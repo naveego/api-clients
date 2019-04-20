@@ -1,0 +1,31 @@
+{
+  "name": "@naveego/client-auth",
+  "author": "Naveego",
+  "description": "Auth Library with typescript type definitions for node.js and browser.",
+  "version": "1.0.1-red",
+  "dependencies": {
+    "ms-rest-js": "~0.17.375"
+  },
+  "keywords": [
+    "node",
+    "azure",
+    "typescript",
+    "browser",
+    "isomorphic"
+  ],
+  "license": "UNLICENSED",
+  "main": "./dist/lib/auth.js",
+  "types": "./typings/lib/auth.d.ts",
+  "devDependencies": {
+    "replace-in-file": "^3.4.4",
+    "ts-loader": "^4.4.2",
+    "tslib": "^1.9.3",
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "build": "npm run generate && node ./scripts/fixAutorestBug.js && tsc && webpack",
+    "generate": "autorest ./generator.md"
+  }
+}
