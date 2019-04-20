@@ -6,7 +6,7 @@ a duplicate "contentType" property on some of the operation types.
 const replace = require('replace-in-file');
 
 const options = {
-    files: './lib/auth.ts',
+    files: './lib/authAPI.ts',
 
     from: /contentType: "application\/x-www-form-urlencoded",[\s]*contentType: "application\/x-www-form-urlencoded",/g,
     to: 'contentType: "application/x-www-form-urlencoded",'

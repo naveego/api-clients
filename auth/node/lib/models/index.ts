@@ -212,12 +212,12 @@ export interface UserCreateUser {
 
 /**
  * @interface
- * An interface representing AuthTokenOptionalParams.
+ * An interface representing AuthAPITokenOptionalParams.
  * Optional Parameters.
  *
  * @extends RequestOptionsBase
  */
-export interface AuthTokenOptionalParams extends msRest.RequestOptionsBase {
+export interface AuthAPITokenOptionalParams extends msRest.RequestOptionsBase {
   /**
    * @member {string} [username] The username used with grant_type=password
    */

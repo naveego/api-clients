@@ -7,10 +7,10 @@ const path = require('path');
  */
 const config = {
   mode: 'production',
-  entry: './lib/auth.ts',
+  entry: './lib/authAPI.ts',
   devtool: 'source-map',
   output: {
-    filename: 'authBundle.js',
+    filename: 'authAPIBundle.js',
     path: __dirname,
     libraryTarget: 'var',
     library: 'auth'

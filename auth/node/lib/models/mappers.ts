@@ -350,11 +350,11 @@ export const UserCreateUser: msRest.CompositeMapper = {
   }
 };
 
-export const AuthTokenOptionalParams: msRest.CompositeMapper = {
+export const AuthAPITokenOptionalParams: msRest.CompositeMapper = {
   serializedName: "TokenOptions",
   type: {
     name: "Composite",
-    className: "AuthTokenOptionalParams",
+    className: "AuthAPITokenOptionalParams",
     modelProperties: {
       username: {
         serializedName: "username",

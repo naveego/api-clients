@@ -339,11 +339,11 @@ exports.UserCreateUser = {
         }
     }
 };
-exports.AuthTokenOptionalParams = {
+exports.AuthAPITokenOptionalParams = {
     serializedName: "TokenOptions",
     type: {
         name: "Composite",
-        className: "AuthTokenOptionalParams",
+        className: "AuthAPITokenOptionalParams",
         modelProperties: {
             username: {
                 serializedName: "username",
