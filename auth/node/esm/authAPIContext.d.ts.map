@@ -1,0 +1,1 @@
+{"version":3,"file":"authAPIContext.d.ts","sourceRoot":"","sources":["../lib/authAPIContext.ts"],"names":[],"mappings":"AAMA,OAAO,KAAK,MAAM,MAAM,mBAAmB,CAAC;AAC5C,OAAO,KAAK,MAAM,MAAM,UAAU,CAAC;AAKnC,qBAAa,cAAe,SAAQ,MAAM,CAAC,aAAa;IACtD,WAAW,EAAE,MAAM,CAAC,wBAAwB,CAAC;IAE7C;;;;OAIG;gBACS,WAAW,EAAE,MAAM,CAAC,wBAAwB,EAAE,OAAO,CAAC,EAAE,MAAM,CAAC,cAAc;CAoB1F"}

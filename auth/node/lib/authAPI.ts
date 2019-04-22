@@ -4,7 +4,7 @@
  * regenerated.
  */
 
-import * as msRest from "ms-rest-js";
+import * as msRest from "@azure/ms-rest-js";
 import * as Models from "./models";
 import * as Mappers from "./models/mappers";
 import * as Parameters from "./models/parameters";
@@ -12,131 +12,143 @@ import { AuthAPIContext } from "./authAPIContext";
 
 class AuthAPI extends AuthAPIContext {
   /**
-   * @class
    * Initializes a new instance of the AuthAPI class.
-   * @constructor
-   *
-   * @param {string} [baseUri] - The base URI of the service.
-   *
-   * @param {object} [options] - The parameter options
-   *
-   * @param {Array} [options.filters] - Filters to be added to the request pipeline
-   *
-   * @param {object} [options.requestOptions] - The request options. Detailed info can be found at
-   * {@link https://github.github.io/fetch/#Request Options doc}
-   *
-   * @param {boolean} [options.noRetryPolicy] - If set to true, turn off default retry policy
-   *
+   * @param credentials Subscription credentials which uniquely identify client subscription.
+   * @param [options] The parameter options
    */
-  constructor(credentials: msRest.ServiceClientCredentials, baseUri?: string, options?: msRest.ServiceClientOptions) {
-    super(credentials, baseUri, options);
+  constructor(credentials: msRest.ServiceClientCredentials, options?: Models.AuthAPIOptions) {
+    super(credentials, options);
   }
-  // methods on the client.
 
   /**
    * @summary get the configuration for a tenant
-   *
-   * @param {string} tenantId The tenant id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param tenantId The tenant id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetConfigurationResponse>
    */
-  getConfigurationWithHttpOperationResponse(tenantId: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.TenantConfiguration>> {
+  getConfiguration(tenantId: string, options?: msRest.RequestOptionsBase): Promise<Models.GetConfigurationResponse>;
+  /**
+   * @param tenantId The tenant id
+   * @param callback The callback
+   */
+  getConfiguration(tenantId: string, callback: msRest.ServiceCallback<Models.TenantConfiguration>): void;
+  /**
+   * @param tenantId The tenant id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getConfiguration(tenantId: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.TenantConfiguration>): void;
+  getConfiguration(tenantId: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.TenantConfiguration>, callback?: msRest.ServiceCallback<Models.TenantConfiguration>): Promise<Models.GetConfigurationResponse> {
     return this.sendOperationRequest(
       {
         tenantId,
         options
       },
-      getConfigurationOperationSpec);
+      getConfigurationOperationSpec,
+      callback) as Promise<Models.GetConfigurationResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary get jwks for key validation
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.DiscoverKeysResponse>
    */
-  discoverKeysWithHttpOperationResponse(options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.DiscoveryKeys>> {
+  discoverKeys(options?: msRest.RequestOptionsBase): Promise<Models.DiscoverKeysResponse>;
+  /**
+   * @param callback The callback
+   */
+  discoverKeys(callback: msRest.ServiceCallback<Models.DiscoveryKeys>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  discoverKeys(options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.DiscoveryKeys>): void;
+  discoverKeys(options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.DiscoveryKeys>, callback?: msRest.ServiceCallback<Models.DiscoveryKeys>): Promise<Models.DiscoverKeysResponse> {
     return this.sendOperationRequest(
       {
         options
       },
-      discoverKeysOperationSpec);
+      discoverKeysOperationSpec,
+      callback) as Promise<Models.DiscoverKeysResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Oauth2 authorize endpoint
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  authorizeWithHttpOperationResponse(options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
+  authorize(options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param callback The callback
+   */
+  authorize(callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  authorize(options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
+  authorize(options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
     return this.sendOperationRequest(
       {
         options
       },
-      authorizeOperationSpec);
+      authorizeOperationSpec,
+      callback);
   }
-  // methods on the client.
 
   /**
    * @summary Oauth2 token endpoint
-   *
-   * @param {string} grantType The grant_type to use for obtaining a token
-   *
-   * @param {AuthAPITokenOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param grantType The grant_type to use for obtaining a token
+   * @param [options] The optional parameters
+   * @returns Promise<Models.TokenResponse>
    */
-  tokenWithHttpOperationResponse(grantType: string, options?: Models.AuthAPITokenOptionalParams): Promise<msRest.HttpOperationResponse<Models.OauthToken>> {
+  token(grantType: string, options?: Models.AuthAPITokenOptionalParams): Promise<Models.TokenResponse>;
+  /**
+   * @param grantType The grant_type to use for obtaining a token
+   * @param callback The callback
+   */
+  token(grantType: string, callback: msRest.ServiceCallback<Models.OauthToken>): void;
+  /**
+   * @param grantType The grant_type to use for obtaining a token
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  token(grantType: string, options: Models.AuthAPITokenOptionalParams, callback: msRest.ServiceCallback<Models.OauthToken>): void;
+  token(grantType: string, options?: Models.AuthAPITokenOptionalParams | msRest.ServiceCallback<Models.OauthToken>, callback?: msRest.ServiceCallback<Models.OauthToken>): Promise<Models.TokenResponse> {
     return this.sendOperationRequest(
       {
         grantType,
         options
       },
-      tokenOperationSpec);
+      tokenOperationSpec,
+      callback) as Promise<Models.TokenResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Redirects user back to target login endpoint
-   *
-   * @param {string} tid The tenant id for this request
-   *
-   * @param {string} sAMLResponse The SAML AuthNResponse from the Identity Provider
-   *
-   * @param {string} relayState The relay state obtained from generate request process
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param tid The tenant id for this request
+   * @param sAMLResponse The SAML AuthNResponse from the Identity Provider
+   * @param relayState The relay state obtained from generate request process
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  generateRequestWithHttpOperationResponse(tid: string, sAMLResponse: string, relayState: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
+  generateRequest(tid: string, sAMLResponse: string, relayState: string, options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param tid The tenant id for this request
+   * @param sAMLResponse The SAML AuthNResponse from the Identity Provider
+   * @param relayState The relay state obtained from generate request process
+   * @param callback The callback
+   */
+  generateRequest(tid: string, sAMLResponse: string, relayState: string, callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param tid The tenant id for this request
+   * @param sAMLResponse The SAML AuthNResponse from the Identity Provider
+   * @param relayState The relay state obtained from generate request process
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  generateRequest(tid: string, sAMLResponse: string, relayState: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
+  generateRequest(tid: string, sAMLResponse: string, relayState: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
     return this.sendOperationRequest(
       {
         tid,
@@ -144,466 +156,212 @@ class AuthAPI extends AuthAPIContext {
         relayState,
         options
       },
-      generateRequestOperationSpec);
+      generateRequestOperationSpec,
+      callback);
   }
-  // methods on the client.
 
   /**
    * @summary Generates a SAML request
-   *
-   * @param {string} tid The tenant id for this request
-   *
-   * @param {string} clientId The Oauth2 client_id that is making the reqeust
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param tid The tenant id for this request
+   * @param clientId The Oauth2 client_id that is making the reqeust
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GenerateRequest1Response>
    */
-  generateRequest1WithHttpOperationResponse(tid: string, clientId: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.SamlGenerateRequestResponse>> {
+  generateRequest1(tid: string, clientId: string, options?: msRest.RequestOptionsBase): Promise<Models.GenerateRequest1Response>;
+  /**
+   * @param tid The tenant id for this request
+   * @param clientId The Oauth2 client_id that is making the reqeust
+   * @param callback The callback
+   */
+  generateRequest1(tid: string, clientId: string, callback: msRest.ServiceCallback<Models.SamlGenerateRequestResponse>): void;
+  /**
+   * @param tid The tenant id for this request
+   * @param clientId The Oauth2 client_id that is making the reqeust
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  generateRequest1(tid: string, clientId: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.SamlGenerateRequestResponse>): void;
+  generateRequest1(tid: string, clientId: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.SamlGenerateRequestResponse>, callback?: msRest.ServiceCallback<Models.SamlGenerateRequestResponse>): Promise<Models.GenerateRequest1Response> {
     return this.sendOperationRequest(
       {
         tid,
         clientId,
         options
       },
-      generateRequest1OperationSpec);
+      generateRequest1OperationSpec,
+      callback) as Promise<Models.GenerateRequest1Response>;
   }
-  // methods on the client.
 
   /**
    * @summary Gets the SAML settings for this tenant
-   *
-   * @param {string} tid The tenant id for this request
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param tid The tenant id for this request
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetSAMLSettingsResponse>
    */
-  getSAMLSettingsWithHttpOperationResponse(tid: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.SamlSAMLSettings>> {
+  getSAMLSettings(tid: string, options?: msRest.RequestOptionsBase): Promise<Models.GetSAMLSettingsResponse>;
+  /**
+   * @param tid The tenant id for this request
+   * @param callback The callback
+   */
+  getSAMLSettings(tid: string, callback: msRest.ServiceCallback<Models.SamlSAMLSettings>): void;
+  /**
+   * @param tid The tenant id for this request
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getSAMLSettings(tid: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.SamlSAMLSettings>): void;
+  getSAMLSettings(tid: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.SamlSAMLSettings>, callback?: msRest.ServiceCallback<Models.SamlSAMLSettings>): Promise<Models.GetSAMLSettingsResponse> {
     return this.sendOperationRequest(
       {
         tid,
         options
       },
-      getSAMLSettingsOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Create a user.
-   *
-   * @param {UserCreateUser} body
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  createWithHttpOperationResponse(body: Models.UserCreateUser, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.UserUser>> {
-    return this.sendOperationRequest(
-      {
-        body,
-        options
-      },
-      createOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Gets a user.
-   *
-   * @param {string} userId identifier of the user
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getWithHttpOperationResponse(userId: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.UserUser>> {
-    return this.sendOperationRequest(
-      {
-        userId,
-        options
-      },
-      getOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Updates a user.
-   *
-   * @param {string} userId identifier of the user
-   *
-   * @param {UserUser} body
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  updateWithHttpOperationResponse(userId: string, body: Models.UserUser, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.UserUser>> {
-    return this.sendOperationRequest(
-      {
-        userId,
-        body,
-        options
-      },
-      updateOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Updates a user.
-   *
-   * @param {string} userId identifier of the user
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  update1WithHttpOperationResponse(userId: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
-    return this.sendOperationRequest(
-      {
-        userId,
-        options
-      },
-      update1OperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Gets an auth code for the user to use for logging in.
-   *
-   * @param {string} userId identifier of the user
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  generateAuthCodeWithHttpOperationResponse(userId: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.UserAuthCodeResponse>> {
-    return this.sendOperationRequest(
-      {
-        userId,
-        options
-      },
-      generateAuthCodeOperationSpec);
-  }
-
-  /**
-   * @summary get the configuration for a tenant
-   *
-   * @param {string} tenantId The tenant id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.TenantConfiguration} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.TenantConfiguration} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getConfiguration(tenantId: string): Promise<Models.TenantConfiguration>;
-  getConfiguration(tenantId: string, options: msRest.RequestOptionsBase): Promise<Models.TenantConfiguration>;
-  getConfiguration(tenantId: string, callback: msRest.ServiceCallback<Models.TenantConfiguration>): void;
-  getConfiguration(tenantId: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.TenantConfiguration>): void;
-  getConfiguration(tenantId: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.TenantConfiguration>): any {
-    return msRest.responseToBody(this.getConfigurationWithHttpOperationResponse.bind(this), tenantId, options, callback);
-  }
-
-  /**
-   * @summary get jwks for key validation
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.DiscoveryKeys} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.DiscoveryKeys} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  discoverKeys(): Promise<Models.DiscoveryKeys>;
-  discoverKeys(options: msRest.RequestOptionsBase): Promise<Models.DiscoveryKeys>;
-  discoverKeys(callback: msRest.ServiceCallback<Models.DiscoveryKeys>): void;
-  discoverKeys(options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.DiscoveryKeys>): void;
-  discoverKeys(options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.DiscoveryKeys>): any {
-    return msRest.responseToBody(this.discoverKeysWithHttpOperationResponse.bind(this), options, callback);
-  }
-
-  /**
-   * @summary Oauth2 authorize endpoint
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  authorize(): Promise<void>;
-  authorize(options: msRest.RequestOptionsBase): Promise<void>;
-  authorize(callback: msRest.ServiceCallback<void>): void;
-  authorize(options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  authorize(options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.authorizeWithHttpOperationResponse.bind(this), options, callback);
-  }
-
-  /**
-   * @summary Oauth2 token endpoint
-   *
-   * @param {string} grantType The grant_type to use for obtaining a token
-   *
-   * @param {AuthAPITokenOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.OauthToken} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.OauthToken} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  token(grantType: string): Promise<Models.OauthToken>;
-  token(grantType: string, options: Models.AuthAPITokenOptionalParams): Promise<Models.OauthToken>;
-  token(grantType: string, callback: msRest.ServiceCallback<Models.OauthToken>): void;
-  token(grantType: string, options: Models.AuthAPITokenOptionalParams, callback: msRest.ServiceCallback<Models.OauthToken>): void;
-  token(grantType: string, options?: Models.AuthAPITokenOptionalParams, callback?: msRest.ServiceCallback<Models.OauthToken>): any {
-    return msRest.responseToBody(this.tokenWithHttpOperationResponse.bind(this), grantType, options, callback);
-  }
-
-  /**
-   * @summary Redirects user back to target login endpoint
-   *
-   * @param {string} tid The tenant id for this request
-   *
-   * @param {string} sAMLResponse The SAML AuthNResponse from the Identity Provider
-   *
-   * @param {string} relayState The relay state obtained from generate request process
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  generateRequest(tid: string, sAMLResponse: string, relayState: string): Promise<void>;
-  generateRequest(tid: string, sAMLResponse: string, relayState: string, options: msRest.RequestOptionsBase): Promise<void>;
-  generateRequest(tid: string, sAMLResponse: string, relayState: string, callback: msRest.ServiceCallback<void>): void;
-  generateRequest(tid: string, sAMLResponse: string, relayState: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  generateRequest(tid: string, sAMLResponse: string, relayState: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.generateRequestWithHttpOperationResponse.bind(this), tid, sAMLResponse, relayState, options, callback);
-  }
-
-  /**
-   * @summary Generates a SAML request
-   *
-   * @param {string} tid The tenant id for this request
-   *
-   * @param {string} clientId The Oauth2 client_id that is making the reqeust
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.SamlGenerateRequestResponse} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.SamlGenerateRequestResponse} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  generateRequest1(tid: string, clientId: string): Promise<Models.SamlGenerateRequestResponse>;
-  generateRequest1(tid: string, clientId: string, options: msRest.RequestOptionsBase): Promise<Models.SamlGenerateRequestResponse>;
-  generateRequest1(tid: string, clientId: string, callback: msRest.ServiceCallback<Models.SamlGenerateRequestResponse>): void;
-  generateRequest1(tid: string, clientId: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.SamlGenerateRequestResponse>): void;
-  generateRequest1(tid: string, clientId: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.SamlGenerateRequestResponse>): any {
-    return msRest.responseToBody(this.generateRequest1WithHttpOperationResponse.bind(this), tid, clientId, options, callback);
-  }
-
-  /**
-   * @summary Gets the SAML settings for this tenant
-   *
-   * @param {string} tid The tenant id for this request
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.SamlSAMLSettings} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.SamlSAMLSettings} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getSAMLSettings(tid: string): Promise<Models.SamlSAMLSettings>;
-  getSAMLSettings(tid: string, options: msRest.RequestOptionsBase): Promise<Models.SamlSAMLSettings>;
-  getSAMLSettings(tid: string, callback: msRest.ServiceCallback<Models.SamlSAMLSettings>): void;
-  getSAMLSettings(tid: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.SamlSAMLSettings>): void;
-  getSAMLSettings(tid: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.SamlSAMLSettings>): any {
-    return msRest.responseToBody(this.getSAMLSettingsWithHttpOperationResponse.bind(this), tid, options, callback);
+      getSAMLSettingsOperationSpec,
+      callback) as Promise<Models.GetSAMLSettingsResponse>;
   }
 
   /**
    * @summary Create a user.
-   *
-   * @param {UserCreateUser} body
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.UserUser} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.UserUser} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param body
+   * @param [options] The optional parameters
+   * @returns Promise<Models.CreateResponse>
    */
-  create(body: Models.UserCreateUser): Promise<Models.UserUser>;
-  create(body: Models.UserCreateUser, options: msRest.RequestOptionsBase): Promise<Models.UserUser>;
+  create(body: Models.UserCreateUser, options?: msRest.RequestOptionsBase): Promise<Models.CreateResponse>;
+  /**
+   * @param body
+   * @param callback The callback
+   */
   create(body: Models.UserCreateUser, callback: msRest.ServiceCallback<Models.UserUser>): void;
+  /**
+   * @param body
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   create(body: Models.UserCreateUser, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.UserUser>): void;
-  create(body: Models.UserCreateUser, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.UserUser>): any {
-    return msRest.responseToBody(this.createWithHttpOperationResponse.bind(this), body, options, callback);
+  create(body: Models.UserCreateUser, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.UserUser>, callback?: msRest.ServiceCallback<Models.UserUser>): Promise<Models.CreateResponse> {
+    return this.sendOperationRequest(
+      {
+        body,
+        options
+      },
+      createOperationSpec,
+      callback) as Promise<Models.CreateResponse>;
   }
 
   /**
    * @summary Gets a user.
-   *
-   * @param {string} userId identifier of the user
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.UserUser} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.UserUser} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param userId identifier of the user
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetResponse>
    */
-  get(userId: string): Promise<Models.UserUser>;
-  get(userId: string, options: msRest.RequestOptionsBase): Promise<Models.UserUser>;
+  get(userId: string, options?: msRest.RequestOptionsBase): Promise<Models.GetResponse>;
+  /**
+   * @param userId identifier of the user
+   * @param callback The callback
+   */
   get(userId: string, callback: msRest.ServiceCallback<Models.UserUser>): void;
+  /**
+   * @param userId identifier of the user
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   get(userId: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.UserUser>): void;
-  get(userId: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.UserUser>): any {
-    return msRest.responseToBody(this.getWithHttpOperationResponse.bind(this), userId, options, callback);
+  get(userId: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.UserUser>, callback?: msRest.ServiceCallback<Models.UserUser>): Promise<Models.GetResponse> {
+    return this.sendOperationRequest(
+      {
+        userId,
+        options
+      },
+      getOperationSpec,
+      callback) as Promise<Models.GetResponse>;
   }
 
   /**
    * @summary Updates a user.
-   *
-   * @param {string} userId identifier of the user
-   *
-   * @param {UserUser} body
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.UserUser} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.UserUser} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param userId identifier of the user
+   * @param body
+   * @param [options] The optional parameters
+   * @returns Promise<Models.UpdateResponse>
    */
-  update(userId: string, body: Models.UserUser): Promise<Models.UserUser>;
-  update(userId: string, body: Models.UserUser, options: msRest.RequestOptionsBase): Promise<Models.UserUser>;
+  update(userId: string, body: Models.UserUser, options?: msRest.RequestOptionsBase): Promise<Models.UpdateResponse>;
+  /**
+   * @param userId identifier of the user
+   * @param body
+   * @param callback The callback
+   */
   update(userId: string, body: Models.UserUser, callback: msRest.ServiceCallback<Models.UserUser>): void;
+  /**
+   * @param userId identifier of the user
+   * @param body
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   update(userId: string, body: Models.UserUser, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.UserUser>): void;
-  update(userId: string, body: Models.UserUser, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.UserUser>): any {
-    return msRest.responseToBody(this.updateWithHttpOperationResponse.bind(this), userId, body, options, callback);
+  update(userId: string, body: Models.UserUser, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.UserUser>, callback?: msRest.ServiceCallback<Models.UserUser>): Promise<Models.UpdateResponse> {
+    return this.sendOperationRequest(
+      {
+        userId,
+        body,
+        options
+      },
+      updateOperationSpec,
+      callback) as Promise<Models.UpdateResponse>;
   }
 
   /**
    * @summary Updates a user.
-   *
-   * @param {string} userId identifier of the user
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param userId identifier of the user
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  update1(userId: string): Promise<void>;
-  update1(userId: string, options: msRest.RequestOptionsBase): Promise<void>;
+  update1(userId: string, options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param userId identifier of the user
+   * @param callback The callback
+   */
   update1(userId: string, callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param userId identifier of the user
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   update1(userId: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  update1(userId: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.update1WithHttpOperationResponse.bind(this), userId, options, callback);
+  update1(userId: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
+    return this.sendOperationRequest(
+      {
+        userId,
+        options
+      },
+      update1OperationSpec,
+      callback);
   }
 
   /**
    * @summary Gets an auth code for the user to use for logging in.
-   *
-   * @param {string} userId identifier of the user
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.UserAuthCodeResponse} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.UserAuthCodeResponse} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param userId identifier of the user
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GenerateAuthCodeResponse>
    */
-  generateAuthCode(userId: string): Promise<Models.UserAuthCodeResponse>;
-  generateAuthCode(userId: string, options: msRest.RequestOptionsBase): Promise<Models.UserAuthCodeResponse>;
+  generateAuthCode(userId: string, options?: msRest.RequestOptionsBase): Promise<Models.GenerateAuthCodeResponse>;
+  /**
+   * @param userId identifier of the user
+   * @param callback The callback
+   */
   generateAuthCode(userId: string, callback: msRest.ServiceCallback<Models.UserAuthCodeResponse>): void;
+  /**
+   * @param userId identifier of the user
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   generateAuthCode(userId: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.UserAuthCodeResponse>): void;
-  generateAuthCode(userId: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.UserAuthCodeResponse>): any {
-    return msRest.responseToBody(this.generateAuthCodeWithHttpOperationResponse.bind(this), userId, options, callback);
+  generateAuthCode(userId: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.UserAuthCodeResponse>, callback?: msRest.ServiceCallback<Models.UserAuthCodeResponse>): Promise<Models.GenerateAuthCodeResponse> {
+    return this.sendOperationRequest(
+      {
+        userId,
+        options
+      },
+      generateAuthCodeOperationSpec,
+      callback) as Promise<Models.GenerateAuthCodeResponse>;
   }
 }
 
@@ -821,4 +579,9 @@ const generateAuthCodeOperationSpec: msRest.OperationSpec = {
   serializer
 };
 
-export { AuthAPI, Models as AuthAPIModels, Mappers as AuthAPIMappers };
+export {
+  AuthAPI,
+  AuthAPIContext,
+  Models as AuthAPIModels,
+  Mappers as AuthAPIMappers
+};

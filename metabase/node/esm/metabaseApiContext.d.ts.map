@@ -1,0 +1,1 @@
+{"version":3,"file":"metabaseApiContext.d.ts","sourceRoot":"","sources":["../lib/metabaseApiContext.ts"],"names":[],"mappings":"AAMA,OAAO,KAAK,MAAM,MAAM,mBAAmB,CAAC;AAC5C,OAAO,KAAK,MAAM,MAAM,UAAU,CAAC;AAKnC,qBAAa,kBAAmB,SAAQ,MAAM,CAAC,aAAa;IAC1D,WAAW,EAAE,MAAM,CAAC,wBAAwB,CAAC;IAE7C;;;;OAIG;gBACS,WAAW,EAAE,MAAM,CAAC,wBAAwB,EAAE,OAAO,CAAC,EAAE,MAAM,CAAC,kBAAkB;CAoB9F"}

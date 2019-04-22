@@ -1,10 +1,11 @@
 {
   "name": "@naveego/client-auth",
-  "author": "Naveego",
-  "description": "Auth Library with typescript type definitions for node.js and browser.",
-  "version": "1.0.1-beta.2",
+  "author": "Microsoft Corporation",
+  "description": "AuthAPI Library with typescript type definitions for node.js and browser.",
+  "version": "1.0.2-beta.3",
   "dependencies": {
-    "ms-rest-js": "~0.17.375"
+    "@azure/ms-rest-js": "^1.2.6",
+    "tslib": "^1.9.3"
   },
   "keywords": [
     "node",
@@ -14,17 +15,42 @@
     "isomorphic"
   ],
   "license": "MIT",
-  "main": "./dist/lib/authAPI.js",
-  "types": "./typings/lib/authAPI.d.ts",
+  "main": "./dist/client-auth.js",
+  "module": "./esm/authAPI.js",
+  "types": "./esm/authAPI.d.ts",
   "devDependencies": {
-    "replace-in-file": "^3.4.4",
-    "ts-loader": "^4.4.2",
-    "tslib": "^1.9.3",
-    "typescript": "^2.9.2",
-    "webpack": "^4.16.2",
-    "webpack-cli": "^3.1.0"
+    "typescript": "^3.1.1",
+    "rollup": "^0.66.2",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "uglify-js": "^3.4.9"
   },
+  "homepage": "https://github.com/azure/azure-sdk-for-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azure/azure-sdk-for-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/azure/azure-sdk-for-js/issues"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map",
+    "esm/**/*.js",
+    "esm/**/*.js.map",
+    "esm/**/*.d.ts",
+    "esm/**/*.d.ts.map",
+    "lib/**/*.ts",
+    "README.md",
+    "rollup.config.js",
+    "tsconfig.json"
+  ],
   "scripts": {
-    "build": "node ./scripts/fixAutorestBug.js && tsc && webpack"
-  }
+    "build": "tsc && rollup -c rollup.config.js && npm run minify",
+    "minify": "uglifyjs -c -m --comments --source-map \"content='./dist/client-auth.js.map'\" -o ./dist/client-auth.min.js ./dist/client-auth.js",
+    "prepack": "npm install && npm run build"
+  },
+  "sideEffects": false
 }

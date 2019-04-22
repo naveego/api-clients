@@ -4,34 +4,21 @@
  * regenerated.
  */
 
-import * as msRest from "ms-rest-js";
+import * as msRest from "@azure/ms-rest-js";
+import * as Models from "./models";
 
-const packageName = "";
-const packageVersion = "";
+const packageName = "@naveego/client-auth";
+const packageVersion = "1.0.2-beta.3";
 
 export class AuthAPIContext extends msRest.ServiceClient {
   credentials: msRest.ServiceClientCredentials;
 
   /**
-   * @class
    * Initializes a new instance of the AuthAPIContext class.
-   * @constructor
-   *
-   * @param {msRest.ServiceClientCredentials} credentials - Subscription credentials which uniquely identify client subscription.
-   *
-   * @param {string} [baseUri] - The base URI of the service.
-   *
-   * @param {object} [options] - The parameter options
-   *
-   * @param {Array} [options.filters] - Filters to be added to the request pipeline
-   *
-   * @param {object} [options.requestOptions] - The request options. Detailed info can be found at
-   * {@link https://github.github.io/fetch/#Request Options doc}
-   *
-   * @param {boolean} [options.noRetryPolicy] - If set to true, turn off default retry policy
-   *
+   * @param credentials Subscription credentials which uniquely identify client subscription.
+   * @param [options] The parameter options
    */
-  constructor(credentials: msRest.ServiceClientCredentials, baseUri?: string, options?: msRest.ServiceClientOptions) {
+  constructor(credentials: msRest.ServiceClientCredentials, options?: Models.AuthAPIOptions) {
     if (credentials === null || credentials === undefined) {
       throw new Error('\'credentials\' cannot be null.');
     }
@@ -39,16 +26,16 @@ export class AuthAPIContext extends msRest.ServiceClient {
     if (!options) {
       options = {};
     }
+    if(!options.userAgent) {
+      const defaultUserAgent = msRest.getDefaultUserAgentValue();
+      options.userAgent = `${packageName}/${packageVersion} ${defaultUserAgent}`;
+    }
 
     super(credentials, options);
 
-    this.baseUri = baseUri as string;
-    if (!this.baseUri) {
-      this.baseUri = "";
-    }
+    this.baseUri = options.baseUri || this.baseUri || "";
     this.requestContentType = "application/json; charset=utf-8";
     this.credentials = credentials;
 
-    this.addUserAgentInfo(`${packageName}/${packageVersion}`);
   }
 }

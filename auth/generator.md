@@ -8,7 +8,7 @@
 input-file: http://auth.n5o.red/swagger.json # full Unicode support
 
 use:
-  - "@microsoft.azure/autorest.typescript@2.0.437"
+  - "@microsoft.azure/autorest.typescript@2.4.0"
 
 go:
   add-credentials: true
@@ -20,12 +20,13 @@ csharp:
   output-folder : csharp # relative to the global value.
 
 typescript:
-  output-folder: node/lib
+  output-folder: node
   add-credentials: true
   override-client-name: AuthAPI
-  # generage-metadata: true
+  generate-metadata: true
   package-name: "@naveego/client-auth"
-  package-version: "1.0.0"
+  package-version: "1.0.2-beta.3"
+  author: "Naveego"
 
 java:
   add-credentials: true

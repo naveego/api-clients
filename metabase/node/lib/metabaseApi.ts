@@ -4,7 +4,7 @@
  * regenerated.
  */
 
-import * as msRest from "ms-rest-js";
+import * as msRest from "@azure/ms-rest-js";
 import * as Models from "./models";
 import * as Mappers from "./models/mappers";
 import * as Parameters from "./models/parameters";
@@ -12,2379 +12,1416 @@ import { MetabaseApiContext } from "./metabaseApiContext";
 
 class MetabaseApi extends MetabaseApiContext {
   /**
-   * @class
    * Initializes a new instance of the MetabaseApi class.
-   * @constructor
-   *
-   * @param {string} [baseUri] - The base URI of the service.
-   *
-   * @param {object} [options] - The parameter options
-   *
-   * @param {Array} [options.filters] - Filters to be added to the request pipeline
-   *
-   * @param {object} [options.requestOptions] - The request options. Detailed info can be found at
-   * {@link https://github.github.io/fetch/#Request Options doc}
-   *
-   * @param {boolean} [options.noRetryPolicy] - If set to true, turn off default retry policy
-   *
+   * @param credentials Subscription credentials which uniquely identify client subscription.
+   * @param [options] The parameter options
    */
-  constructor(credentials: msRest.ServiceClientCredentials, baseUri?: string, options?: msRest.ServiceClientOptions) {
-    super(credentials, baseUri, options);
+  constructor(credentials: msRest.ServiceClientCredentials, options?: Models.MetabaseApiOptions) {
+    super(credentials, options);
   }
-  // methods on the client.
 
   /**
    * @summary Set batch status for go between batch.
-   *
-   * @param {string} id
-   *
-   * @param {BatchStatusGoBetweenScope} status
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param status
+   * @param [options] The optional parameters
+   * @returns Promise<Models.SetBatchStatusForGoBetweenBatchResponse>
    */
-  setBatchStatusForGoBetweenBatchWithHttpOperationResponse(id: string, status: Models.BatchStatusGoBetweenScope, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<{ [propertyName: string]: string[] }>> {
+  setBatchStatusForGoBetweenBatch(id: string, status: Models.BatchStatusGoBetweenScope, options?: msRest.RequestOptionsBase): Promise<Models.SetBatchStatusForGoBetweenBatchResponse>;
+  /**
+   * @param id
+   * @param status
+   * @param callback The callback
+   */
+  setBatchStatusForGoBetweenBatch(id: string, status: Models.BatchStatusGoBetweenScope, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
+  /**
+   * @param id
+   * @param status
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  setBatchStatusForGoBetweenBatch(id: string, status: Models.BatchStatusGoBetweenScope, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
+  setBatchStatusForGoBetweenBatch(id: string, status: Models.BatchStatusGoBetweenScope, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<{ [propertyName: string]: string[] }>, callback?: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): Promise<Models.SetBatchStatusForGoBetweenBatchResponse> {
     return this.sendOperationRequest(
       {
         id,
         status,
         options
       },
-      setBatchStatusForGoBetweenBatchOperationSpec);
+      setBatchStatusForGoBetweenBatchOperationSpec,
+      callback) as Promise<Models.SetBatchStatusForGoBetweenBatchResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Get paged statuses for batch.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetPagedStatusesForBatchOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetPagedStatusesForBatchResponse>
    */
-  getPagedStatusesForBatchWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetPagedStatusesForBatchOptionalParams): Promise<msRest.HttpOperationResponse<Models.PagedResultOfBatchStatus>> {
+  getPagedStatusesForBatch(id: string, options?: Models.MetabaseApiGetPagedStatusesForBatchOptionalParams): Promise<Models.GetPagedStatusesForBatchResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  getPagedStatusesForBatch(id: string, callback: msRest.ServiceCallback<Models.PagedResultOfBatchStatus>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getPagedStatusesForBatch(id: string, options: Models.MetabaseApiGetPagedStatusesForBatchOptionalParams, callback: msRest.ServiceCallback<Models.PagedResultOfBatchStatus>): void;
+  getPagedStatusesForBatch(id: string, options?: Models.MetabaseApiGetPagedStatusesForBatchOptionalParams | msRest.ServiceCallback<Models.PagedResultOfBatchStatus>, callback?: msRest.ServiceCallback<Models.PagedResultOfBatchStatus>): Promise<Models.GetPagedStatusesForBatchResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      getPagedStatusesForBatchOperationSpec);
+      getPagedStatusesForBatchOperationSpec,
+      callback) as Promise<Models.GetPagedStatusesForBatchResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Events placeholder for batch.
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.EventsPlaceholderForBatchResponse>
    */
-  eventsPlaceholderForBatchWithHttpOperationResponse(options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.DataflowEvent>> {
+  eventsPlaceholderForBatch(options?: msRest.RequestOptionsBase): Promise<Models.EventsPlaceholderForBatchResponse>;
+  /**
+   * @param callback The callback
+   */
+  eventsPlaceholderForBatch(callback: msRest.ServiceCallback<Models.DataflowEvent>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  eventsPlaceholderForBatch(options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.DataflowEvent>): void;
+  eventsPlaceholderForBatch(options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.DataflowEvent>, callback?: msRest.ServiceCallback<Models.DataflowEvent>): Promise<Models.EventsPlaceholderForBatchResponse> {
     return this.sendOperationRequest(
       {
         options
       },
-      eventsPlaceholderForBatchOperationSpec);
+      eventsPlaceholderForBatchOperationSpec,
+      callback) as Promise<Models.EventsPlaceholderForBatchResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Get all batches.
-   *
-   * @param {MetabaseApiGetAllBatchesOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetAllBatchesResponse>
    */
-  getAllBatchesWithHttpOperationResponse(options?: Models.MetabaseApiGetAllBatchesOptionalParams): Promise<msRest.HttpOperationResponse<Models.Batch[]>> {
+  getAllBatches(options?: Models.MetabaseApiGetAllBatchesOptionalParams): Promise<Models.GetAllBatchesResponse>;
+  /**
+   * @param callback The callback
+   */
+  getAllBatches(callback: msRest.ServiceCallback<Models.Batch[]>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getAllBatches(options: Models.MetabaseApiGetAllBatchesOptionalParams, callback: msRest.ServiceCallback<Models.Batch[]>): void;
+  getAllBatches(options?: Models.MetabaseApiGetAllBatchesOptionalParams | msRest.ServiceCallback<Models.Batch[]>, callback?: msRest.ServiceCallback<Models.Batch[]>): Promise<Models.GetAllBatchesResponse> {
     return this.sendOperationRequest(
       {
         options
       },
-      getAllBatchesOperationSpec);
+      getAllBatchesOperationSpec,
+      callback) as Promise<Models.GetAllBatchesResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Create batch.
-   *
-   * @param {Batch} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param input
+   * @param [options] The optional parameters
+   * @returns Promise<Models.CreateBatchResponse>
    */
-  createBatchWithHttpOperationResponse(input: Models.Batch, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
+  createBatch(input: Models.Batch, options?: msRest.RequestOptionsBase): Promise<Models.CreateBatchResponse>;
+  /**
+   * @param input
+   * @param callback The callback
+   */
+  createBatch(input: Models.Batch, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param input
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  createBatch(input: Models.Batch, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
+  createBatch(input: Models.Batch, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.CreateBatchResponse> {
     return this.sendOperationRequest(
       {
         input,
         options
       },
-      createBatchOperationSpec);
+      createBatchOperationSpec,
+      callback) as Promise<Models.CreateBatchResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Get one batch.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneBatchOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetOneBatchResponse>
    */
-  getOneBatchWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetOneBatchOptionalParams): Promise<msRest.HttpOperationResponse<Models.Batch>> {
+  getOneBatch(id: string, options?: Models.MetabaseApiGetOneBatchOptionalParams): Promise<Models.GetOneBatchResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  getOneBatch(id: string, callback: msRest.ServiceCallback<Models.Batch>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getOneBatch(id: string, options: Models.MetabaseApiGetOneBatchOptionalParams, callback: msRest.ServiceCallback<Models.Batch>): void;
+  getOneBatch(id: string, options?: Models.MetabaseApiGetOneBatchOptionalParams | msRest.ServiceCallback<Models.Batch>, callback?: msRest.ServiceCallback<Models.Batch>): Promise<Models.GetOneBatchResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      getOneBatchOperationSpec);
+      getOneBatchOperationSpec,
+      callback) as Promise<Models.GetOneBatchResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Update batch.
-   *
-   * @param {string} id
-   *
-   * @param {Batch} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param model
+   * @param [options] The optional parameters
+   * @returns Promise<Models.UpdateBatchResponse>
    */
-  updateBatchWithHttpOperationResponse(id: string, model: Models.Batch, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
+  updateBatch(id: string, model: Models.Batch, options?: msRest.RequestOptionsBase): Promise<Models.UpdateBatchResponse>;
+  /**
+   * @param id
+   * @param model
+   * @param callback The callback
+   */
+  updateBatch(id: string, model: Models.Batch, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param id
+   * @param model
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  updateBatch(id: string, model: Models.Batch, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
+  updateBatch(id: string, model: Models.Batch, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.UpdateBatchResponse> {
     return this.sendOperationRequest(
       {
         id,
         model,
         options
       },
-      updateBatchOperationSpec);
+      updateBatchOperationSpec,
+      callback) as Promise<Models.UpdateBatchResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Delete batch.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  deleteBatchWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
+  deleteBatch(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  deleteBatch(id: string, callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  deleteBatch(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
+  deleteBatch(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      deleteBatchOperationSpec);
+      deleteBatchOperationSpec,
+      callback);
   }
-  // methods on the client.
 
   /**
    * @summary Get batch versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetBatchVersionsResponse>
    */
-  getBatchVersionsWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.Batch[]>> {
+  getBatchVersions(id: string, options?: msRest.RequestOptionsBase): Promise<Models.GetBatchVersionsResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  getBatchVersions(id: string, callback: msRest.ServiceCallback<Models.Batch[]>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getBatchVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.Batch[]>): void;
+  getBatchVersions(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.Batch[]>, callback?: msRest.ServiceCallback<Models.Batch[]>): Promise<Models.GetBatchVersionsResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      getBatchVersionsOperationSpec);
+      getBatchVersionsOperationSpec,
+      callback) as Promise<Models.GetBatchVersionsResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Get all connections.
-   *
-   * @param {MetabaseApiGetAllConnectionsOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetAllConnectionsResponse>
    */
-  getAllConnectionsWithHttpOperationResponse(options?: Models.MetabaseApiGetAllConnectionsOptionalParams): Promise<msRest.HttpOperationResponse<Models.Connection[]>> {
+  getAllConnections(options?: Models.MetabaseApiGetAllConnectionsOptionalParams): Promise<Models.GetAllConnectionsResponse>;
+  /**
+   * @param callback The callback
+   */
+  getAllConnections(callback: msRest.ServiceCallback<Models.Connection[]>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getAllConnections(options: Models.MetabaseApiGetAllConnectionsOptionalParams, callback: msRest.ServiceCallback<Models.Connection[]>): void;
+  getAllConnections(options?: Models.MetabaseApiGetAllConnectionsOptionalParams | msRest.ServiceCallback<Models.Connection[]>, callback?: msRest.ServiceCallback<Models.Connection[]>): Promise<Models.GetAllConnectionsResponse> {
     return this.sendOperationRequest(
       {
         options
       },
-      getAllConnectionsOperationSpec);
+      getAllConnectionsOperationSpec,
+      callback) as Promise<Models.GetAllConnectionsResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Create connection.
-   *
-   * @param {Connection} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param input
+   * @param [options] The optional parameters
+   * @returns Promise<Models.CreateConnectionResponse>
    */
-  createConnectionWithHttpOperationResponse(input: Models.Connection, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
+  createConnection(input: Models.Connection, options?: msRest.RequestOptionsBase): Promise<Models.CreateConnectionResponse>;
+  /**
+   * @param input
+   * @param callback The callback
+   */
+  createConnection(input: Models.Connection, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param input
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  createConnection(input: Models.Connection, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
+  createConnection(input: Models.Connection, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.CreateConnectionResponse> {
     return this.sendOperationRequest(
       {
         input,
         options
       },
-      createConnectionOperationSpec);
+      createConnectionOperationSpec,
+      callback) as Promise<Models.CreateConnectionResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Get one connection.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneConnectionOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetOneConnectionResponse>
    */
-  getOneConnectionWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetOneConnectionOptionalParams): Promise<msRest.HttpOperationResponse<Models.Connection>> {
+  getOneConnection(id: string, options?: Models.MetabaseApiGetOneConnectionOptionalParams): Promise<Models.GetOneConnectionResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  getOneConnection(id: string, callback: msRest.ServiceCallback<Models.Connection>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getOneConnection(id: string, options: Models.MetabaseApiGetOneConnectionOptionalParams, callback: msRest.ServiceCallback<Models.Connection>): void;
+  getOneConnection(id: string, options?: Models.MetabaseApiGetOneConnectionOptionalParams | msRest.ServiceCallback<Models.Connection>, callback?: msRest.ServiceCallback<Models.Connection>): Promise<Models.GetOneConnectionResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      getOneConnectionOperationSpec);
+      getOneConnectionOperationSpec,
+      callback) as Promise<Models.GetOneConnectionResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Update connection.
-   *
-   * @param {string} id
-   *
-   * @param {Connection} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param model
+   * @param [options] The optional parameters
+   * @returns Promise<Models.UpdateConnectionResponse>
    */
-  updateConnectionWithHttpOperationResponse(id: string, model: Models.Connection, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
+  updateConnection(id: string, model: Models.Connection, options?: msRest.RequestOptionsBase): Promise<Models.UpdateConnectionResponse>;
+  /**
+   * @param id
+   * @param model
+   * @param callback The callback
+   */
+  updateConnection(id: string, model: Models.Connection, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param id
+   * @param model
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  updateConnection(id: string, model: Models.Connection, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
+  updateConnection(id: string, model: Models.Connection, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.UpdateConnectionResponse> {
     return this.sendOperationRequest(
       {
         id,
         model,
         options
       },
-      updateConnectionOperationSpec);
+      updateConnectionOperationSpec,
+      callback) as Promise<Models.UpdateConnectionResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Delete connection.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  deleteConnectionWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
+  deleteConnection(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  deleteConnection(id: string, callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  deleteConnection(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
+  deleteConnection(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      deleteConnectionOperationSpec);
+      deleteConnectionOperationSpec,
+      callback);
   }
-  // methods on the client.
 
   /**
    * @summary Get connection versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetConnectionVersionsResponse>
    */
-  getConnectionVersionsWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.Connection[]>> {
+  getConnectionVersions(id: string, options?: msRest.RequestOptionsBase): Promise<Models.GetConnectionVersionsResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  getConnectionVersions(id: string, callback: msRest.ServiceCallback<Models.Connection[]>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getConnectionVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.Connection[]>): void;
+  getConnectionVersions(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.Connection[]>, callback?: msRest.ServiceCallback<Models.Connection[]>): Promise<Models.GetConnectionVersionsResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      getConnectionVersionsOperationSpec);
+      getConnectionVersionsOperationSpec,
+      callback) as Promise<Models.GetConnectionVersionsResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Get all flows.
-   *
-   * @param {MetabaseApiGetAllFlowsOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetAllFlowsResponse>
    */
-  getAllFlowsWithHttpOperationResponse(options?: Models.MetabaseApiGetAllFlowsOptionalParams): Promise<msRest.HttpOperationResponse<Models.Flow[]>> {
+  getAllFlows(options?: Models.MetabaseApiGetAllFlowsOptionalParams): Promise<Models.GetAllFlowsResponse>;
+  /**
+   * @param callback The callback
+   */
+  getAllFlows(callback: msRest.ServiceCallback<Models.Flow[]>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getAllFlows(options: Models.MetabaseApiGetAllFlowsOptionalParams, callback: msRest.ServiceCallback<Models.Flow[]>): void;
+  getAllFlows(options?: Models.MetabaseApiGetAllFlowsOptionalParams | msRest.ServiceCallback<Models.Flow[]>, callback?: msRest.ServiceCallback<Models.Flow[]>): Promise<Models.GetAllFlowsResponse> {
     return this.sendOperationRequest(
       {
         options
       },
-      getAllFlowsOperationSpec);
+      getAllFlowsOperationSpec,
+      callback) as Promise<Models.GetAllFlowsResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Create flow.
-   *
-   * @param {Flow} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param input
+   * @param [options] The optional parameters
+   * @returns Promise<Models.CreateFlowResponse>
    */
-  createFlowWithHttpOperationResponse(input: Models.Flow, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
+  createFlow(input: Models.Flow, options?: msRest.RequestOptionsBase): Promise<Models.CreateFlowResponse>;
+  /**
+   * @param input
+   * @param callback The callback
+   */
+  createFlow(input: Models.Flow, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param input
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  createFlow(input: Models.Flow, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
+  createFlow(input: Models.Flow, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.CreateFlowResponse> {
     return this.sendOperationRequest(
       {
         input,
         options
       },
-      createFlowOperationSpec);
+      createFlowOperationSpec,
+      callback) as Promise<Models.CreateFlowResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Get one flow.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneFlowOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetOneFlowResponse>
    */
-  getOneFlowWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetOneFlowOptionalParams): Promise<msRest.HttpOperationResponse<Models.Flow>> {
+  getOneFlow(id: string, options?: Models.MetabaseApiGetOneFlowOptionalParams): Promise<Models.GetOneFlowResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  getOneFlow(id: string, callback: msRest.ServiceCallback<Models.Flow>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getOneFlow(id: string, options: Models.MetabaseApiGetOneFlowOptionalParams, callback: msRest.ServiceCallback<Models.Flow>): void;
+  getOneFlow(id: string, options?: Models.MetabaseApiGetOneFlowOptionalParams | msRest.ServiceCallback<Models.Flow>, callback?: msRest.ServiceCallback<Models.Flow>): Promise<Models.GetOneFlowResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      getOneFlowOperationSpec);
+      getOneFlowOperationSpec,
+      callback) as Promise<Models.GetOneFlowResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Update flow.
-   *
-   * @param {string} id
-   *
-   * @param {Flow} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param model
+   * @param [options] The optional parameters
+   * @returns Promise<Models.UpdateFlowResponse>
    */
-  updateFlowWithHttpOperationResponse(id: string, model: Models.Flow, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
+  updateFlow(id: string, model: Models.Flow, options?: msRest.RequestOptionsBase): Promise<Models.UpdateFlowResponse>;
+  /**
+   * @param id
+   * @param model
+   * @param callback The callback
+   */
+  updateFlow(id: string, model: Models.Flow, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param id
+   * @param model
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  updateFlow(id: string, model: Models.Flow, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
+  updateFlow(id: string, model: Models.Flow, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.UpdateFlowResponse> {
     return this.sendOperationRequest(
       {
         id,
         model,
         options
       },
-      updateFlowOperationSpec);
+      updateFlowOperationSpec,
+      callback) as Promise<Models.UpdateFlowResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Delete flow.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  deleteFlowWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
+  deleteFlow(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  deleteFlow(id: string, callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  deleteFlow(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
+  deleteFlow(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      deleteFlowOperationSpec);
+      deleteFlowOperationSpec,
+      callback);
   }
-  // methods on the client.
 
   /**
    * @summary Get flow versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetFlowVersionsResponse>
    */
-  getFlowVersionsWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.Flow[]>> {
+  getFlowVersions(id: string, options?: msRest.RequestOptionsBase): Promise<Models.GetFlowVersionsResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  getFlowVersions(id: string, callback: msRest.ServiceCallback<Models.Flow[]>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getFlowVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.Flow[]>): void;
+  getFlowVersions(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.Flow[]>, callback?: msRest.ServiceCallback<Models.Flow[]>): Promise<Models.GetFlowVersionsResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      getFlowVersionsOperationSpec);
+      getFlowVersionsOperationSpec,
+      callback) as Promise<Models.GetFlowVersionsResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Get job mapping.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetJobMappingOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetJobMappingResponse>
    */
-  getJobMappingWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetJobMappingOptionalParams): Promise<msRest.HttpOperationResponse<Models.Mapping>> {
+  getJobMapping(id: string, options?: Models.MetabaseApiGetJobMappingOptionalParams): Promise<Models.GetJobMappingResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
+  getJobMapping(id: string, callback: msRest.ServiceCallback<Models.Mapping>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  getJobMapping(id: string, options: Models.MetabaseApiGetJobMappingOptionalParams, callback: msRest.ServiceCallback<Models.Mapping>): void;
+  getJobMapping(id: string, options?: Models.MetabaseApiGetJobMappingOptionalParams | msRest.ServiceCallback<Models.Mapping>, callback?: msRest.ServiceCallback<Models.Mapping>): Promise<Models.GetJobMappingResponse> {
     return this.sendOperationRequest(
       {
         id,
         options
       },
-      getJobMappingOperationSpec);
+      getJobMappingOperationSpec,
+      callback) as Promise<Models.GetJobMappingResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Set job status for go between.
-   *
-   * @param {string} id
-   *
-   * @param {JobStatusGoBetweenScope} status
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param status
+   * @param [options] The optional parameters
+   * @returns Promise<Models.SetJobStatusForGoBetweenResponse>
    */
-  setJobStatusForGoBetweenWithHttpOperationResponse(id: string, status: Models.JobStatusGoBetweenScope, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<{ [propertyName: string]: string[] }>> {
+  setJobStatusForGoBetween(id: string, status: Models.JobStatusGoBetweenScope, options?: msRest.RequestOptionsBase): Promise<Models.SetJobStatusForGoBetweenResponse>;
+  /**
+   * @param id
+   * @param status
+   * @param callback The callback
+   */
+  setJobStatusForGoBetween(id: string, status: Models.JobStatusGoBetweenScope, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
+  /**
+   * @param id
+   * @param status
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  setJobStatusForGoBetween(id: string, status: Models.JobStatusGoBetweenScope, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
+  setJobStatusForGoBetween(id: string, status: Models.JobStatusGoBetweenScope, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<{ [propertyName: string]: string[] }>, callback?: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): Promise<Models.SetJobStatusForGoBetweenResponse> {
     return this.sendOperationRequest(
       {
         id,
         status,
         options
       },
-      setJobStatusForGoBetweenOperationSpec);
+      setJobStatusForGoBetweenOperationSpec,
+      callback) as Promise<Models.SetJobStatusForGoBetweenResponse>;
   }
-  // methods on the client.
 
   /**
    * @summary Set real time state.
-   *
-   * @param {string} id
-   *
-   * @param {RealTimeStateScope} state
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
+   * @param id
+   * @param state
+   * @param [options] The optional parameters
+   * @returns Promise<Models.SetRealTimeStateResponse>
    */
-  setRealTimeStateWithHttpOperationResponse(id: string, state: Models.RealTimeStateScope, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<{ [propertyName: string]: string[] }>> {
+  setRealTimeState(id: string, state: Models.RealTimeStateScope, options?: msRest.RequestOptionsBase): Promise<Models.SetRealTimeStateResponse>;
+  /**
+   * @param id
+   * @param state
+   * @param callback The callback
+   */
+  setRealTimeState(id: string, state: Models.RealTimeStateScope, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
+  /**
+   * @param id
+   * @param state
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  setRealTimeState(id: string, state: Models.RealTimeStateScope, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
+  setRealTimeState(id: string, state: Models.RealTimeStateScope, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<{ [propertyName: string]: string[] }>, callback?: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): Promise<Models.SetRealTimeStateResponse> {
     return this.sendOperationRequest(
       {
         id,
         state,
         options
       },
-      setRealTimeStateOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get all jobs.
-   *
-   * @param {MetabaseApiGetAllJobsOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getAllJobsWithHttpOperationResponse(options?: Models.MetabaseApiGetAllJobsOptionalParams): Promise<msRest.HttpOperationResponse<Models.Job[]>> {
-    return this.sendOperationRequest(
-      {
-        options
-      },
-      getAllJobsOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Create job.
-   *
-   * @param {Job} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  createJobWithHttpOperationResponse(input: Models.Job, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
-    return this.sendOperationRequest(
-      {
-        input,
-        options
-      },
-      createJobOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get paged statuses for job.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetPagedStatusesForJobOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getPagedStatusesForJobWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetPagedStatusesForJobOptionalParams): Promise<msRest.HttpOperationResponse<Models.PagedResultOfJobStatus>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      getPagedStatusesForJobOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Events placeholder for job.
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  eventsPlaceholderForJobWithHttpOperationResponse(options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.DataflowEvent>> {
-    return this.sendOperationRequest(
-      {
-        options
-      },
-      eventsPlaceholderForJobOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get one job.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneJobOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getOneJobWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetOneJobOptionalParams): Promise<msRest.HttpOperationResponse<Models.Job>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      getOneJobOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Update job.
-   *
-   * @param {string} id
-   *
-   * @param {Job} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  updateJobWithHttpOperationResponse(id: string, model: Models.Job, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        model,
-        options
-      },
-      updateJobOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Delete job.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  deleteJobWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      deleteJobOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get job versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getJobVersionsWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.Job[]>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      getJobVersionsOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get all schema profiles.
-   *
-   * @param {MetabaseApiGetAllSchemaProfilesOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getAllSchemaProfilesWithHttpOperationResponse(options?: Models.MetabaseApiGetAllSchemaProfilesOptionalParams): Promise<msRest.HttpOperationResponse<Models.SchemaProfile[]>> {
-    return this.sendOperationRequest(
-      {
-        options
-      },
-      getAllSchemaProfilesOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Create schema profile.
-   *
-   * @param {SchemaProfile} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  createSchemaProfileWithHttpOperationResponse(input: Models.SchemaProfile, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
-    return this.sendOperationRequest(
-      {
-        input,
-        options
-      },
-      createSchemaProfileOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get one schema profile.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneSchemaProfileOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getOneSchemaProfileWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetOneSchemaProfileOptionalParams): Promise<msRest.HttpOperationResponse<Models.SchemaProfile>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      getOneSchemaProfileOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Update schema profile.
-   *
-   * @param {string} id
-   *
-   * @param {SchemaProfile} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  updateSchemaProfileWithHttpOperationResponse(id: string, model: Models.SchemaProfile, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        model,
-        options
-      },
-      updateSchemaProfileOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Delete schema profile.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  deleteSchemaProfileWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      deleteSchemaProfileOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get schema profile versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getSchemaProfileVersionsWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.SchemaProfile[]>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      getSchemaProfileVersionsOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get all schemas.
-   *
-   * @param {MetabaseApiGetAllSchemasOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getAllSchemasWithHttpOperationResponse(options?: Models.MetabaseApiGetAllSchemasOptionalParams): Promise<msRest.HttpOperationResponse<Models.Schema[]>> {
-    return this.sendOperationRequest(
-      {
-        options
-      },
-      getAllSchemasOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Create schema.
-   *
-   * @param {Schema} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  createSchemaWithHttpOperationResponse(input: Models.Schema, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
-    return this.sendOperationRequest(
-      {
-        input,
-        options
-      },
-      createSchemaOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get one schema.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneSchemaOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getOneSchemaWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetOneSchemaOptionalParams): Promise<msRest.HttpOperationResponse<Models.Schema>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      getOneSchemaOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Update schema.
-   *
-   * @param {string} id
-   *
-   * @param {Schema} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  updateSchemaWithHttpOperationResponse(id: string, model: Models.Schema, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        model,
-        options
-      },
-      updateSchemaOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Delete schema.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  deleteSchemaWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      deleteSchemaOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get schema versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getSchemaVersionsWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.Schema[]>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      getSchemaVersionsOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get all shapes.
-   *
-   * @param {MetabaseApiGetAllShapesOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getAllShapesWithHttpOperationResponse(options?: Models.MetabaseApiGetAllShapesOptionalParams): Promise<msRest.HttpOperationResponse<Models.Shape[]>> {
-    return this.sendOperationRequest(
-      {
-        options
-      },
-      getAllShapesOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Create shape.
-   *
-   * @param {Shape} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  createShapeWithHttpOperationResponse(input: Models.Shape, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
-    return this.sendOperationRequest(
-      {
-        input,
-        options
-      },
-      createShapeOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get one shape.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneShapeOptionalParams} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getOneShapeWithHttpOperationResponse(id: string, options?: Models.MetabaseApiGetOneShapeOptionalParams): Promise<msRest.HttpOperationResponse<Models.Shape>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      getOneShapeOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Update shape.
-   *
-   * @param {string} id
-   *
-   * @param {Shape} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  updateShapeWithHttpOperationResponse(id: string, model: Models.Shape, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<any>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        model,
-        options
-      },
-      updateShapeOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Delete shape.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  deleteShapeWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<void>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      deleteShapeOperationSpec);
-  }
-  // methods on the client.
-
-  /**
-   * @summary Get shape versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse} The deserialized result object.
-   *
-   * @reject {Error|ServiceError} The error object.
-   */
-  getShapeVersionsWithHttpOperationResponse(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.HttpOperationResponse<Models.Shape[]>> {
-    return this.sendOperationRequest(
-      {
-        id,
-        options
-      },
-      getShapeVersionsOperationSpec);
-  }
-
-  /**
-   * @summary Set batch status for go between batch.
-   *
-   * @param {string} id
-   *
-   * @param {BatchStatusGoBetweenScope} status
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {{ [propertyName: string]: string[] }} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  setBatchStatusForGoBetweenBatch(id: string, status: Models.BatchStatusGoBetweenScope): Promise<{ [propertyName: string]: string[] }>;
-  setBatchStatusForGoBetweenBatch(id: string, status: Models.BatchStatusGoBetweenScope, options: msRest.RequestOptionsBase): Promise<{ [propertyName: string]: string[] }>;
-  setBatchStatusForGoBetweenBatch(id: string, status: Models.BatchStatusGoBetweenScope, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
-  setBatchStatusForGoBetweenBatch(id: string, status: Models.BatchStatusGoBetweenScope, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
-  setBatchStatusForGoBetweenBatch(id: string, status: Models.BatchStatusGoBetweenScope, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): any {
-    return msRest.responseToBody(this.setBatchStatusForGoBetweenBatchWithHttpOperationResponse.bind(this), id, status, options, callback);
-  }
-
-  /**
-   * @summary Get paged statuses for batch.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetPagedStatusesForBatchOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.PagedResultOfBatchStatus} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.PagedResultOfBatchStatus} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getPagedStatusesForBatch(id: string): Promise<Models.PagedResultOfBatchStatus>;
-  getPagedStatusesForBatch(id: string, options: Models.MetabaseApiGetPagedStatusesForBatchOptionalParams): Promise<Models.PagedResultOfBatchStatus>;
-  getPagedStatusesForBatch(id: string, callback: msRest.ServiceCallback<Models.PagedResultOfBatchStatus>): void;
-  getPagedStatusesForBatch(id: string, options: Models.MetabaseApiGetPagedStatusesForBatchOptionalParams, callback: msRest.ServiceCallback<Models.PagedResultOfBatchStatus>): void;
-  getPagedStatusesForBatch(id: string, options?: Models.MetabaseApiGetPagedStatusesForBatchOptionalParams, callback?: msRest.ServiceCallback<Models.PagedResultOfBatchStatus>): any {
-    return msRest.responseToBody(this.getPagedStatusesForBatchWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Events placeholder for batch.
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.DataflowEvent} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.DataflowEvent} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  eventsPlaceholderForBatch(): Promise<Models.DataflowEvent>;
-  eventsPlaceholderForBatch(options: msRest.RequestOptionsBase): Promise<Models.DataflowEvent>;
-  eventsPlaceholderForBatch(callback: msRest.ServiceCallback<Models.DataflowEvent>): void;
-  eventsPlaceholderForBatch(options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.DataflowEvent>): void;
-  eventsPlaceholderForBatch(options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.DataflowEvent>): any {
-    return msRest.responseToBody(this.eventsPlaceholderForBatchWithHttpOperationResponse.bind(this), options, callback);
-  }
-
-  /**
-   * @summary Get all batches.
-   *
-   * @param {MetabaseApiGetAllBatchesOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Batch[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getAllBatches(): Promise<Models.Batch[]>;
-  getAllBatches(options: Models.MetabaseApiGetAllBatchesOptionalParams): Promise<Models.Batch[]>;
-  getAllBatches(callback: msRest.ServiceCallback<Models.Batch[]>): void;
-  getAllBatches(options: Models.MetabaseApiGetAllBatchesOptionalParams, callback: msRest.ServiceCallback<Models.Batch[]>): void;
-  getAllBatches(options?: Models.MetabaseApiGetAllBatchesOptionalParams, callback?: msRest.ServiceCallback<Models.Batch[]>): any {
-    return msRest.responseToBody(this.getAllBatchesWithHttpOperationResponse.bind(this), options, callback);
-  }
-
-  /**
-   * @summary Create batch.
-   *
-   * @param {Batch} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  createBatch(input: Models.Batch): Promise<any>;
-  createBatch(input: Models.Batch, options: msRest.RequestOptionsBase): Promise<any>;
-  createBatch(input: Models.Batch, callback: msRest.ServiceCallback<any>): void;
-  createBatch(input: Models.Batch, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  createBatch(input: Models.Batch, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.createBatchWithHttpOperationResponse.bind(this), input, options, callback);
-  }
-
-  /**
-   * @summary Get one batch.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneBatchOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Batch} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.Batch} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getOneBatch(id: string): Promise<Models.Batch>;
-  getOneBatch(id: string, options: Models.MetabaseApiGetOneBatchOptionalParams): Promise<Models.Batch>;
-  getOneBatch(id: string, callback: msRest.ServiceCallback<Models.Batch>): void;
-  getOneBatch(id: string, options: Models.MetabaseApiGetOneBatchOptionalParams, callback: msRest.ServiceCallback<Models.Batch>): void;
-  getOneBatch(id: string, options?: Models.MetabaseApiGetOneBatchOptionalParams, callback?: msRest.ServiceCallback<Models.Batch>): any {
-    return msRest.responseToBody(this.getOneBatchWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Update batch.
-   *
-   * @param {string} id
-   *
-   * @param {Batch} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  updateBatch(id: string, model: Models.Batch): Promise<any>;
-  updateBatch(id: string, model: Models.Batch, options: msRest.RequestOptionsBase): Promise<any>;
-  updateBatch(id: string, model: Models.Batch, callback: msRest.ServiceCallback<any>): void;
-  updateBatch(id: string, model: Models.Batch, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  updateBatch(id: string, model: Models.Batch, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.updateBatchWithHttpOperationResponse.bind(this), id, model, options, callback);
-  }
-
-  /**
-   * @summary Delete batch.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  deleteBatch(id: string): Promise<void>;
-  deleteBatch(id: string, options: msRest.RequestOptionsBase): Promise<void>;
-  deleteBatch(id: string, callback: msRest.ServiceCallback<void>): void;
-  deleteBatch(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  deleteBatch(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.deleteBatchWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Get batch versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Batch[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getBatchVersions(id: string): Promise<Models.Batch[]>;
-  getBatchVersions(id: string, options: msRest.RequestOptionsBase): Promise<Models.Batch[]>;
-  getBatchVersions(id: string, callback: msRest.ServiceCallback<Models.Batch[]>): void;
-  getBatchVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.Batch[]>): void;
-  getBatchVersions(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.Batch[]>): any {
-    return msRest.responseToBody(this.getBatchVersionsWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Get all connections.
-   *
-   * @param {MetabaseApiGetAllConnectionsOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Connection[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getAllConnections(): Promise<Models.Connection[]>;
-  getAllConnections(options: Models.MetabaseApiGetAllConnectionsOptionalParams): Promise<Models.Connection[]>;
-  getAllConnections(callback: msRest.ServiceCallback<Models.Connection[]>): void;
-  getAllConnections(options: Models.MetabaseApiGetAllConnectionsOptionalParams, callback: msRest.ServiceCallback<Models.Connection[]>): void;
-  getAllConnections(options?: Models.MetabaseApiGetAllConnectionsOptionalParams, callback?: msRest.ServiceCallback<Models.Connection[]>): any {
-    return msRest.responseToBody(this.getAllConnectionsWithHttpOperationResponse.bind(this), options, callback);
-  }
-
-  /**
-   * @summary Create connection.
-   *
-   * @param {Connection} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  createConnection(input: Models.Connection): Promise<any>;
-  createConnection(input: Models.Connection, options: msRest.RequestOptionsBase): Promise<any>;
-  createConnection(input: Models.Connection, callback: msRest.ServiceCallback<any>): void;
-  createConnection(input: Models.Connection, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  createConnection(input: Models.Connection, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.createConnectionWithHttpOperationResponse.bind(this), input, options, callback);
-  }
-
-  /**
-   * @summary Get one connection.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneConnectionOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Connection} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.Connection} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getOneConnection(id: string): Promise<Models.Connection>;
-  getOneConnection(id: string, options: Models.MetabaseApiGetOneConnectionOptionalParams): Promise<Models.Connection>;
-  getOneConnection(id: string, callback: msRest.ServiceCallback<Models.Connection>): void;
-  getOneConnection(id: string, options: Models.MetabaseApiGetOneConnectionOptionalParams, callback: msRest.ServiceCallback<Models.Connection>): void;
-  getOneConnection(id: string, options?: Models.MetabaseApiGetOneConnectionOptionalParams, callback?: msRest.ServiceCallback<Models.Connection>): any {
-    return msRest.responseToBody(this.getOneConnectionWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Update connection.
-   *
-   * @param {string} id
-   *
-   * @param {Connection} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  updateConnection(id: string, model: Models.Connection): Promise<any>;
-  updateConnection(id: string, model: Models.Connection, options: msRest.RequestOptionsBase): Promise<any>;
-  updateConnection(id: string, model: Models.Connection, callback: msRest.ServiceCallback<any>): void;
-  updateConnection(id: string, model: Models.Connection, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  updateConnection(id: string, model: Models.Connection, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.updateConnectionWithHttpOperationResponse.bind(this), id, model, options, callback);
-  }
-
-  /**
-   * @summary Delete connection.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  deleteConnection(id: string): Promise<void>;
-  deleteConnection(id: string, options: msRest.RequestOptionsBase): Promise<void>;
-  deleteConnection(id: string, callback: msRest.ServiceCallback<void>): void;
-  deleteConnection(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  deleteConnection(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.deleteConnectionWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Get connection versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Connection[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getConnectionVersions(id: string): Promise<Models.Connection[]>;
-  getConnectionVersions(id: string, options: msRest.RequestOptionsBase): Promise<Models.Connection[]>;
-  getConnectionVersions(id: string, callback: msRest.ServiceCallback<Models.Connection[]>): void;
-  getConnectionVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.Connection[]>): void;
-  getConnectionVersions(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.Connection[]>): any {
-    return msRest.responseToBody(this.getConnectionVersionsWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Get all flows.
-   *
-   * @param {MetabaseApiGetAllFlowsOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Flow[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getAllFlows(): Promise<Models.Flow[]>;
-  getAllFlows(options: Models.MetabaseApiGetAllFlowsOptionalParams): Promise<Models.Flow[]>;
-  getAllFlows(callback: msRest.ServiceCallback<Models.Flow[]>): void;
-  getAllFlows(options: Models.MetabaseApiGetAllFlowsOptionalParams, callback: msRest.ServiceCallback<Models.Flow[]>): void;
-  getAllFlows(options?: Models.MetabaseApiGetAllFlowsOptionalParams, callback?: msRest.ServiceCallback<Models.Flow[]>): any {
-    return msRest.responseToBody(this.getAllFlowsWithHttpOperationResponse.bind(this), options, callback);
-  }
-
-  /**
-   * @summary Create flow.
-   *
-   * @param {Flow} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  createFlow(input: Models.Flow): Promise<any>;
-  createFlow(input: Models.Flow, options: msRest.RequestOptionsBase): Promise<any>;
-  createFlow(input: Models.Flow, callback: msRest.ServiceCallback<any>): void;
-  createFlow(input: Models.Flow, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  createFlow(input: Models.Flow, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.createFlowWithHttpOperationResponse.bind(this), input, options, callback);
-  }
-
-  /**
-   * @summary Get one flow.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneFlowOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Flow} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.Flow} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getOneFlow(id: string): Promise<Models.Flow>;
-  getOneFlow(id: string, options: Models.MetabaseApiGetOneFlowOptionalParams): Promise<Models.Flow>;
-  getOneFlow(id: string, callback: msRest.ServiceCallback<Models.Flow>): void;
-  getOneFlow(id: string, options: Models.MetabaseApiGetOneFlowOptionalParams, callback: msRest.ServiceCallback<Models.Flow>): void;
-  getOneFlow(id: string, options?: Models.MetabaseApiGetOneFlowOptionalParams, callback?: msRest.ServiceCallback<Models.Flow>): any {
-    return msRest.responseToBody(this.getOneFlowWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Update flow.
-   *
-   * @param {string} id
-   *
-   * @param {Flow} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  updateFlow(id: string, model: Models.Flow): Promise<any>;
-  updateFlow(id: string, model: Models.Flow, options: msRest.RequestOptionsBase): Promise<any>;
-  updateFlow(id: string, model: Models.Flow, callback: msRest.ServiceCallback<any>): void;
-  updateFlow(id: string, model: Models.Flow, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  updateFlow(id: string, model: Models.Flow, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.updateFlowWithHttpOperationResponse.bind(this), id, model, options, callback);
-  }
-
-  /**
-   * @summary Delete flow.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  deleteFlow(id: string): Promise<void>;
-  deleteFlow(id: string, options: msRest.RequestOptionsBase): Promise<void>;
-  deleteFlow(id: string, callback: msRest.ServiceCallback<void>): void;
-  deleteFlow(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  deleteFlow(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.deleteFlowWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Get flow versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Flow[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getFlowVersions(id: string): Promise<Models.Flow[]>;
-  getFlowVersions(id: string, options: msRest.RequestOptionsBase): Promise<Models.Flow[]>;
-  getFlowVersions(id: string, callback: msRest.ServiceCallback<Models.Flow[]>): void;
-  getFlowVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.Flow[]>): void;
-  getFlowVersions(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.Flow[]>): any {
-    return msRest.responseToBody(this.getFlowVersionsWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Get job mapping.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetJobMappingOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Mapping} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.Mapping} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  getJobMapping(id: string): Promise<Models.Mapping>;
-  getJobMapping(id: string, options: Models.MetabaseApiGetJobMappingOptionalParams): Promise<Models.Mapping>;
-  getJobMapping(id: string, callback: msRest.ServiceCallback<Models.Mapping>): void;
-  getJobMapping(id: string, options: Models.MetabaseApiGetJobMappingOptionalParams, callback: msRest.ServiceCallback<Models.Mapping>): void;
-  getJobMapping(id: string, options?: Models.MetabaseApiGetJobMappingOptionalParams, callback?: msRest.ServiceCallback<Models.Mapping>): any {
-    return msRest.responseToBody(this.getJobMappingWithHttpOperationResponse.bind(this), id, options, callback);
-  }
-
-  /**
-   * @summary Set job status for go between.
-   *
-   * @param {string} id
-   *
-   * @param {JobStatusGoBetweenScope} status
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {{ [propertyName: string]: string[] }} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  setJobStatusForGoBetween(id: string, status: Models.JobStatusGoBetweenScope): Promise<{ [propertyName: string]: string[] }>;
-  setJobStatusForGoBetween(id: string, status: Models.JobStatusGoBetweenScope, options: msRest.RequestOptionsBase): Promise<{ [propertyName: string]: string[] }>;
-  setJobStatusForGoBetween(id: string, status: Models.JobStatusGoBetweenScope, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
-  setJobStatusForGoBetween(id: string, status: Models.JobStatusGoBetweenScope, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
-  setJobStatusForGoBetween(id: string, status: Models.JobStatusGoBetweenScope, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): any {
-    return msRest.responseToBody(this.setJobStatusForGoBetweenWithHttpOperationResponse.bind(this), id, status, options, callback);
-  }
-
-  /**
-   * @summary Set real time state.
-   *
-   * @param {string} id
-   *
-   * @param {RealTimeStateScope} state
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {{ [propertyName: string]: string[] }} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
-   */
-  setRealTimeState(id: string, state: Models.RealTimeStateScope): Promise<{ [propertyName: string]: string[] }>;
-  setRealTimeState(id: string, state: Models.RealTimeStateScope, options: msRest.RequestOptionsBase): Promise<{ [propertyName: string]: string[] }>;
-  setRealTimeState(id: string, state: Models.RealTimeStateScope, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
-  setRealTimeState(id: string, state: Models.RealTimeStateScope, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): void;
-  setRealTimeState(id: string, state: Models.RealTimeStateScope, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<{ [propertyName: string]: string[] }>): any {
-    return msRest.responseToBody(this.setRealTimeStateWithHttpOperationResponse.bind(this), id, state, options, callback);
+      setRealTimeStateOperationSpec,
+      callback) as Promise<Models.SetRealTimeStateResponse>;
   }
 
   /**
    * @summary Get all jobs.
-   *
-   * @param {MetabaseApiGetAllJobsOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Job[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetAllJobsResponse>
    */
-  getAllJobs(): Promise<Models.Job[]>;
-  getAllJobs(options: Models.MetabaseApiGetAllJobsOptionalParams): Promise<Models.Job[]>;
+  getAllJobs(options?: Models.MetabaseApiGetAllJobsOptionalParams): Promise<Models.GetAllJobsResponse>;
+  /**
+   * @param callback The callback
+   */
   getAllJobs(callback: msRest.ServiceCallback<Models.Job[]>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getAllJobs(options: Models.MetabaseApiGetAllJobsOptionalParams, callback: msRest.ServiceCallback<Models.Job[]>): void;
-  getAllJobs(options?: Models.MetabaseApiGetAllJobsOptionalParams, callback?: msRest.ServiceCallback<Models.Job[]>): any {
-    return msRest.responseToBody(this.getAllJobsWithHttpOperationResponse.bind(this), options, callback);
+  getAllJobs(options?: Models.MetabaseApiGetAllJobsOptionalParams | msRest.ServiceCallback<Models.Job[]>, callback?: msRest.ServiceCallback<Models.Job[]>): Promise<Models.GetAllJobsResponse> {
+    return this.sendOperationRequest(
+      {
+        options
+      },
+      getAllJobsOperationSpec,
+      callback) as Promise<Models.GetAllJobsResponse>;
   }
 
   /**
    * @summary Create job.
-   *
-   * @param {Job} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param input
+   * @param [options] The optional parameters
+   * @returns Promise<Models.CreateJobResponse>
    */
-  createJob(input: Models.Job): Promise<any>;
-  createJob(input: Models.Job, options: msRest.RequestOptionsBase): Promise<any>;
+  createJob(input: Models.Job, options?: msRest.RequestOptionsBase): Promise<Models.CreateJobResponse>;
+  /**
+   * @param input
+   * @param callback The callback
+   */
   createJob(input: Models.Job, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param input
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   createJob(input: Models.Job, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  createJob(input: Models.Job, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.createJobWithHttpOperationResponse.bind(this), input, options, callback);
+  createJob(input: Models.Job, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.CreateJobResponse> {
+    return this.sendOperationRequest(
+      {
+        input,
+        options
+      },
+      createJobOperationSpec,
+      callback) as Promise<Models.CreateJobResponse>;
   }
 
   /**
    * @summary Get paged statuses for job.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetPagedStatusesForJobOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.PagedResultOfJobStatus} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.PagedResultOfJobStatus} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetPagedStatusesForJobResponse>
    */
-  getPagedStatusesForJob(id: string): Promise<Models.PagedResultOfJobStatus>;
-  getPagedStatusesForJob(id: string, options: Models.MetabaseApiGetPagedStatusesForJobOptionalParams): Promise<Models.PagedResultOfJobStatus>;
+  getPagedStatusesForJob(id: string, options?: Models.MetabaseApiGetPagedStatusesForJobOptionalParams): Promise<Models.GetPagedStatusesForJobResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   getPagedStatusesForJob(id: string, callback: msRest.ServiceCallback<Models.PagedResultOfJobStatus>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getPagedStatusesForJob(id: string, options: Models.MetabaseApiGetPagedStatusesForJobOptionalParams, callback: msRest.ServiceCallback<Models.PagedResultOfJobStatus>): void;
-  getPagedStatusesForJob(id: string, options?: Models.MetabaseApiGetPagedStatusesForJobOptionalParams, callback?: msRest.ServiceCallback<Models.PagedResultOfJobStatus>): any {
-    return msRest.responseToBody(this.getPagedStatusesForJobWithHttpOperationResponse.bind(this), id, options, callback);
+  getPagedStatusesForJob(id: string, options?: Models.MetabaseApiGetPagedStatusesForJobOptionalParams | msRest.ServiceCallback<Models.PagedResultOfJobStatus>, callback?: msRest.ServiceCallback<Models.PagedResultOfJobStatus>): Promise<Models.GetPagedStatusesForJobResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      getPagedStatusesForJobOperationSpec,
+      callback) as Promise<Models.GetPagedStatusesForJobResponse>;
   }
 
   /**
    * @summary Events placeholder for job.
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.DataflowEvent} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.DataflowEvent} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.EventsPlaceholderForJobResponse>
    */
-  eventsPlaceholderForJob(): Promise<Models.DataflowEvent>;
-  eventsPlaceholderForJob(options: msRest.RequestOptionsBase): Promise<Models.DataflowEvent>;
+  eventsPlaceholderForJob(options?: msRest.RequestOptionsBase): Promise<Models.EventsPlaceholderForJobResponse>;
+  /**
+   * @param callback The callback
+   */
   eventsPlaceholderForJob(callback: msRest.ServiceCallback<Models.DataflowEvent>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   eventsPlaceholderForJob(options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.DataflowEvent>): void;
-  eventsPlaceholderForJob(options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.DataflowEvent>): any {
-    return msRest.responseToBody(this.eventsPlaceholderForJobWithHttpOperationResponse.bind(this), options, callback);
+  eventsPlaceholderForJob(options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.DataflowEvent>, callback?: msRest.ServiceCallback<Models.DataflowEvent>): Promise<Models.EventsPlaceholderForJobResponse> {
+    return this.sendOperationRequest(
+      {
+        options
+      },
+      eventsPlaceholderForJobOperationSpec,
+      callback) as Promise<Models.EventsPlaceholderForJobResponse>;
   }
 
   /**
    * @summary Get one job.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneJobOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Job} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.Job} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetOneJobResponse>
    */
-  getOneJob(id: string): Promise<Models.Job>;
-  getOneJob(id: string, options: Models.MetabaseApiGetOneJobOptionalParams): Promise<Models.Job>;
+  getOneJob(id: string, options?: Models.MetabaseApiGetOneJobOptionalParams): Promise<Models.GetOneJobResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   getOneJob(id: string, callback: msRest.ServiceCallback<Models.Job>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getOneJob(id: string, options: Models.MetabaseApiGetOneJobOptionalParams, callback: msRest.ServiceCallback<Models.Job>): void;
-  getOneJob(id: string, options?: Models.MetabaseApiGetOneJobOptionalParams, callback?: msRest.ServiceCallback<Models.Job>): any {
-    return msRest.responseToBody(this.getOneJobWithHttpOperationResponse.bind(this), id, options, callback);
+  getOneJob(id: string, options?: Models.MetabaseApiGetOneJobOptionalParams | msRest.ServiceCallback<Models.Job>, callback?: msRest.ServiceCallback<Models.Job>): Promise<Models.GetOneJobResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      getOneJobOperationSpec,
+      callback) as Promise<Models.GetOneJobResponse>;
   }
 
   /**
    * @summary Update job.
-   *
-   * @param {string} id
-   *
-   * @param {Job} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param model
+   * @param [options] The optional parameters
+   * @returns Promise<Models.UpdateJobResponse>
    */
-  updateJob(id: string, model: Models.Job): Promise<any>;
-  updateJob(id: string, model: Models.Job, options: msRest.RequestOptionsBase): Promise<any>;
+  updateJob(id: string, model: Models.Job, options?: msRest.RequestOptionsBase): Promise<Models.UpdateJobResponse>;
+  /**
+   * @param id
+   * @param model
+   * @param callback The callback
+   */
   updateJob(id: string, model: Models.Job, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param id
+   * @param model
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   updateJob(id: string, model: Models.Job, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  updateJob(id: string, model: Models.Job, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.updateJobWithHttpOperationResponse.bind(this), id, model, options, callback);
+  updateJob(id: string, model: Models.Job, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.UpdateJobResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        model,
+        options
+      },
+      updateJobOperationSpec,
+      callback) as Promise<Models.UpdateJobResponse>;
   }
 
   /**
    * @summary Delete job.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  deleteJob(id: string): Promise<void>;
-  deleteJob(id: string, options: msRest.RequestOptionsBase): Promise<void>;
+  deleteJob(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   deleteJob(id: string, callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   deleteJob(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  deleteJob(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.deleteJobWithHttpOperationResponse.bind(this), id, options, callback);
+  deleteJob(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      deleteJobOperationSpec,
+      callback);
   }
 
   /**
    * @summary Get job versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Job[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetJobVersionsResponse>
    */
-  getJobVersions(id: string): Promise<Models.Job[]>;
-  getJobVersions(id: string, options: msRest.RequestOptionsBase): Promise<Models.Job[]>;
+  getJobVersions(id: string, options?: msRest.RequestOptionsBase): Promise<Models.GetJobVersionsResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   getJobVersions(id: string, callback: msRest.ServiceCallback<Models.Job[]>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getJobVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.Job[]>): void;
-  getJobVersions(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.Job[]>): any {
-    return msRest.responseToBody(this.getJobVersionsWithHttpOperationResponse.bind(this), id, options, callback);
+  getJobVersions(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.Job[]>, callback?: msRest.ServiceCallback<Models.Job[]>): Promise<Models.GetJobVersionsResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      getJobVersionsOperationSpec,
+      callback) as Promise<Models.GetJobVersionsResponse>;
   }
 
   /**
    * @summary Get all schema profiles.
-   *
-   * @param {MetabaseApiGetAllSchemaProfilesOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.SchemaProfile[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetAllSchemaProfilesResponse>
    */
-  getAllSchemaProfiles(): Promise<Models.SchemaProfile[]>;
-  getAllSchemaProfiles(options: Models.MetabaseApiGetAllSchemaProfilesOptionalParams): Promise<Models.SchemaProfile[]>;
+  getAllSchemaProfiles(options?: Models.MetabaseApiGetAllSchemaProfilesOptionalParams): Promise<Models.GetAllSchemaProfilesResponse>;
+  /**
+   * @param callback The callback
+   */
   getAllSchemaProfiles(callback: msRest.ServiceCallback<Models.SchemaProfile[]>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getAllSchemaProfiles(options: Models.MetabaseApiGetAllSchemaProfilesOptionalParams, callback: msRest.ServiceCallback<Models.SchemaProfile[]>): void;
-  getAllSchemaProfiles(options?: Models.MetabaseApiGetAllSchemaProfilesOptionalParams, callback?: msRest.ServiceCallback<Models.SchemaProfile[]>): any {
-    return msRest.responseToBody(this.getAllSchemaProfilesWithHttpOperationResponse.bind(this), options, callback);
+  getAllSchemaProfiles(options?: Models.MetabaseApiGetAllSchemaProfilesOptionalParams | msRest.ServiceCallback<Models.SchemaProfile[]>, callback?: msRest.ServiceCallback<Models.SchemaProfile[]>): Promise<Models.GetAllSchemaProfilesResponse> {
+    return this.sendOperationRequest(
+      {
+        options
+      },
+      getAllSchemaProfilesOperationSpec,
+      callback) as Promise<Models.GetAllSchemaProfilesResponse>;
   }
 
   /**
    * @summary Create schema profile.
-   *
-   * @param {SchemaProfile} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param input
+   * @param [options] The optional parameters
+   * @returns Promise<Models.CreateSchemaProfileResponse>
    */
-  createSchemaProfile(input: Models.SchemaProfile): Promise<any>;
-  createSchemaProfile(input: Models.SchemaProfile, options: msRest.RequestOptionsBase): Promise<any>;
+  createSchemaProfile(input: Models.SchemaProfile, options?: msRest.RequestOptionsBase): Promise<Models.CreateSchemaProfileResponse>;
+  /**
+   * @param input
+   * @param callback The callback
+   */
   createSchemaProfile(input: Models.SchemaProfile, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param input
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   createSchemaProfile(input: Models.SchemaProfile, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  createSchemaProfile(input: Models.SchemaProfile, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.createSchemaProfileWithHttpOperationResponse.bind(this), input, options, callback);
+  createSchemaProfile(input: Models.SchemaProfile, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.CreateSchemaProfileResponse> {
+    return this.sendOperationRequest(
+      {
+        input,
+        options
+      },
+      createSchemaProfileOperationSpec,
+      callback) as Promise<Models.CreateSchemaProfileResponse>;
   }
 
   /**
    * @summary Get one schema profile.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneSchemaProfileOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.SchemaProfile} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.SchemaProfile} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetOneSchemaProfileResponse>
    */
-  getOneSchemaProfile(id: string): Promise<Models.SchemaProfile>;
-  getOneSchemaProfile(id: string, options: Models.MetabaseApiGetOneSchemaProfileOptionalParams): Promise<Models.SchemaProfile>;
+  getOneSchemaProfile(id: string, options?: Models.MetabaseApiGetOneSchemaProfileOptionalParams): Promise<Models.GetOneSchemaProfileResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   getOneSchemaProfile(id: string, callback: msRest.ServiceCallback<Models.SchemaProfile>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getOneSchemaProfile(id: string, options: Models.MetabaseApiGetOneSchemaProfileOptionalParams, callback: msRest.ServiceCallback<Models.SchemaProfile>): void;
-  getOneSchemaProfile(id: string, options?: Models.MetabaseApiGetOneSchemaProfileOptionalParams, callback?: msRest.ServiceCallback<Models.SchemaProfile>): any {
-    return msRest.responseToBody(this.getOneSchemaProfileWithHttpOperationResponse.bind(this), id, options, callback);
+  getOneSchemaProfile(id: string, options?: Models.MetabaseApiGetOneSchemaProfileOptionalParams | msRest.ServiceCallback<Models.SchemaProfile>, callback?: msRest.ServiceCallback<Models.SchemaProfile>): Promise<Models.GetOneSchemaProfileResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      getOneSchemaProfileOperationSpec,
+      callback) as Promise<Models.GetOneSchemaProfileResponse>;
   }
 
   /**
    * @summary Update schema profile.
-   *
-   * @param {string} id
-   *
-   * @param {SchemaProfile} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param model
+   * @param [options] The optional parameters
+   * @returns Promise<Models.UpdateSchemaProfileResponse>
    */
-  updateSchemaProfile(id: string, model: Models.SchemaProfile): Promise<any>;
-  updateSchemaProfile(id: string, model: Models.SchemaProfile, options: msRest.RequestOptionsBase): Promise<any>;
+  updateSchemaProfile(id: string, model: Models.SchemaProfile, options?: msRest.RequestOptionsBase): Promise<Models.UpdateSchemaProfileResponse>;
+  /**
+   * @param id
+   * @param model
+   * @param callback The callback
+   */
   updateSchemaProfile(id: string, model: Models.SchemaProfile, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param id
+   * @param model
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   updateSchemaProfile(id: string, model: Models.SchemaProfile, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  updateSchemaProfile(id: string, model: Models.SchemaProfile, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.updateSchemaProfileWithHttpOperationResponse.bind(this), id, model, options, callback);
+  updateSchemaProfile(id: string, model: Models.SchemaProfile, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.UpdateSchemaProfileResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        model,
+        options
+      },
+      updateSchemaProfileOperationSpec,
+      callback) as Promise<Models.UpdateSchemaProfileResponse>;
   }
 
   /**
    * @summary Delete schema profile.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  deleteSchemaProfile(id: string): Promise<void>;
-  deleteSchemaProfile(id: string, options: msRest.RequestOptionsBase): Promise<void>;
+  deleteSchemaProfile(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   deleteSchemaProfile(id: string, callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   deleteSchemaProfile(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  deleteSchemaProfile(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.deleteSchemaProfileWithHttpOperationResponse.bind(this), id, options, callback);
+  deleteSchemaProfile(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      deleteSchemaProfileOperationSpec,
+      callback);
   }
 
   /**
    * @summary Get schema profile versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.SchemaProfile[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetSchemaProfileVersionsResponse>
    */
-  getSchemaProfileVersions(id: string): Promise<Models.SchemaProfile[]>;
-  getSchemaProfileVersions(id: string, options: msRest.RequestOptionsBase): Promise<Models.SchemaProfile[]>;
+  getSchemaProfileVersions(id: string, options?: msRest.RequestOptionsBase): Promise<Models.GetSchemaProfileVersionsResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   getSchemaProfileVersions(id: string, callback: msRest.ServiceCallback<Models.SchemaProfile[]>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getSchemaProfileVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.SchemaProfile[]>): void;
-  getSchemaProfileVersions(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.SchemaProfile[]>): any {
-    return msRest.responseToBody(this.getSchemaProfileVersionsWithHttpOperationResponse.bind(this), id, options, callback);
+  getSchemaProfileVersions(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.SchemaProfile[]>, callback?: msRest.ServiceCallback<Models.SchemaProfile[]>): Promise<Models.GetSchemaProfileVersionsResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      getSchemaProfileVersionsOperationSpec,
+      callback) as Promise<Models.GetSchemaProfileVersionsResponse>;
   }
 
   /**
    * @summary Get all schemas.
-   *
-   * @param {MetabaseApiGetAllSchemasOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Schema[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetAllSchemasResponse>
    */
-  getAllSchemas(): Promise<Models.Schema[]>;
-  getAllSchemas(options: Models.MetabaseApiGetAllSchemasOptionalParams): Promise<Models.Schema[]>;
+  getAllSchemas(options?: Models.MetabaseApiGetAllSchemasOptionalParams): Promise<Models.GetAllSchemasResponse>;
+  /**
+   * @param callback The callback
+   */
   getAllSchemas(callback: msRest.ServiceCallback<Models.Schema[]>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getAllSchemas(options: Models.MetabaseApiGetAllSchemasOptionalParams, callback: msRest.ServiceCallback<Models.Schema[]>): void;
-  getAllSchemas(options?: Models.MetabaseApiGetAllSchemasOptionalParams, callback?: msRest.ServiceCallback<Models.Schema[]>): any {
-    return msRest.responseToBody(this.getAllSchemasWithHttpOperationResponse.bind(this), options, callback);
+  getAllSchemas(options?: Models.MetabaseApiGetAllSchemasOptionalParams | msRest.ServiceCallback<Models.Schema[]>, callback?: msRest.ServiceCallback<Models.Schema[]>): Promise<Models.GetAllSchemasResponse> {
+    return this.sendOperationRequest(
+      {
+        options
+      },
+      getAllSchemasOperationSpec,
+      callback) as Promise<Models.GetAllSchemasResponse>;
   }
 
   /**
    * @summary Create schema.
-   *
-   * @param {Schema} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param input
+   * @param [options] The optional parameters
+   * @returns Promise<Models.CreateSchemaResponse>
    */
-  createSchema(input: Models.Schema): Promise<any>;
-  createSchema(input: Models.Schema, options: msRest.RequestOptionsBase): Promise<any>;
+  createSchema(input: Models.Schema, options?: msRest.RequestOptionsBase): Promise<Models.CreateSchemaResponse>;
+  /**
+   * @param input
+   * @param callback The callback
+   */
   createSchema(input: Models.Schema, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param input
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   createSchema(input: Models.Schema, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  createSchema(input: Models.Schema, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.createSchemaWithHttpOperationResponse.bind(this), input, options, callback);
+  createSchema(input: Models.Schema, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.CreateSchemaResponse> {
+    return this.sendOperationRequest(
+      {
+        input,
+        options
+      },
+      createSchemaOperationSpec,
+      callback) as Promise<Models.CreateSchemaResponse>;
   }
 
   /**
    * @summary Get one schema.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneSchemaOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Schema} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.Schema} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetOneSchemaResponse>
    */
-  getOneSchema(id: string): Promise<Models.Schema>;
-  getOneSchema(id: string, options: Models.MetabaseApiGetOneSchemaOptionalParams): Promise<Models.Schema>;
+  getOneSchema(id: string, options?: Models.MetabaseApiGetOneSchemaOptionalParams): Promise<Models.GetOneSchemaResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   getOneSchema(id: string, callback: msRest.ServiceCallback<Models.Schema>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getOneSchema(id: string, options: Models.MetabaseApiGetOneSchemaOptionalParams, callback: msRest.ServiceCallback<Models.Schema>): void;
-  getOneSchema(id: string, options?: Models.MetabaseApiGetOneSchemaOptionalParams, callback?: msRest.ServiceCallback<Models.Schema>): any {
-    return msRest.responseToBody(this.getOneSchemaWithHttpOperationResponse.bind(this), id, options, callback);
+  getOneSchema(id: string, options?: Models.MetabaseApiGetOneSchemaOptionalParams | msRest.ServiceCallback<Models.Schema>, callback?: msRest.ServiceCallback<Models.Schema>): Promise<Models.GetOneSchemaResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      getOneSchemaOperationSpec,
+      callback) as Promise<Models.GetOneSchemaResponse>;
   }
 
   /**
    * @summary Update schema.
-   *
-   * @param {string} id
-   *
-   * @param {Schema} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param model
+   * @param [options] The optional parameters
+   * @returns Promise<Models.UpdateSchemaResponse>
    */
-  updateSchema(id: string, model: Models.Schema): Promise<any>;
-  updateSchema(id: string, model: Models.Schema, options: msRest.RequestOptionsBase): Promise<any>;
+  updateSchema(id: string, model: Models.Schema, options?: msRest.RequestOptionsBase): Promise<Models.UpdateSchemaResponse>;
+  /**
+   * @param id
+   * @param model
+   * @param callback The callback
+   */
   updateSchema(id: string, model: Models.Schema, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param id
+   * @param model
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   updateSchema(id: string, model: Models.Schema, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  updateSchema(id: string, model: Models.Schema, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.updateSchemaWithHttpOperationResponse.bind(this), id, model, options, callback);
+  updateSchema(id: string, model: Models.Schema, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.UpdateSchemaResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        model,
+        options
+      },
+      updateSchemaOperationSpec,
+      callback) as Promise<Models.UpdateSchemaResponse>;
   }
 
   /**
    * @summary Delete schema.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  deleteSchema(id: string): Promise<void>;
-  deleteSchema(id: string, options: msRest.RequestOptionsBase): Promise<void>;
+  deleteSchema(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   deleteSchema(id: string, callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   deleteSchema(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  deleteSchema(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.deleteSchemaWithHttpOperationResponse.bind(this), id, options, callback);
+  deleteSchema(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      deleteSchemaOperationSpec,
+      callback);
   }
 
   /**
    * @summary Get schema versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Schema[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetSchemaVersionsResponse>
    */
-  getSchemaVersions(id: string): Promise<Models.Schema[]>;
-  getSchemaVersions(id: string, options: msRest.RequestOptionsBase): Promise<Models.Schema[]>;
+  getSchemaVersions(id: string, options?: msRest.RequestOptionsBase): Promise<Models.GetSchemaVersionsResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   getSchemaVersions(id: string, callback: msRest.ServiceCallback<Models.Schema[]>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getSchemaVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.Schema[]>): void;
-  getSchemaVersions(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.Schema[]>): any {
-    return msRest.responseToBody(this.getSchemaVersionsWithHttpOperationResponse.bind(this), id, options, callback);
+  getSchemaVersions(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.Schema[]>, callback?: msRest.ServiceCallback<Models.Schema[]>): Promise<Models.GetSchemaVersionsResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      getSchemaVersionsOperationSpec,
+      callback) as Promise<Models.GetSchemaVersionsResponse>;
   }
 
   /**
    * @summary Get all shapes.
-   *
-   * @param {MetabaseApiGetAllShapesOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Shape[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetAllShapesResponse>
    */
-  getAllShapes(): Promise<Models.Shape[]>;
-  getAllShapes(options: Models.MetabaseApiGetAllShapesOptionalParams): Promise<Models.Shape[]>;
+  getAllShapes(options?: Models.MetabaseApiGetAllShapesOptionalParams): Promise<Models.GetAllShapesResponse>;
+  /**
+   * @param callback The callback
+   */
   getAllShapes(callback: msRest.ServiceCallback<Models.Shape[]>): void;
+  /**
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getAllShapes(options: Models.MetabaseApiGetAllShapesOptionalParams, callback: msRest.ServiceCallback<Models.Shape[]>): void;
-  getAllShapes(options?: Models.MetabaseApiGetAllShapesOptionalParams, callback?: msRest.ServiceCallback<Models.Shape[]>): any {
-    return msRest.responseToBody(this.getAllShapesWithHttpOperationResponse.bind(this), options, callback);
+  getAllShapes(options?: Models.MetabaseApiGetAllShapesOptionalParams | msRest.ServiceCallback<Models.Shape[]>, callback?: msRest.ServiceCallback<Models.Shape[]>): Promise<Models.GetAllShapesResponse> {
+    return this.sendOperationRequest(
+      {
+        options
+      },
+      getAllShapesOperationSpec,
+      callback) as Promise<Models.GetAllShapesResponse>;
   }
 
   /**
    * @summary Create shape.
-   *
-   * @param {Shape} input
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param input
+   * @param [options] The optional parameters
+   * @returns Promise<Models.CreateShapeResponse>
    */
-  createShape(input: Models.Shape): Promise<any>;
-  createShape(input: Models.Shape, options: msRest.RequestOptionsBase): Promise<any>;
+  createShape(input: Models.Shape, options?: msRest.RequestOptionsBase): Promise<Models.CreateShapeResponse>;
+  /**
+   * @param input
+   * @param callback The callback
+   */
   createShape(input: Models.Shape, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param input
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   createShape(input: Models.Shape, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  createShape(input: Models.Shape, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.createShapeWithHttpOperationResponse.bind(this), input, options, callback);
+  createShape(input: Models.Shape, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.CreateShapeResponse> {
+    return this.sendOperationRequest(
+      {
+        input,
+        options
+      },
+      createShapeOperationSpec,
+      callback) as Promise<Models.CreateShapeResponse>;
   }
 
   /**
    * @summary Get one shape.
-   *
-   * @param {string} id
-   *
-   * @param {MetabaseApiGetOneShapeOptionalParams} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Shape} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Models.Shape} for more information.
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetOneShapeResponse>
    */
-  getOneShape(id: string): Promise<Models.Shape>;
-  getOneShape(id: string, options: Models.MetabaseApiGetOneShapeOptionalParams): Promise<Models.Shape>;
+  getOneShape(id: string, options?: Models.MetabaseApiGetOneShapeOptionalParams): Promise<Models.GetOneShapeResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   getOneShape(id: string, callback: msRest.ServiceCallback<Models.Shape>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getOneShape(id: string, options: Models.MetabaseApiGetOneShapeOptionalParams, callback: msRest.ServiceCallback<Models.Shape>): void;
-  getOneShape(id: string, options?: Models.MetabaseApiGetOneShapeOptionalParams, callback?: msRest.ServiceCallback<Models.Shape>): any {
-    return msRest.responseToBody(this.getOneShapeWithHttpOperationResponse.bind(this), id, options, callback);
+  getOneShape(id: string, options?: Models.MetabaseApiGetOneShapeOptionalParams | msRest.ServiceCallback<Models.Shape>, callback?: msRest.ServiceCallback<Models.Shape>): Promise<Models.GetOneShapeResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      getOneShapeOperationSpec,
+      callback) as Promise<Models.GetOneShapeResponse>;
   }
 
   /**
    * @summary Update shape.
-   *
-   * @param {string} id
-   *
-   * @param {Shape} model
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {any} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param model
+   * @param [options] The optional parameters
+   * @returns Promise<Models.UpdateShapeResponse>
    */
-  updateShape(id: string, model: Models.Shape): Promise<any>;
-  updateShape(id: string, model: Models.Shape, options: msRest.RequestOptionsBase): Promise<any>;
+  updateShape(id: string, model: Models.Shape, options?: msRest.RequestOptionsBase): Promise<Models.UpdateShapeResponse>;
+  /**
+   * @param id
+   * @param model
+   * @param callback The callback
+   */
   updateShape(id: string, model: Models.Shape, callback: msRest.ServiceCallback<any>): void;
+  /**
+   * @param id
+   * @param model
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   updateShape(id: string, model: Models.Shape, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<any>): void;
-  updateShape(id: string, model: Models.Shape, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<any>): any {
-    return msRest.responseToBody(this.updateShapeWithHttpOperationResponse.bind(this), id, model, options, callback);
+  updateShape(id: string, model: Models.Shape, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<any>, callback?: msRest.ServiceCallback<any>): Promise<Models.UpdateShapeResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        model,
+        options
+      },
+      updateShapeOperationSpec,
+      callback) as Promise<Models.UpdateShapeResponse>;
   }
 
   /**
    * @summary Delete shape.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {void} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<msRest.RestResponse>
    */
-  deleteShape(id: string): Promise<void>;
-  deleteShape(id: string, options: msRest.RequestOptionsBase): Promise<void>;
+  deleteShape(id: string, options?: msRest.RequestOptionsBase): Promise<msRest.RestResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   deleteShape(id: string, callback: msRest.ServiceCallback<void>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   deleteShape(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<void>): void;
-  deleteShape(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<void>): any {
-    return msRest.responseToBody(this.deleteShapeWithHttpOperationResponse.bind(this), id, options, callback);
+  deleteShape(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<void>, callback?: msRest.ServiceCallback<void>): Promise<msRest.RestResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      deleteShapeOperationSpec,
+      callback);
   }
 
   /**
    * @summary Get shape versions.
-   *
-   * @param {string} id
-   *
-   * @param {RequestOptionsBase} [options] Optional Parameters.
-   *
-   * @param {ServiceCallback} callback The callback.
-   *
-   * @returns {ServiceCallback} callback(err, result, request, operationRes)
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *                      {Models.Shape[]} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *                      {HttpOperationResponse} [response] - The HTTP Response stream if an error did not occur.
+   * @param id
+   * @param [options] The optional parameters
+   * @returns Promise<Models.GetShapeVersionsResponse>
    */
-  getShapeVersions(id: string): Promise<Models.Shape[]>;
-  getShapeVersions(id: string, options: msRest.RequestOptionsBase): Promise<Models.Shape[]>;
+  getShapeVersions(id: string, options?: msRest.RequestOptionsBase): Promise<Models.GetShapeVersionsResponse>;
+  /**
+   * @param id
+   * @param callback The callback
+   */
   getShapeVersions(id: string, callback: msRest.ServiceCallback<Models.Shape[]>): void;
+  /**
+   * @param id
+   * @param options The optional parameters
+   * @param callback The callback
+   */
   getShapeVersions(id: string, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.Shape[]>): void;
-  getShapeVersions(id: string, options?: msRest.RequestOptionsBase, callback?: msRest.ServiceCallback<Models.Shape[]>): any {
-    return msRest.responseToBody(this.getShapeVersionsWithHttpOperationResponse.bind(this), id, options, callback);
+  getShapeVersions(id: string, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.Shape[]>, callback?: msRest.ServiceCallback<Models.Shape[]>): Promise<Models.GetShapeVersionsResponse> {
+    return this.sendOperationRequest(
+      {
+        id,
+        options
+      },
+      getShapeVersionsOperationSpec,
+      callback) as Promise<Models.GetShapeVersionsResponse>;
   }
 }
 
@@ -3802,4 +2839,9 @@ const getShapeVersionsOperationSpec: msRest.OperationSpec = {
   serializer
 };
 
-export { MetabaseApi, Models as MetabaseApiModels, Mappers as MetabaseApiMappers };
+export {
+  MetabaseApi,
+  MetabaseApiContext,
+  Models as MetabaseApiModels,
+  Mappers as MetabaseApiMappers
+};

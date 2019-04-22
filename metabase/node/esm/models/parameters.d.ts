@@ -1,0 +1,28 @@
+import * as msRest from "@azure/ms-rest-js";
+export declare const agentId: msRest.OperationQueryParameter;
+export declare const capability: msRest.OperationQueryParameter;
+export declare const connectionId: msRest.OperationQueryParameter;
+export declare const copiedFromSchemaId: msRest.OperationQueryParameter;
+export declare const createdBy: msRest.OperationQueryParameter;
+export declare const deletedBy: msRest.OperationQueryParameter;
+export declare const description: msRest.OperationQueryParameter;
+export declare const discoveredDescription: msRest.OperationQueryParameter;
+export declare const discoveredId: msRest.OperationQueryParameter;
+export declare const discoveredName: msRest.OperationQueryParameter;
+export declare const id0: msRest.OperationURLParameter;
+export declare const id1: msRest.OperationQueryParameter;
+export declare const jobId: msRest.OperationQueryParameter;
+export declare const name: msRest.OperationQueryParameter;
+export declare const page: msRest.OperationQueryParameter;
+export declare const pageSize: msRest.OperationQueryParameter;
+export declare const plugin: msRest.OperationQueryParameter;
+export declare const preferredAgent: msRest.OperationQueryParameter;
+export declare const profilingJobId: msRest.OperationQueryParameter;
+export declare const publisherMetaJson: msRest.OperationQueryParameter;
+export declare const query: msRest.OperationQueryParameter;
+export declare const schemaId: msRest.OperationQueryParameter;
+export declare const shapeId: msRest.OperationQueryParameter;
+export declare const type: msRest.OperationQueryParameter;
+export declare const updatedBy: msRest.OperationQueryParameter;
+export declare const version: msRest.OperationQueryParameter;
+//# sourceMappingURL=parameters.d.ts.map

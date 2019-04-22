@@ -1,75 +1,100 @@
-# An isomorphic javascript sdk for - MetabaseApi
-This project provides an isomorphic javascript package. Right now it supports:
-- node.js version 6.x.x or higher
-- browser javascript
+## An isomorphic javascript sdk for - MetabaseApi
 
-## How to Install
+This package contains an isomorphic SDK for MetabaseApi.
 
-- nodejs
+### Currently supported environments
+
+- Node.js version 6.x.x or higher
+- Browser JavaScript
+
+### How to Install
+
+```bash
+npm install @naveego/client-metabase
 ```
-npm install
+
+### How to use
+
+#### nodejs - Authentication, client creation and getPagedStatusesForBatch  as an example written in TypeScript.
+
+##### Install @azure/ms-rest-nodeauth
+
+```bash
+npm install @azure/ms-rest-nodeauth
 ```
-- browser
-```html
-<script type="text/javascript" src="/metabaseApiBundle.js"></script>
-```
 
-## How to use
+##### Sample code
 
-### nodejs - Authentication, client creation and getPagedStatusesForBatch  as an example written in TypeScript.
-
-```javascript
-import * as msRest from "ms-rest-js";
-import { MetabaseApi, MetabaseApiModels, MetabaseApiMappers } from "";
+```typescript
+import * as msRest from "@azure/ms-rest-js";
+import * as msRestNodeAuth from "@azure/ms-rest-nodeauth";
+import { MetabaseApi, MetabaseApiModels, MetabaseApiMappers } from "@naveego/client-metabase";
 const subscriptionId = process.env["AZURE_SUBSCRIPTION_ID"];
 
-const token = "<access_token>";
-const creds = new msRest.TokenCredentials(token);
-const client = new MetabaseApi(creds, subscriptionId);
-const id = "testid";
-const page = 1;
-const pageSize = 1;
-client.getPagedStatusesForBatch(id, page, pageSize).then((result) => {
-  console.log("The result is:");
-  console.log(result);
+msRestNodeAuth.interactiveLogin().then((creds) => {
+  const client = new MetabaseApi(creds, subscriptionId);
+  const id = "testid";
+  const page = 1;
+  const pageSize = 1;
+  client.getPagedStatusesForBatch(id, page, pageSize).then((result) => {
+    console.log("The result is:");
+    console.log(result);
+  });
 }).catch((err) => {
-  console.log('An error ocurred:');
-  console.dir(err, {depth: null, colors: true});
+  console.error(err);
 });
 ```
 
-### browser - Authentication, client creation and getPagedStatusesForBatch  as an example written in javascript.
+#### browser - Authentication, client creation and getPagedStatusesForBatch  as an example written in JavaScript.
+
+##### Install @azure/ms-rest-browserauth
+
+```bash
+npm install @azure/ms-rest-browserauth
+```
+
+##### Sample code
+
+See https://github.com/Azure/ms-rest-browserauth to learn how to authenticate to Azure in the browser.
 
 - index.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My Todos</title>
-    <script type="text/javascript" src="https://raw.githubusercontent.com/Azure/ms-rest-js/master/msRestBundle.js"></script>
-    <script type="text/javascript" src="./metabaseApiBundle.js"></script>
+    <title>@naveego/client-metabase sample</title>
+    <script src="node_modules/@azure/ms-rest-js/dist/msRest.browser.js"></script>
+    <script src="node_modules/@azure/ms-rest-browserauth/dist/msAuth.js"></script>
+    <script src="node_modules/@naveego/client-metabase/dist/client-metabase.js"></script>
     <script type="text/javascript">
-      document.write('hello world');
       const subscriptionId = "<Subscription_Id>";
-      const token = "<access_token>";
-      const creds = new msRest.TokenCredentials(token);
-      const client = new MetabaseApi(creds, subscriptionId);
-      const id = "testid";
-      const page = 1;
-      const pageSize = 1;
-      client.getPagedStatusesForBatch(id, page, pageSize).then((result) => {
-        console.log("The result is:");
-        console.log(result);
-      }).catch((err) => {
-        console.log('An error ocurred:');
-        console.dir(err, { depth: null, colors: true});
+      const authManager = new msAuth.AuthManager({
+        clientId: "<client id for your Azure AD app>",
+        tenant: "<optional tenant for your organization>"
+      });
+      authManager.finalizeLogin().then((res) => {
+        if (!res.isLoggedIn) {
+          // may cause redirects
+          authManager.login();
+        }
+        const client = new Naveego.ClientMetabase.MetabaseApi(res.creds, subscriptionId);
+        const id = "testid";
+        const page = 1;
+        const pageSize = 1;
+        client.getPagedStatusesForBatch(id, page, pageSize).then((result) => {
+          console.log("The result is:");
+          console.log(result);
+        }).catch((err) => {
+          console.log("An error occurred:");
+          console.error(err);
+        });
       });
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
-# Related projects
- - [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
+## Related projects
+
+- [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
