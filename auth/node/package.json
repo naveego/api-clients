@@ -2,7 +2,7 @@
   "name": "@naveego/client-auth",
   "author": "Naveego",
   "description": "Auth Library with typescript type definitions for node.js and browser.",
-  "version": "1.0.1-red",
+  "version": "1.0.1-beta.2",
   "dependencies": {
     "ms-rest-js": "~0.17.375"
   },
@@ -13,9 +13,9 @@
     "browser",
     "isomorphic"
   ],
-  "license": "UNLICENSED",
-  "main": "./dist/lib/auth.js",
-  "types": "./typings/lib/auth.d.ts",
+  "license": "MIT",
+  "main": "./dist/lib/authAPI.js",
+  "types": "./typings/lib/authAPI.d.ts",
   "devDependencies": {
     "replace-in-file": "^3.4.4",
     "ts-loader": "^4.4.2",
