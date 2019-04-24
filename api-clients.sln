@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naveego.Auth", "auth\csharp\Naveego.Auth.csproj", "{43AED96D-71CD-4EA5-BFD2-7CA40CBC0040}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naveego.Metabase", "metabase\csharp\Naveego.Metabase.csproj", "{E1F8F5D7-B1C1-4B25-9ABD-5C8BC9E66BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naveego.Vault.Tests", "vault\csharp\Naveego.Vault.Tests\Naveego.Vault.Tests.csproj", "{9969BAF6-A3AA-4993-BA21-9927727DABA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naveego.Vault", "vault\csharp\Naveego.Vault\Naveego.Vault.csproj", "{234E1FD2-99C8-4DE2-996A-8E15795E49D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43AED96D-71CD-4EA5-BFD2-7CA40CBC0040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43AED96D-71CD-4EA5-BFD2-7CA40CBC0040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43AED96D-71CD-4EA5-BFD2-7CA40CBC0040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43AED96D-71CD-4EA5-BFD2-7CA40CBC0040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F8F5D7-B1C1-4B25-9ABD-5C8BC9E66BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F8F5D7-B1C1-4B25-9ABD-5C8BC9E66BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F8F5D7-B1C1-4B25-9ABD-5C8BC9E66BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F8F5D7-B1C1-4B25-9ABD-5C8BC9E66BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9969BAF6-A3AA-4993-BA21-9927727DABA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9969BAF6-A3AA-4993-BA21-9927727DABA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9969BAF6-A3AA-4993-BA21-9927727DABA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9969BAF6-A3AA-4993-BA21-9927727DABA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{234E1FD2-99C8-4DE2-996A-8E15795E49D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234E1FD2-99C8-4DE2-996A-8E15795E49D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234E1FD2-99C8-4DE2-996A-8E15795E49D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234E1FD2-99C8-4DE2-996A-8E15795E49D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
