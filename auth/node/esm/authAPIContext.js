@@ -6,7 +6,7 @@
 import * as tslib_1 from "tslib";
 import * as msRest from "@azure/ms-rest-js";
 var packageName = "@naveego/client-auth";
-var packageVersion = "1.0.2-beta.3";
+var packageVersion = "1.0.2-derek.1";
 var AuthAPIContext = /** @class */ (function (_super) {
     tslib_1.__extends(AuthAPIContext, _super);
     /**

@@ -655,6 +655,77 @@ func NewWithBaseURI(baseURI string, ) BaseClient {
             return
         }
 
+    // LoginUserMethod sends the login user request.
+    func (client BaseClient) LoginUserMethod(ctx context.Context, body UserLoginRequestType) (result UserLoginResponseType, err error) {
+        if tracing.IsEnabled() {
+            ctx = tracing.StartSpan(ctx, fqdn + "/BaseClient.LoginUserMethod")
+            defer func() {
+                sc := -1
+                if result.Response.Response != nil {
+                    sc = result.Response.Response.StatusCode
+                }
+                tracing.EndSpan(ctx, sc, err)
+            }()
+        }
+                if err := validation.Validate([]validation.Validation{
+                { TargetValue: body,
+                 Constraints: []validation.Constraint{	{Target: "body.Password", Name: validation.Null, Rule: true, Chain: nil },
+                	{Target: "body.Username", Name: validation.Null, Rule: true, Chain: nil }}}}); err != nil {
+                return result, validation.NewError(".BaseClient", "LoginUserMethod", err.Error())
+                }
+
+                    req, err := client.LoginUserMethodPreparer(ctx, body)
+        if err != nil {
+        err = autorest.NewErrorWithError(err, ".BaseClient", "LoginUserMethod", nil , "Failure preparing request")
+        return
+        }
+
+                resp, err := client.LoginUserMethodSender(req)
+                if err != nil {
+                result.Response = autorest.Response{Response: resp}
+                err = autorest.NewErrorWithError(err, ".BaseClient", "LoginUserMethod", resp, "Failure sending request")
+                return
+                }
+
+                result, err = client.LoginUserMethodResponder(resp)
+                if err != nil {
+                err = autorest.NewErrorWithError(err, ".BaseClient", "LoginUserMethod", resp, "Failure responding to request")
+                }
+
+        return
+        }
+
+        // LoginUserMethodPreparer prepares the LoginUserMethod request.
+        func (client BaseClient) LoginUserMethodPreparer(ctx context.Context, body UserLoginRequestType) (*http.Request, error) {
+            preparer := autorest.CreatePreparer(
+        autorest.AsContentType("application/json; charset=utf-8"),
+        autorest.AsPost(),
+        autorest.WithBaseURL(client.BaseURI),
+        autorest.WithPath("/users/login"),
+        autorest.WithJSON(body))
+        return preparer.Prepare((&http.Request{}).WithContext(ctx))
+        }
+
+        // LoginUserMethodSender sends the LoginUserMethod request. The method will close the
+        // http.Response Body if it receives an error.
+        func (client BaseClient) LoginUserMethodSender(req *http.Request) (*http.Response, error) {
+                return autorest.SendWithSender(client, req,
+                autorest.DoRetryForStatusCodes(client.RetryAttempts, client.RetryDuration, autorest.StatusCodesForRetry...))
+                }
+
+    // LoginUserMethodResponder handles the response to the LoginUserMethod request. The method always
+    // closes the http.Response Body.
+    func (client BaseClient) LoginUserMethodResponder(resp *http.Response) (result UserLoginResponseType, err error) {
+        err = autorest.Respond(
+        resp,
+        client.ByInspecting(),
+        azure.WithErrorUnlessStatusCode(http.StatusOK),
+        autorest.ByUnmarshallingJSON(&result),
+        autorest.ByClosing())
+        result.Response = autorest.Response{Response: resp}
+            return
+        }
+
     // TokenMethod sends the token request.
         // Parameters:
             // grantType - the grant_type to use for obtaining a token

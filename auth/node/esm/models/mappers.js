@@ -336,4 +336,61 @@ export var UserCreateUser = {
         }
     }
 };
+export var UserLoginRequest = {
+    serializedName: "UserLoginRequest",
+    type: {
+        name: "Composite",
+        className: "UserLoginRequest",
+        modelProperties: {
+            password: {
+                required: true,
+                serializedName: "password",
+                type: {
+                    name: "String"
+                }
+            },
+            username: {
+                required: true,
+                serializedName: "username",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+export var UserLoginResponse = {
+    serializedName: "UserLoginResponse",
+    type: {
+        name: "Composite",
+        className: "UserLoginResponse",
+        modelProperties: {
+            authCode: {
+                serializedName: "auth_code",
+                type: {
+                    name: "String"
+                }
+            },
+            message: {
+                serializedName: "message",
+                type: {
+                    name: "String"
+                }
+            },
+            redirectUri: {
+                serializedName: "redirect_uri",
+                type: {
+                    name: "String"
+                }
+            },
+            success: {
+                required: true,
+                serializedName: "success",
+                type: {
+                    name: "Boolean"
+                }
+            }
+        }
+    }
+};
 //# sourceMappingURL=mappers.js.map

@@ -20,6 +20,7 @@ import (
             GetConfigurationMethod(ctx context.Context, tenantID string) (result .TenantConfigurationType, err error)
             GetMethod(ctx context.Context, userID string) (result .UserUserType, err error)
             GetSAMLSettingsMethod(ctx context.Context, tid string) (result .SamlSAMLSettingsType, err error)
+            LoginUserMethod(ctx context.Context, body .UserLoginRequestType) (result .UserLoginResponseType, err error)
             TokenMethod(ctx context.Context, grantType string, username string, password string, code string, refreshToken string) (result .OauthTokenType, err error)
             Update1Method(ctx context.Context, userID string) (result autorest.Response, err error)
             UpdateMethod(ctx context.Context, userID string, body .UserUserType) (result .UserUserType, err error)

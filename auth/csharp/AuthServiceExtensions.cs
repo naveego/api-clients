@@ -310,6 +310,40 @@ namespace Naveego.Auth
             }
 
             /// <summary>
+            /// Provides a login endpoint that can generate an auth code for the user given
+            /// valid user credentials.
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='body'>
+            /// </param>
+            public static UserLoginResponse LoginUser(this IAuthService operations, UserLoginRequest body)
+            {
+                return operations.LoginUserAsync(body).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Provides a login endpoint that can generate an auth code for the user given
+            /// valid user credentials.
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='body'>
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<UserLoginResponse> LoginUserAsync(this IAuthService operations, UserLoginRequest body, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.LoginUserWithHttpMessagesAsync(body, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <summary>
             /// Gets a user.
             /// </summary>
             /// <param name='operations'>

@@ -30,6 +30,9 @@ import com.naveego.auth.models.TenantConfigurationException;
 import com.naveego.auth.models.UserAuthCodeResponse;
 import com.naveego.auth.models.UserAuthCodeResponseException;
 import com.naveego.auth.models.UserCreateUser;
+import com.naveego.auth.models.UserLoginRequest;
+import com.naveego.auth.models.UserLoginResponse;
+import com.naveego.auth.models.UserLoginResponseException;
 import com.naveego.auth.models.UserUser;
 import com.naveego.auth.models.UserUserException;
 import java.io.IOException;
@@ -151,6 +154,10 @@ public class AuthServiceImpl extends ServiceClient implements AuthService {
         @Headers({ "Content-Type: application/json; charset=utf-8", "x-ms-logging-context: com.naveego.auth.AuthService create" })
         @POST("users")
         Observable<Response<ResponseBody>> create(@Body UserCreateUser body);
+
+        @Headers({ "Content-Type: application/json; charset=utf-8", "x-ms-logging-context: com.naveego.auth.AuthService loginUser" })
+        @POST("users/login")
+        Observable<Response<ResponseBody>> loginUser(@Body UserLoginRequest body);
 
         @Headers({ "Content-Type: application/json; charset=utf-8", "x-ms-logging-context: com.naveego.auth.AuthService get" })
         @GET("users/{userId}")
@@ -843,6 +850,80 @@ public class AuthServiceImpl extends ServiceClient implements AuthService {
     private ServiceResponse<UserUser> createDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
         return this.restClient().responseBuilderFactory().<UserUser, RestException>newInstance(this.serializerAdapter())
                 .register(202, new TypeToken<UserUser>() { }.getType())
+                .build(response);
+    }
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @throws UserLoginResponseException thrown if the request is rejected by server
+     * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
+     * @return the UserLoginResponse object if successful.
+     */
+    public UserLoginResponse loginUser(UserLoginRequest body) {
+        return loginUserWithServiceResponseAsync(body).toBlocking().single().body();
+    }
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the {@link ServiceFuture} object
+     */
+    public ServiceFuture<UserLoginResponse> loginUserAsync(UserLoginRequest body, final ServiceCallback<UserLoginResponse> serviceCallback) {
+        return ServiceFuture.fromResponse(loginUserWithServiceResponseAsync(body), serviceCallback);
+    }
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the UserLoginResponse object
+     */
+    public Observable<UserLoginResponse> loginUserAsync(UserLoginRequest body) {
+        return loginUserWithServiceResponseAsync(body).map(new Func1<ServiceResponse<UserLoginResponse>, UserLoginResponse>() {
+            @Override
+            public UserLoginResponse call(ServiceResponse<UserLoginResponse> response) {
+                return response.body();
+            }
+        });
+    }
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the UserLoginResponse object
+     */
+    public Observable<ServiceResponse<UserLoginResponse>> loginUserWithServiceResponseAsync(UserLoginRequest body) {
+        if (body == null) {
+            throw new IllegalArgumentException("Parameter body is required and cannot be null.");
+        }
+        Validator.validate(body);
+        return service.loginUser(body)
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<UserLoginResponse>>>() {
+                @Override
+                public Observable<ServiceResponse<UserLoginResponse>> call(Response<ResponseBody> response) {
+                    try {
+                        ServiceResponse<UserLoginResponse> clientResponse = loginUserDelegate(response);
+                        return Observable.just(clientResponse);
+                    } catch (Throwable t) {
+                        return Observable.error(t);
+                    }
+                }
+            });
+    }
+
+    private ServiceResponse<UserLoginResponse> loginUserDelegate(Response<ResponseBody> response) throws UserLoginResponseException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<UserLoginResponse, UserLoginResponseException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<UserLoginResponse>() { }.getType())
+                .registerError(UserLoginResponseException.class)
                 .build(response);
     }
 

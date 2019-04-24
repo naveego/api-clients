@@ -76,6 +76,21 @@ const fqdn = "go"
             User *UserUserType `json:"User,omitempty"`
             }
 
+            // UserLoginRequestType ...
+            type UserLoginRequestType struct {
+            Password *string `json:"password,omitempty"`
+            Username *string `json:"username,omitempty"`
+            }
+
+            // UserLoginResponseType ...
+            type UserLoginResponseType struct {
+            autorest.Response `json:"-"`
+            AuthCode *string `json:"auth_code,omitempty"`
+            Message *string `json:"message,omitempty"`
+            RedirectURI *string `json:"redirect_uri,omitempty"`
+            Success *bool `json:"success,omitempty"`
+            }
+
             // UserUserType ...
             type UserUserType struct {
             autorest.Response `json:"-"`

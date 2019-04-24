@@ -96,6 +96,24 @@ export interface UserCreateUser {
 }
 
 /**
+ * An interface representing UserLoginRequest.
+ */
+export interface UserLoginRequest {
+  password: string;
+  username: string;
+}
+
+/**
+ * An interface representing UserLoginResponse.
+ */
+export interface UserLoginResponse {
+  authCode?: string;
+  message?: string;
+  redirectUri?: string;
+  success: boolean;
+}
+
+/**
  * An interface representing AuthAPIOptions.
  */
 export interface AuthAPIOptions extends ServiceClientOptions {
@@ -241,6 +259,26 @@ export type CreateResponse = UserUser & {
        * The response body as parsed JSON or XML
        */
       parsedBody: UserUser;
+    };
+};
+
+/**
+ * Contains response data for the loginUser operation.
+ */
+export type LoginUserResponse = UserLoginResponse & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: UserLoginResponse;
     };
 };
 

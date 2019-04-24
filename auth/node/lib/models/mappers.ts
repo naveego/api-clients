@@ -348,3 +348,62 @@ export const UserCreateUser: msRest.CompositeMapper = {
     }
   }
 };
+
+export const UserLoginRequest: msRest.CompositeMapper = {
+  serializedName: "UserLoginRequest",
+  type: {
+    name: "Composite",
+    className: "UserLoginRequest",
+    modelProperties: {
+      password: {
+        required: true,
+        serializedName: "password",
+        type: {
+          name: "String"
+        }
+      },
+      username: {
+        required: true,
+        serializedName: "username",
+        type: {
+          name: "String"
+        }
+      }
+    }
+  }
+};
+
+export const UserLoginResponse: msRest.CompositeMapper = {
+  serializedName: "UserLoginResponse",
+  type: {
+    name: "Composite",
+    className: "UserLoginResponse",
+    modelProperties: {
+      authCode: {
+        serializedName: "auth_code",
+        type: {
+          name: "String"
+        }
+      },
+      message: {
+        serializedName: "message",
+        type: {
+          name: "String"
+        }
+      },
+      redirectUri: {
+        serializedName: "redirect_uri",
+        type: {
+          name: "String"
+        }
+      },
+      success: {
+        required: true,
+        serializedName: "success",
+        type: {
+          name: "Boolean"
+        }
+      }
+    }
+  }
+};

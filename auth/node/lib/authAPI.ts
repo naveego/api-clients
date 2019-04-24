@@ -249,6 +249,35 @@ class AuthAPI extends AuthAPIContext {
   }
 
   /**
+   * @summary Provides a login endpoint that can generate an auth code for the user given valid user
+   * credentials.
+   * @param body
+   * @param [options] The optional parameters
+   * @returns Promise<Models.LoginUserResponse>
+   */
+  loginUser(body: Models.UserLoginRequest, options?: msRest.RequestOptionsBase): Promise<Models.LoginUserResponse>;
+  /**
+   * @param body
+   * @param callback The callback
+   */
+  loginUser(body: Models.UserLoginRequest, callback: msRest.ServiceCallback<Models.UserLoginResponse>): void;
+  /**
+   * @param body
+   * @param options The optional parameters
+   * @param callback The callback
+   */
+  loginUser(body: Models.UserLoginRequest, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.UserLoginResponse>): void;
+  loginUser(body: Models.UserLoginRequest, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.UserLoginResponse>, callback?: msRest.ServiceCallback<Models.UserLoginResponse>): Promise<Models.LoginUserResponse> {
+    return this.sendOperationRequest(
+      {
+        body,
+        options
+      },
+      loginUserOperationSpec,
+      callback) as Promise<Models.LoginUserResponse>;
+  }
+
+  /**
    * @summary Gets a user.
    * @param userId identifier of the user
    * @param [options] The optional parameters
@@ -504,6 +533,27 @@ const createOperationSpec: msRest.OperationSpec = {
       bodyMapper: Mappers.UserUser
     },
     default: {}
+  },
+  serializer
+};
+
+const loginUserOperationSpec: msRest.OperationSpec = {
+  httpMethod: "POST",
+  path: "users/login",
+  requestBody: {
+    parameterPath: "body",
+    mapper: {
+      ...Mappers.UserLoginRequest,
+      required: true
+    }
+  },
+  responses: {
+    200: {
+      bodyMapper: Mappers.UserLoginResponse
+    },
+    default: {
+      bodyMapper: Mappers.UserLoginResponse
+    }
   },
   serializer
 };
