@@ -8,7 +8,7 @@ import * as msRest from "@azure/ms-rest-js";
 import * as Models from "./models";
 
 const packageName = "@naveego/client-auth";
-const packageVersion = "1.0.2-derek.1";
+const packageVersion = "1.0.2-beta.4";
 
 export class AuthAPIContext extends msRest.ServiceClient {
   credentials: msRest.ServiceClientCredentials;
