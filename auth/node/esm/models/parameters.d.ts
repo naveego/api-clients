@@ -1,5 +1,6 @@
 import * as msRest from "@azure/ms-rest-js";
-export declare const clientId: msRest.OperationParameter;
+export declare const clientId0: msRest.OperationParameter;
+export declare const clientId1: msRest.OperationQueryParameter;
 export declare const code: msRest.OperationParameter;
 export declare const grantType: msRest.OperationParameter;
 export declare const password: msRest.OperationParameter;

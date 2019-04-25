@@ -1520,6 +1520,9 @@ namespace Naveego.Auth
         /// </summary>
         /// <param name='body'>
         /// </param>
+        /// <param name='clientId'>
+        /// identifier of the oauth client
+        /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -1541,7 +1544,7 @@ namespace Naveego.Auth
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<UserLoginResponse>> LoginUserWithHttpMessagesAsync(UserLoginRequest body, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<UserLoginResponse>> LoginUserWithHttpMessagesAsync(UserLoginRequest body, string clientId = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (body == null)
             {
@@ -1558,6 +1561,7 @@ namespace Naveego.Auth
             {
                 _invocationId = ServiceClientTracing.NextInvocationId.ToString();
                 Dictionary<string, object> tracingParameters = new Dictionary<string, object>();
+                tracingParameters.Add("clientId", clientId);
                 tracingParameters.Add("body", body);
                 tracingParameters.Add("cancellationToken", cancellationToken);
                 ServiceClientTracing.Enter(_invocationId, this, "LoginUser", tracingParameters);
@@ -1565,6 +1569,15 @@ namespace Naveego.Auth
             // Construct URL
             var _baseUrl = BaseUri.AbsoluteUri;
             var _url = new System.Uri(new System.Uri(_baseUrl + (_baseUrl.EndsWith("/") ? "" : "/")), "users/login").ToString();
+            List<string> _queryParameters = new List<string>();
+            if (clientId != null)
+            {
+                _queryParameters.Add(string.Format("client_id={0}", System.Uri.EscapeDataString(clientId)));
+            }
+            if (_queryParameters.Count > 0)
+            {
+                _url += "?" + string.Join("&", _queryParameters);
+            }
             // Create HTTP transport objects
             var _httpRequest = new HttpRequestMessage();
             HttpResponseMessage _httpResponse = null;

@@ -255,7 +255,7 @@ class AuthAPI extends AuthAPIContext {
    * @param [options] The optional parameters
    * @returns Promise<Models.LoginUserResponse>
    */
-  loginUser(body: Models.UserLoginRequest, options?: msRest.RequestOptionsBase): Promise<Models.LoginUserResponse>;
+  loginUser(body: Models.UserLoginRequest, options?: Models.AuthAPILoginUserOptionalParams): Promise<Models.LoginUserResponse>;
   /**
    * @param body
    * @param callback The callback
@@ -266,8 +266,8 @@ class AuthAPI extends AuthAPIContext {
    * @param options The optional parameters
    * @param callback The callback
    */
-  loginUser(body: Models.UserLoginRequest, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.UserLoginResponse>): void;
-  loginUser(body: Models.UserLoginRequest, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.UserLoginResponse>, callback?: msRest.ServiceCallback<Models.UserLoginResponse>): Promise<Models.LoginUserResponse> {
+  loginUser(body: Models.UserLoginRequest, options: Models.AuthAPILoginUserOptionalParams, callback: msRest.ServiceCallback<Models.UserLoginResponse>): void;
+  loginUser(body: Models.UserLoginRequest, options?: Models.AuthAPILoginUserOptionalParams | msRest.ServiceCallback<Models.UserLoginResponse>, callback?: msRest.ServiceCallback<Models.UserLoginResponse>): Promise<Models.LoginUserResponse> {
     return this.sendOperationRequest(
       {
         body,
@@ -487,7 +487,7 @@ const generateRequest1OperationSpec: msRest.OperationSpec = {
     Parameters.tid
   ],
   formDataParameters: [
-    Parameters.clientId
+    Parameters.clientId0
   ],
   contentType: "application/x-www-form-urlencoded",
   responses: {
@@ -540,6 +540,9 @@ const createOperationSpec: msRest.OperationSpec = {
 const loginUserOperationSpec: msRest.OperationSpec = {
   httpMethod: "POST",
   path: "users/login",
+  queryParameters: [
+    Parameters.clientId1
+  ],
   requestBody: {
     parameterPath: "body",
     mapper: {

@@ -656,7 +656,9 @@ func NewWithBaseURI(baseURI string, ) BaseClient {
         }
 
     // LoginUserMethod sends the login user request.
-    func (client BaseClient) LoginUserMethod(ctx context.Context, body UserLoginRequestType) (result UserLoginResponseType, err error) {
+        // Parameters:
+            // clientID - identifier of the oauth client
+    func (client BaseClient) LoginUserMethod(ctx context.Context, body UserLoginRequestType, clientID string) (result UserLoginResponseType, err error) {
         if tracing.IsEnabled() {
             ctx = tracing.StartSpan(ctx, fqdn + "/BaseClient.LoginUserMethod")
             defer func() {
@@ -674,7 +676,7 @@ func NewWithBaseURI(baseURI string, ) BaseClient {
                 return result, validation.NewError(".BaseClient", "LoginUserMethod", err.Error())
                 }
 
-                    req, err := client.LoginUserMethodPreparer(ctx, body)
+                    req, err := client.LoginUserMethodPreparer(ctx, body, clientID)
         if err != nil {
         err = autorest.NewErrorWithError(err, ".BaseClient", "LoginUserMethod", nil , "Failure preparing request")
         return
@@ -696,13 +698,20 @@ func NewWithBaseURI(baseURI string, ) BaseClient {
         }
 
         // LoginUserMethodPreparer prepares the LoginUserMethod request.
-        func (client BaseClient) LoginUserMethodPreparer(ctx context.Context, body UserLoginRequestType) (*http.Request, error) {
+        func (client BaseClient) LoginUserMethodPreparer(ctx context.Context, body UserLoginRequestType, clientID string) (*http.Request, error) {
+                    queryParameters := map[string]interface{} {
+            }
+                if len(clientID) > 0 {
+                queryParameters["client_id"] = autorest.Encode("query",clientID)
+                }
+
             preparer := autorest.CreatePreparer(
         autorest.AsContentType("application/json; charset=utf-8"),
         autorest.AsPost(),
         autorest.WithBaseURL(client.BaseURI),
         autorest.WithPath("/users/login"),
-        autorest.WithJSON(body))
+        autorest.WithJSON(body),
+        autorest.WithQueryParameters(queryParameters))
         return preparer.Prepare((&http.Request{}).WithContext(ctx))
         }
 

@@ -189,7 +189,7 @@ var generateRequest1OperationSpec = {
         Parameters.tid
     ],
     formDataParameters: [
-        Parameters.clientId
+        Parameters.clientId0
     ],
     contentType: "application/x-www-form-urlencoded",
     responses: {
@@ -236,6 +236,9 @@ var createOperationSpec = {
 var loginUserOperationSpec = {
     httpMethod: "POST",
     path: "users/login",
+    queryParameters: [
+        Parameters.clientId1
+    ],
     requestBody: {
         parameterPath: "body",
         mapper: tslib_1.__assign({}, Mappers.UserLoginRequest, { required: true })

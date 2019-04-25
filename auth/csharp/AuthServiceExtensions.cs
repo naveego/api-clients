@@ -318,9 +318,12 @@ namespace Naveego.Auth
             /// </param>
             /// <param name='body'>
             /// </param>
-            public static UserLoginResponse LoginUser(this IAuthService operations, UserLoginRequest body)
+            /// <param name='clientId'>
+            /// identifier of the oauth client
+            /// </param>
+            public static UserLoginResponse LoginUser(this IAuthService operations, UserLoginRequest body, string clientId = default(string))
             {
-                return operations.LoginUserAsync(body).GetAwaiter().GetResult();
+                return operations.LoginUserAsync(body, clientId).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -332,12 +335,15 @@ namespace Naveego.Auth
             /// </param>
             /// <param name='body'>
             /// </param>
+            /// <param name='clientId'>
+            /// identifier of the oauth client
+            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<UserLoginResponse> LoginUserAsync(this IAuthService operations, UserLoginRequest body, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<UserLoginResponse> LoginUserAsync(this IAuthService operations, UserLoginRequest body, string clientId = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.LoginUserWithHttpMessagesAsync(body, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.LoginUserWithHttpMessagesAsync(body, clientId, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }

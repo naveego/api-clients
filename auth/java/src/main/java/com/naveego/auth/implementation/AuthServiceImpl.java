@@ -157,7 +157,7 @@ public class AuthServiceImpl extends ServiceClient implements AuthService {
 
         @Headers({ "Content-Type: application/json; charset=utf-8", "x-ms-logging-context: com.naveego.auth.AuthService loginUser" })
         @POST("users/login")
-        Observable<Response<ResponseBody>> loginUser(@Body UserLoginRequest body);
+        Observable<Response<ResponseBody>> loginUser(@Query("client_id") String clientId, @Body UserLoginRequest body);
 
         @Headers({ "Content-Type: application/json; charset=utf-8", "x-ms-logging-context: com.naveego.auth.AuthService get" })
         @GET("users/{userId}")
@@ -906,7 +906,79 @@ public class AuthServiceImpl extends ServiceClient implements AuthService {
             throw new IllegalArgumentException("Parameter body is required and cannot be null.");
         }
         Validator.validate(body);
-        return service.loginUser(body)
+        final String clientId = null;
+        return service.loginUser(clientId, body)
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<UserLoginResponse>>>() {
+                @Override
+                public Observable<ServiceResponse<UserLoginResponse>> call(Response<ResponseBody> response) {
+                    try {
+                        ServiceResponse<UserLoginResponse> clientResponse = loginUserDelegate(response);
+                        return Observable.just(clientResponse);
+                    } catch (Throwable t) {
+                        return Observable.error(t);
+                    }
+                }
+            });
+    }
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @param clientId identifier of the oauth client
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @throws UserLoginResponseException thrown if the request is rejected by server
+     * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
+     * @return the UserLoginResponse object if successful.
+     */
+    public UserLoginResponse loginUser(UserLoginRequest body, String clientId) {
+        return loginUserWithServiceResponseAsync(body, clientId).toBlocking().single().body();
+    }
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @param clientId identifier of the oauth client
+     * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the {@link ServiceFuture} object
+     */
+    public ServiceFuture<UserLoginResponse> loginUserAsync(UserLoginRequest body, String clientId, final ServiceCallback<UserLoginResponse> serviceCallback) {
+        return ServiceFuture.fromResponse(loginUserWithServiceResponseAsync(body, clientId), serviceCallback);
+    }
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @param clientId identifier of the oauth client
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the UserLoginResponse object
+     */
+    public Observable<UserLoginResponse> loginUserAsync(UserLoginRequest body, String clientId) {
+        return loginUserWithServiceResponseAsync(body, clientId).map(new Func1<ServiceResponse<UserLoginResponse>, UserLoginResponse>() {
+            @Override
+            public UserLoginResponse call(ServiceResponse<UserLoginResponse> response) {
+                return response.body();
+            }
+        });
+    }
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @param clientId identifier of the oauth client
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the UserLoginResponse object
+     */
+    public Observable<ServiceResponse<UserLoginResponse>> loginUserWithServiceResponseAsync(UserLoginRequest body, String clientId) {
+        if (body == null) {
+            throw new IllegalArgumentException("Parameter body is required and cannot be null.");
+        }
+        Validator.validate(body);
+        return service.loginUser(clientId, body)
             .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<UserLoginResponse>>>() {
                 @Override
                 public Observable<ServiceResponse<UserLoginResponse>> call(Response<ResponseBody> response) {

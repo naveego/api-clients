@@ -454,6 +454,48 @@ public interface AuthService {
      * @return the observable to the UserLoginResponse object
      */
     Observable<ServiceResponse<UserLoginResponse>> loginUserWithServiceResponseAsync(UserLoginRequest body);
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @param clientId identifier of the oauth client
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @throws UserLoginResponseException thrown if the request is rejected by server
+     * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
+     * @return the UserLoginResponse object if successful.
+     */
+    UserLoginResponse loginUser(UserLoginRequest body, String clientId);
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @param clientId identifier of the oauth client
+     * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the {@link ServiceFuture} object
+     */
+    ServiceFuture<UserLoginResponse> loginUserAsync(UserLoginRequest body, String clientId, final ServiceCallback<UserLoginResponse> serviceCallback);
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @param clientId identifier of the oauth client
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the UserLoginResponse object
+     */
+    Observable<UserLoginResponse> loginUserAsync(UserLoginRequest body, String clientId);
+
+    /**
+     * Provides a login endpoint that can generate an auth code for the user given valid user credentials.
+     *
+     * @param body the UserLoginRequest value
+     * @param clientId identifier of the oauth client
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the UserLoginResponse object
+     */
+    Observable<ServiceResponse<UserLoginResponse>> loginUserWithServiceResponseAsync(UserLoginRequest body, String clientId);
 
     /**
      * Gets a user.

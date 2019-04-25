@@ -163,7 +163,7 @@ declare class AuthAPI extends AuthAPIContext {
      * @param [options] The optional parameters
      * @returns Promise<Models.LoginUserResponse>
      */
-    loginUser(body: Models.UserLoginRequest, options?: msRest.RequestOptionsBase): Promise<Models.LoginUserResponse>;
+    loginUser(body: Models.UserLoginRequest, options?: Models.AuthAPILoginUserOptionalParams): Promise<Models.LoginUserResponse>;
     /**
      * @param body
      * @param callback The callback
@@ -174,7 +174,7 @@ declare class AuthAPI extends AuthAPIContext {
      * @param options The optional parameters
      * @param callback The callback
      */
-    loginUser(body: Models.UserLoginRequest, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.UserLoginResponse>): void;
+    loginUser(body: Models.UserLoginRequest, options: Models.AuthAPILoginUserOptionalParams, callback: msRest.ServiceCallback<Models.UserLoginResponse>): void;
     /**
      * @summary Gets a user.
      * @param userId identifier of the user

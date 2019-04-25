@@ -173,13 +173,16 @@ namespace Naveego.Auth
         /// </summary>
         /// <param name='body'>
         /// </param>
+        /// <param name='clientId'>
+        /// identifier of the oauth client
+        /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<UserLoginResponse>> LoginUserWithHttpMessagesAsync(UserLoginRequest body, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<UserLoginResponse>> LoginUserWithHttpMessagesAsync(UserLoginRequest body, string clientId = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Gets a user.

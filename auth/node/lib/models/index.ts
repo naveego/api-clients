@@ -143,6 +143,16 @@ export interface AuthAPITokenOptionalParams extends msRest.RequestOptionsBase {
 }
 
 /**
+ * Optional Parameters.
+ */
+export interface AuthAPILoginUserOptionalParams extends msRest.RequestOptionsBase {
+  /**
+   * identifier of the oauth client
+   */
+  clientId?: string;
+}
+
+/**
  * Contains response data for the getConfiguration operation.
  */
 export type GetConfigurationResponse = TenantConfiguration & {
