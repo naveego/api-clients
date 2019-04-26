@@ -9,62 +9,26 @@ using Vault.Models;
 
 namespace Metabase.Api.Vault
 {
-    public class RenewingSecret<T> : IDisposable
-    {
-        private readonly CancellationTokenSource _cts;
-        private readonly Func<CancellationToken, Task<T>> _factory;
-        private readonly TimeSpan _interval;
-        private readonly Task _task;
-        private Exception _error;
-        private T _value;
-
-        public RenewingSecret(T initialValue, CancellationToken token, TimeSpan interval, Func<CancellationToken, Task<T>> factory)
-        {
-            _value = initialValue;
-            _cts = CancellationTokenSource.CreateLinkedTokenSource(token);
-            _interval = interval;
-            _factory = factory;
-            _task = Task.Factory.StartNew(async () =>
-            {
-                try
-                {
-                    while (true)
-                    {
-                        await Task.Delay(interval, _cts.Token);
-                        _value = await factory(_cts.Token);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _error = new Exception($"Factory threw error at {DateTime.UtcNow}.", ex);
-                }
-            });
-        }
-
-        /// <summary>
-        ///     Create a renewing secret that doesn't actually do any renewing.
-        /// </summary>
-        /// <param name="initialValue"></param>
-        public RenewingSecret(T initialValue)
-        {
-            _value = initialValue;
-        }
-
-        public T Value => _error == null ? _value : throw _error;
-
-        public void Dispose()
-        {
-            _cts?.Cancel();
-            _cts?.Dispose();
-        }
-    }
-
-    public static class RenewingFactories
+    public static class SecretGetters
     {
         private static readonly Regex SecretReferenceParser = new Regex(@"(?:^|\()vault:/?/?([^?)]+)(?:\?template=([^)]+))?(?:$|\))");
 
         private static readonly Regex TemplateReplacer = new Regex(@"\{\{\s*\.?([A-z]+)\s*\}\}");
 
+        private static VaultResponse<TTo> RewrapResponse<TFrom, TTo>(VaultResponse<TFrom> secret, TTo transformedValue)
+        {
+            return                new VaultResponse<TTo>
+            {
+                Data = transformedValue,
+                Renewable = secret.Renewable,
+                LeaseDuration = secret.LeaseDuration,
+                Auth = secret.Auth,
+                Warnings = secret.Warnings,
+                LeaseId = secret.LeaseId,
+                RequestId = secret.RequestId
+            };
+        }
+        
         public static (Uri, bool) ParseSecretURI(string secretUri)
         {
             try
@@ -90,25 +54,73 @@ namespace Metabase.Api.Vault
         }
 
 
-        public static Func<IVaultClient, Task<VaultResponse<string>>> MakeRenderSecretTemplate(
-            string stringWithEmbeddedSecrets)
+        public static Func<IVaultApi, CancellationToken, Task<VaultResponse<string>>> MakeJwt(string role, TimeSpan ttl, string tenantID, string sub, Dictionary<string, object> claims = null)
         {
-            var (uri, hasSecret) = ParseSecretURI(stringWithEmbeddedSecrets);
-
-            if (!hasSecret)
-                return client => Task.FromResult(new VaultResponse<string>
-                {
-                    Data = stringWithEmbeddedSecrets
-                });
-
-            return async client =>
+            claims = new Dictionary<string, object>(claims ?? new Dictionary<string, object>());
+            claims["tid"] = tenantID;
+            claims["sub"] = sub;
+            return MakeJwt(role, ttl, claims);
+        }
+        
+        public static Func<IVaultApi, CancellationToken, Task<VaultResponse<string>>> MakeJwt(string role, TimeSpan ttl, Dictionary<string, object> claims = null)
+        {
+            claims = new Dictionary<string, object>(claims ?? new Dictionary<string, object>());
+            
+            return async (client, cancellationToken) =>
             {
                 string formattedSecret;
                 VaultResponse<Dictionary<string, string>> secret;
 
                 try
                 {
-                    secret = await client.Secret.Read<Dictionary<string, string>>(uri.AbsolutePath);
+                    var path = $"jose/jwt/issue/{role}";
+                    claims["exp"] = DateTimeOffset.Now.Add(ttl).ToUnixTimeSeconds();
+                    
+                    var req = new Dictionary<string, object>()
+                    {
+                        ["token_ttl"] = ttl.TotalSeconds,
+                        ["claims"] = claims,
+                    };
+                    
+                    secret = await client.WriteAsync<Dictionary<string, string>>(path, req, cancellationToken);
+
+                    if (secret?.Data == null)
+                    {
+                        throw new Exception("Secret contained no data.");
+                    }
+
+                    if (!secret.Data.TryGetValue("token", out var token))
+                    {
+                        throw new Exception("Secret did not contain token.");
+                    }
+
+                    return RewrapResponse(secret, token);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Error creating JWT using role '{role}'.", ex);
+                }
+            };
+        } 
+        
+        public static Func<IVaultApi, CancellationToken, Task<VaultResponse<string>>> MakeRenderSecretTemplate(string stringWithEmbeddedSecrets)
+        {
+            var (uri, hasSecret) = ParseSecretURI(stringWithEmbeddedSecrets);
+
+            if (!hasSecret)
+                return (client, token) => Task.FromResult(new VaultResponse<string>
+                {
+                    Data = stringWithEmbeddedSecrets
+                });
+
+            return async (client, cancellationToken) =>
+            {
+                string formattedSecret;
+                VaultResponse<Dictionary<string, string>> secret;
+
+                try
+                {
+                    secret = await client.ReadAsync<Dictionary<string, string>>(uri.AbsolutePath, cancellationToken);
                 }
                 catch (Exception ex)
                 {
@@ -146,18 +158,7 @@ namespace Metabase.Api.Vault
 
                 var final = SecretReferenceParser.Replace(stringWithEmbeddedSecrets, formattedSecret);
 
-                var finalResponse = new VaultResponse<string>
-                {
-                    Data = final,
-                    Renewable = secret.Renewable,
-                    LeaseDuration = secret.LeaseDuration,
-                    Auth = secret.Auth,
-                    Warnings = secret.Warnings,
-                    LeaseId = secret.LeaseId,
-                    RequestId = secret.RequestId
-                };
-
-                return finalResponse;
+                return RewrapResponse(secret, final);
             };
         }
     }

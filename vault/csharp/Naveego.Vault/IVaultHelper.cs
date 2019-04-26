@@ -1,48 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Newtonsoft.Json;
-using Vault;
 using Vault.Models;
 
 namespace Metabase.Api.Vault
 {
     public interface IVaultHelper : IVaultApi, IDisposable
     {
-        Task<RenewingSecret<T>> GetRenewingSecret<T>(Func<IVaultApi, CancellationToken, Task<VaultResponse<T>>> getter, CancellationToken cancellationToken = default (CancellationToken));
-        
+        /// <summary>
+        /// Gets a secret using the provided secret getter.
+        /// </summary>
+        /// <param name="getter"></param>
+        /// <param name="cancellationToken"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        Task<T> GetSecretAsync<T>(Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Gets a new <see cref="LiveSecret{T}"/> which will be acquired and renewed using the <paramref name="getter"/>.
+        /// </summary>
+        /// <param name="label">Used to prefix log messages and errors related to this secret.</param>
+        /// <param name="getter"></param>
+        /// <param name="cancellationToken"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        Task<LiveSecret<T>> GetRenewingSecretAsync<T>(string label, Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default(CancellationToken));
     }
 
-    public interface IVaultApi
-    {
-        Task<VaultResponse<T>> ReadAsync<T>(string path, CancellationToken cancellationToken = default (CancellationToken));
-        Task<VaultResponse<T>> WriteAsync<T>(string path, object payload, CancellationToken cancellationToken = default (CancellationToken));
-    }
 
     public class VaultHelperConfig
     {
         public VaultHelperConfig()
         {
-            
         }
-        
+
         public VaultHelperConfig(string address)
         {
             Address = address;
         }
-
-        /// <summary>
-        ///     Vault client to use. If not set, one will be created using <see cref="Address" />.
-        /// </summary>
-        public IVaultClient VaultClient { get; set; }
-
-        public string Address { get; set; }
         
+        public string Address { get; set; }
+
         public ILogger Logger { get; set; } = NullLogger.Instance;
 
         public List<ILoginStrategy> LoginStrategies { get; set; } = new List<ILoginStrategy>();
@@ -71,19 +76,15 @@ namespace Metabase.Api.Vault
     {
         private readonly VaultHelperConfig _config;
         private readonly CancellationTokenSource _cts;
-        private readonly IVaultClient _vaultClient;
+        private IVaultApi _api;
         private readonly ILogger _logger;
+      
 
         private VaultHelper(VaultHelperConfig config)
         {
             _config = config;
             _cts = new CancellationTokenSource();
             _logger = config.Logger;
-            _vaultClient = config.VaultClient ?? new VaultClient(
-                               new VaultOptions
-                               {
-                                   Address = config.Address
-                               });
         }
 
 
@@ -100,13 +101,13 @@ namespace Metabase.Api.Vault
         {
             try
             {
-                VaultResponse<TokenData> secret = null;
+                LoginResult loginResult = null;
                 var errors = new Dictionary<string, string>();
                 foreach (var strategy in _config.LoginStrategies)
                     try
                     {
-                        secret = await strategy.LoginAsync(_vaultClient, _logger);
-                        if (secret != null) break;
+                        loginResult = await strategy.LoginAsync(_config.Address, _logger);
+                        if (loginResult != null) break;
                         errors[strategy.ToString()] = "returned null";
                     }
                     catch (Exception ex)
@@ -114,7 +115,7 @@ namespace Metabase.Api.Vault
                         errors[strategy.ToString()] = ex.ToString();
                     }
 
-                if (secret?.Auth == null)
+                if (loginResult?.SecretAuth == null)
                 {
                     var errorMessages = string.Join(";", errors.Select(x => $"{x.Key}:{x.Value}"));
                     throw new Exception($"All auth strategies failed (strategies were [{errorMessages}]).");
@@ -122,10 +123,10 @@ namespace Metabase.Api.Vault
 
                 _logger.LogInformation("Authenticated to Vault.");
 
-                _vaultClient.Token = secret.Auth.ClientToken;
+                _api = loginResult.Client;
 
 #pragma warning disable 4014
-                Task.Factory.StartNew(() => RunTokenRenewer(secret.Auth));
+                Task.Factory.StartNew(() => RunTokenRenewer(loginResult.SecretAuth));
 #pragma warning restore 4014
             }
             catch (Exception ex)
@@ -134,7 +135,7 @@ namespace Metabase.Api.Vault
                 throw;
             }
         }
-        
+
         private async Task RunTokenRenewer(SecretAuth tokenData)
         {
             try
@@ -161,7 +162,7 @@ namespace Metabase.Api.Vault
                     await Task.Delay(halflife, _cts.Token);
                     _logger.LogDebug("Renewing auth token.");
 
-                    await _vaultClient.Auth.Write<NoData>("token/renew-self");
+                    await _api.WriteAsync<NoData>("auth/token/renew-self");
 
                     _logger.LogDebug("Auth token renewed.");
                 }
@@ -177,42 +178,65 @@ namespace Metabase.Api.Vault
             }
         }
 
-        public async Task<RenewingSecret<T>> GetRenewingSecret<T>(Func<IVaultApi, CancellationToken, Task<VaultResponse<T>>> getter, CancellationToken cancellationToken = default (CancellationToken))
+        public async Task<T> GetSecretAsync<T>(Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default(CancellationToken))
         {
             var cts = CancellationTokenSource.CreateLinkedTokenSource(_cts.Token, cancellationToken);
             var secret = await getter(this, cts.Token);
-            
+            return secret.Data;
+        }
+
+        public async Task<LiveSecret<T>> GetRenewingSecretAsync<T>(string label, Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var cts = CancellationTokenSource.CreateLinkedTokenSource(_cts.Token, cancellationToken);
+            var secret = await getter(this, cts.Token);
+
             if (secret.Renewable)
             {
-                // ReSharper disable once PossibleLossOfFraction
-                var halflife = TimeSpan.FromSeconds(secret.LeaseDuration / 2);
-                return new RenewingSecret<T>(secret.Data, _cts.Token, halflife, async (token) =>
+                // If the lease is renewable, the renewal action is to renew the lease and return
+                // the original value provided by the getter.
+                var halflife = TimeSpan.FromSeconds(secret.LeaseDuration / 2.0);
+                return new LiveSecret<T>(label, secret.Data, _cts.Token, halflife, async (token) =>
                 {
+                    _logger.LogDebug($"Renewing lease for secret with label '{label}'.");
+                    await _api.WriteAsync<NoData>("sys/lease/renew", new Dictionary<string,string>{["lease_id"] = secret.LeaseId}, token);
+                    return secret.Data;
+                });
+            }
+            else if (secret.LeaseDuration == 0)
+            {
+                _logger.LogDebug($"Lease for secret with label '{label}' will never expire, no renewal work to do.");
+                return new LiveSecret<T>(secret.Data);
+            }
+            else
+            {
+                // If the lease is not renewable, the only way to keep the secret fresh is to re-invoke the getter.
+                var halflife = TimeSpan.FromSeconds(secret.LeaseDuration / 2.0);
+                return new LiveSecret<T>(label, secret.Data, _cts.Token, halflife, async (token) =>
+                {
+                    _logger.LogDebug($"Re-acquiring secret with label '{label}'.");
                     var renewedSecret = await getter(this, token);
                     return renewedSecret.Data;
                 });
             }
-            else
-            {
-                return new RenewingSecret<T>(secret.Data);
-            }
         }
 
-        public Task<VaultResponse<T>> ReadAsync<T>(string path, CancellationToken cancellationToken = default (CancellationToken))
+
+        public string Token
         {
-            return _vaultClient.Secret.Read<T>(path, cancellationToken);
+            get => _api.Token;
+            set => _api.Token = value;
         }
 
-        public Task<VaultResponse<T>> WriteAsync<T>(string path, object payload, CancellationToken cancellationToken = default (CancellationToken))
-        {
-            return _vaultClient.Secret.Write<object, T>(path, payload, cancellationToken);
-        }
+        public Task<Secret<T>> ReadAsync<T>(string path, CancellationToken cancellationToken = default(CancellationToken)) => _api.ReadAsync<T>(path, cancellationToken);
+
+        public Task<Secret<T>> WriteAsync<T>(string path, object payload, CancellationToken cancellationToken = default(CancellationToken)) => _api.WriteAsync<T>(path, payload, cancellationToken);
 
         public void Dispose()
         {
             _cts?.Cancel();
             _cts?.Dispose();
         }
+
     }
 
 
