@@ -2,47 +2,45 @@ package naveego.vault
 
 import java.util.TimerTask
 import java.util.Timer
+
 import spray.json._
 import NaveegoJsonProtocol._
-
-case class TransformedSecret[T](secret: Secret, data: T)
 
 class LiveSecret[T](
                      label: String,
                      api: VaultApi,
-                     getter: (VaultApi) => TransformedSecret[T]
-                     ) extends log.LazyLogger {
+                     getter: (VaultApi) => Secret[T]
+                   ) extends log.LazyLogger {
 
-  private var valueOrError : Either[String, T] = Left("not initialized")
-  def value(): T = valueOrError match {
-    case Left(err) => throw new Exception(err)
-    case Right(v) => v
-  }
+  private var valueOrError: Either[String, T] = Left("not initialized")
+
+  private val timer = new Timer()
+
+  def value(): Either[String, T] = valueOrError
 
   init()
 
   private def init(): Unit = {
 
+
     val self = this
-    val initialInfo = getter(api)
-    val secret = initialInfo.secret
-    val initialValue = initialInfo.data
-    this.valueOrError = Right(initialValue)
+    var secret = getter(api)
+    this.valueOrError = Right(secret.data.get)
 
+    if (secret.leaseDuration == 0) {
+      log.debug(s"Lease for secret with label '$label' will never expire, no renewal work to do.");
+      return
+    }
 
-    if (secret.renewable)
-    {
+    val task = if (secret.renewable) {
       // If the lease is renewable, the renewal action is to renew the lease and return
       // the original value provided by the getter.
-      val halflife = (secret.leaseDuration * 1000) / 2
-
-      val timer = new Timer()
-      timer.schedule(new TimerTask {
+      new TimerTask {
         override def run(): Unit = {
           try {
             log.debug(s"Renewing live secret with label '$label'.")
-            val payload = Map[String, String]().toJson
-            api.write("sys/lease/renew", Map("lease_id" -> secret.leaseId).toJson)
+            val payload = Map("lease_id" -> secret.leaseId).toJson(DefaultJsonProtocol.mapFormat)
+            api.write[NoData]("sys/lease/renew", payload)
           }
           catch {
             case e: Exception => {
@@ -51,22 +49,15 @@ class LiveSecret[T](
             }
           }
         }
-      }, halflife, halflife)
-    }
-    else if (secret.leaseDuration == 0)
-    {
-      log.debug(s"Lease for secret with label '$label' will never expire, no renewal work to do.");
+      }
     } else {
       // If the lease is not renewable, the only way to keep the secret fresh is to re-invoke the getter.
-      val halflife = (secret.leaseDuration * 1000) / 2
-
-      var timer = new Timer()
-      timer.schedule(new TimerTask {
+      new TimerTask {
         override def run(): Unit = {
           try {
             log.debug(s"Re-acquiring live secret with label '$label'.")
-            val result = getter(api)
-            self.valueOrError = Right(result.data)
+            secret = getter(api)
+            self.valueOrError = Right(secret.data.get)
           }
           catch {
             case e: Exception => {
@@ -75,20 +66,16 @@ class LiveSecret[T](
             }
           }
         }
-      }, halflife, halflife)
+      }
     }
+
+    val halflife = (secret.leaseDuration * 1000) / 2
+
+    timer.schedule(task, halflife, halflife)
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
+  def stop(): Unit = {
+    timer.cancel()
+    valueOrError = Left("Timer has been stopped.")
+  }
 }

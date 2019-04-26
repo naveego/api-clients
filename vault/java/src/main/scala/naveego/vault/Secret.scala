@@ -2,31 +2,33 @@ package naveego.vault
 
 import spray.json._
 
-case class Secret(
-                   requestId: String,
-                   leaseId: String,
-                   renewable: Boolean,
-                   leaseDuration: Int,
-                   warnings: List[String],
-                   auth: SecretAuth,
-                   data: JsObject,
-                 )
 
+case class Secret[T: JsonFormat](
+                   data: Option[T],
+                   auth: SecretAuth = null,
+                   renewable: Boolean = false,
+                   leaseDuration: Int = 0,
+                   leaseId: String = null,
+                   warnings: List[String] = null,
+                   requestId: String = "",
+                 )
 
 case class SecretAuth(
                        clientToken: String,
-                       accessor: String,
-                       policies: List[String],
-                       metadata: Map[String, String],
-                       leaseDuration: Int,
-                       renewable: Boolean,
+                       renewable: Boolean = false,
+                       leaseDuration: Int = 0,
+                       policies: List[String] = List[String](),
+                       metadata: Map[String, String] = null,
+                       accessor: String = null,
                      )
 
 case class NoData()
 
 object NaveegoJsonProtocol extends DefaultJsonProtocol {
 
-  implicit val secretAuth = new RootJsonFormat[SecretAuth] {
+  implicit val noData: RootJsonFormat[NoData] = jsonFormat0(NoData)
+
+  implicit val secretAuth: RootJsonFormat[SecretAuth] = new RootJsonFormat[SecretAuth] {
     override def write(obj: SecretAuth): JsValue = {
       JsObject(
         "client_token" -> obj.clientToken.toJson,
@@ -47,20 +49,20 @@ object NaveegoJsonProtocol extends DefaultJsonProtocol {
 
       new SecretAuth(
         obj.fields("client_token").convertTo[String],
-        obj.fields("accessor").convertTo[String],
+        obj.fields("renewable").convertTo[Boolean],
+        obj.fields("lease_duration").convertTo[Int],
         obj.fields("policies").convertTo[List[String]],
         obj.fields("metadata") match {
           case o: JsObject => o.convertTo[Map[String, String]]
           case _ => null
         },
-        obj.fields("lease_duration").convertTo[Int],
-        obj.fields("renewable").convertTo[Boolean],
+        obj.fields("accessor").convertTo[String],
       )
     }
   }
 
-  implicit val secret = new RootJsonFormat[Secret] {
-    override def write(obj: Secret): JsValue = {
+  implicit def secret[T: JsonFormat] = new RootJsonFormat[Secret[T]] {
+    override def write(obj: Secret[T]): JsValue = {
       JsObject(
         "data" -> obj.data.toJson,
         "auth" -> obj.auth.toJson,
@@ -72,23 +74,26 @@ object NaveegoJsonProtocol extends DefaultJsonProtocol {
       )
     }
 
-    override def read(json: JsValue): Secret = {
+    override def read(json: JsValue): Secret[T] = {
       val obj = json.asJsObject
 
       new Secret(
-        obj.fields("request_id").convertTo[String],
-        obj.fields("lease_id").convertTo[String],
+        obj.fields("data") match {
+          case o: JsObject => Some(o.convertTo[T])
+          case _ => None
+        },
+        obj.fields("auth") match {
+          case o: JsObject => o.convertTo[SecretAuth]
+          case _ => null
+        },
         obj.fields("renewable").convertTo[Boolean],
         obj.fields("lease_duration").convertTo[Int],
+        obj.fields("lease_id").convertTo[String],
         obj.fields("warnings") match {
           case o: JsArray => o.convertTo[List[String]]
           case _ => null
         },
-        obj.fields("auth").convertTo[SecretAuth],
-        obj.fields("data") match {
-          case o: JsObject => o
-          case _ => null
-        },
+        obj.fields("request_id").convertTo[String],
       )
     }
   }

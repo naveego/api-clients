@@ -1,10 +1,10 @@
 package naveego.vault
 
 import NaveegoJsonProtocol._
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.{FlatSpec, Matchers, OptionValues}
 import spray.json._
 
-class VaultHelperFixture extends FlatSpec with Matchers {
+class VaultHelperFixture extends FlatSpec with Matchers with OptionValues {
 
    val address = "http://vault.n5o.red"
 
@@ -15,12 +15,12 @@ class VaultHelperFixture extends FlatSpec with Matchers {
 
     val data = Map[String, String](
       "a" -> "A"
-    ).toJson.asJsObject()
-    sut.write("secret/data/scala-test", data)
+    )
+    sut.write[NoData]("secret/data/scala-test", data.toJson.asJsObject())
 
-    val result = sut.read("secret/data/scala-test")
+    val result = sut.read[Map[String,String]]("secret/data/scala-test")
 
-    result.data should equal(data)
+    result.data.value should equal(data)
   }
 
   "org.naveego.vault.VaultHelper" should "keep own auth token fresh" in {
@@ -33,24 +33,24 @@ class VaultHelperFixture extends FlatSpec with Matchers {
       .build()
 
     val data = Map(
-      "ttl" -> "1s",
+      "ttl" -> "2s",
       "explicit_max_ttl" -> "1m",
       "renewable" -> "true",
     )
 
-    val secret = helperWithRootToken.write("auth/token/create", data.toJson)
+    val secret = helperWithRootToken.write[NoData]("auth/token/create", data.toJson)
 
     val sut = vault.vault.withAddress(address)
       .withStrategies(TokenLoginStrategy(secret.auth.clientToken))
       .build()
 
-    Thread.sleep(1000)
+    Thread.sleep(1500)
 
     error should be(null)
 
-    val result = sut.read("auth/token/lookup-self")
+    val result = sut.read[NoData]("auth/token/lookup-self")
 
-    result.data should not be(null)
+    result.data.value should not be(null)
   }
 
 }

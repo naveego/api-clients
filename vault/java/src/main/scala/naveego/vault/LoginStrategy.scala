@@ -24,20 +24,16 @@ case class TokenLoginStrategy(token: String) extends LoginStrategy {
       .body
       .map(body => {
         val secret = body.parseJson
-          .convertTo[Secret](NaveegoJsonProtocol.secret)
 
-        val obj = secret.data
+        val obj = secret.asJsObject().fields.get("data").get.asJsObject()
 
         val auth = new SecretAuth(
           obj.fields("id").convertTo[String],
-          obj.fields("accessor").convertTo[String],
-          obj.fields("policies").convertTo[List[String]],
-          obj.fields.get("metadata") match {
-            case Some(o) => o.convertTo[Map[String, String]]
-            case _ => null
-          },
-          obj.fields("ttl").convertTo[Int],
           obj.fields("renewable").convertTo[Boolean],
+          obj.fields("ttl").convertTo[Int],
+          obj.fields("policies").convertTo[List[String]],
+          null,
+          obj.fields("accessor").convertTo[String],
         )
 
         auth

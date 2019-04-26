@@ -15,9 +15,10 @@ package object vault {
 
 }
 
+
 trait VaultApi {
-  def read(path: String): Secret
-  def write(path: String, payload: JsValue = null): Secret
+  def read[T:JsonFormat](path: String): Secret[T]
+  def write[T:JsonFormat](path: String, payload: JsValue = null): Secret[T]
 }
 
 case class VaultHelperBuilder(
@@ -80,7 +81,7 @@ case class VaultHelperBuilder(
                 auth.accessor
               }")
               try {
-                helper.write("auth/token/renew-self")
+                helper.write[NoData]("auth/token/renew-self")
               }
               catch {
                 case e: Exception => {
@@ -114,7 +115,7 @@ class VaultHelper(address: String, secretAuth: SecretAuth)
 
   val token = secretAuth.clientToken
 
-  def read(path: String): Secret = {
+  def read[T: JsonFormat](path: String): Secret[T] = {
 
     val url = uri"${address + "/v1/" + path}"
     val request = sttp.get(url)
@@ -128,8 +129,8 @@ class VaultHelper(address: String, secretAuth: SecretAuth)
       val body = response.unsafeBody
       if (!body.isEmpty) {
         val secret = body
-          .parseJson
-          .convertTo[Secret](NaveegoJsonProtocol.secret)
+            .parseJson
+          .convertTo[Secret[T]](NaveegoJsonProtocol.secret[T])
         return secret
       }
     }
@@ -137,18 +138,18 @@ class VaultHelper(address: String, secretAuth: SecretAuth)
     val secret = response
       .unsafeBody
       .parseJson
-      .convertTo[Secret](NaveegoJsonProtocol.secret)
+      .convertTo[Secret[T]](NaveegoJsonProtocol.secret[T])
 
     secret
   }
 
-  def write(path: String, payload: JsValue = null): Secret = {
+  def write[T:JsonFormat](path: String, payload: JsValue = null): Secret[T] = {
     val url = uri"${address + "/v1/" + path}"
     var request = sttp.post(url)
       .headers(("X-Vault-Token", token))
 
     if(payload != null) {
-      val body = payload.toString()
+      val body = payload.toJson.toString()
       request = request.body(body)
     }
 
@@ -159,7 +160,7 @@ class VaultHelper(address: String, secretAuth: SecretAuth)
       if (!body.isEmpty) {
         val secret = body
           .parseJson
-          .convertTo[Secret](NaveegoJsonProtocol.secret)
+          .convertTo[Secret[T]](NaveegoJsonProtocol.secret[T])
         return secret
       }
     }
