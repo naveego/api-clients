@@ -8,4 +8,6 @@ export declare const TenantConfiguration: msRest.CompositeMapper;
 export declare const UserAuthCodeResponse: msRest.CompositeMapper;
 export declare const UserUser: msRest.CompositeMapper;
 export declare const UserCreateUser: msRest.CompositeMapper;
+export declare const UserLoginRequest: msRest.CompositeMapper;
+export declare const UserLoginResponse: msRest.CompositeMapper;
 //# sourceMappingURL=mappers.d.ts.map

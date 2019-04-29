@@ -1,0 +1,1 @@
+{"version":3,"file":"anonymous.d.ts","sourceRoot":"","sources":["../lib/anonymous.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,wBAAwB,EAAE,MAAM,mBAAmB,CAAC;AAE7D,qBAAa,oBAAqB,YAAW,wBAAwB;IAEjE,WAAW,CAAC,WAAW,EAAE,OAAO,mBAAmB,EAAE,WAAW,GAAG,OAAO,CAAC,OAAO,mBAAmB,EAAE,WAAW,CAAC;CAKtH"}

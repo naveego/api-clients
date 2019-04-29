@@ -157,6 +157,25 @@ declare class AuthAPI extends AuthAPIContext {
      */
     create(body: Models.UserCreateUser, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.UserUser>): void;
     /**
+     * @summary Provides a login endpoint that can generate an auth code for the user given valid user
+     * credentials.
+     * @param body
+     * @param [options] The optional parameters
+     * @returns Promise<Models.LoginUserResponse>
+     */
+    loginUser(body: Models.UserLoginRequest, options?: Models.AuthAPILoginUserOptionalParams): Promise<Models.LoginUserResponse>;
+    /**
+     * @param body
+     * @param callback The callback
+     */
+    loginUser(body: Models.UserLoginRequest, callback: msRest.ServiceCallback<Models.UserLoginResponse>): void;
+    /**
+     * @param body
+     * @param options The optional parameters
+     * @param callback The callback
+     */
+    loginUser(body: Models.UserLoginRequest, options: Models.AuthAPILoginUserOptionalParams, callback: msRest.ServiceCallback<Models.UserLoginResponse>): void;
+    /**
      * @summary Gets a user.
      * @param userId identifier of the user
      * @param [options] The optional parameters

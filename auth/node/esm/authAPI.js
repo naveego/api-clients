@@ -68,6 +68,12 @@ var AuthAPI = /** @class */ (function (_super) {
             options: options
         }, createOperationSpec, callback);
     };
+    AuthAPI.prototype.loginUser = function (body, options, callback) {
+        return this.sendOperationRequest({
+            body: body,
+            options: options
+        }, loginUserOperationSpec, callback);
+    };
     AuthAPI.prototype.get = function (userId, options, callback) {
         return this.sendOperationRequest({
             userId: userId,
@@ -183,7 +189,7 @@ var generateRequest1OperationSpec = {
         Parameters.tid
     ],
     formDataParameters: [
-        Parameters.clientId
+        Parameters.clientId0
     ],
     contentType: "application/x-www-form-urlencoded",
     responses: {
@@ -224,6 +230,26 @@ var createOperationSpec = {
             bodyMapper: Mappers.UserUser
         },
         default: {}
+    },
+    serializer: serializer
+};
+var loginUserOperationSpec = {
+    httpMethod: "POST",
+    path: "users/login",
+    queryParameters: [
+        Parameters.clientId1
+    ],
+    requestBody: {
+        parameterPath: "body",
+        mapper: tslib_1.__assign({}, Mappers.UserLoginRequest, { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: Mappers.UserLoginResponse
+        },
+        default: {
+            bodyMapper: Mappers.UserLoginResponse
+        }
     },
     serializer: serializer
 };

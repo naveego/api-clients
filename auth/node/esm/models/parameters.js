@@ -3,10 +3,22 @@
  * Changes may cause incorrect behavior and will be lost if the code is
  * regenerated.
  */
-export var clientId = {
+export var clientId0 = {
     parameterPath: "clientId",
     mapper: {
         required: true,
+        serializedName: "client_id",
+        type: {
+            name: "String"
+        }
+    }
+};
+export var clientId1 = {
+    parameterPath: [
+        "options",
+        "clientId"
+    ],
+    mapper: {
         serializedName: "client_id",
         type: {
             name: "String"

@@ -4,7 +4,7 @@
 autorest ./generator.md
 
 # Compile the Node library with Typescript support
-(cd node && npm run compile)
+(cd node && npm run prepack)
 
 # Build the dotnet core project
 (cd csharp && dotnet build)

@@ -25,7 +25,7 @@ typescript:
   override-client-name: AuthAPI
   generate-metadata: true
   package-name: "@naveego/client-auth"
-  package-version: "1.0.2-beta.3"
+  package-version: "1.0.2-beta.5"
   author: "Naveego"
 
 java:

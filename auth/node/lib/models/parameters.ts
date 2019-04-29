@@ -6,10 +6,22 @@
 
 import * as msRest from "@azure/ms-rest-js";
 
-export const clientId: msRest.OperationParameter = {
+export const clientId0: msRest.OperationParameter = {
   parameterPath: "clientId",
   mapper: {
     required: true,
+    serializedName: "client_id",
+    type: {
+      name: "String"
+    }
+  }
+};
+export const clientId1: msRest.OperationQueryParameter = {
+  parameterPath: [
+    "options",
+    "clientId"
+  ],
+  mapper: {
     serializedName: "client_id",
     type: {
       name: "String"
