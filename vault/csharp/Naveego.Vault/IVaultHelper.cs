@@ -1,37 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Newtonsoft.Json;
-using Vault.Models;
 
 namespace Metabase.Api.Vault
 {
     public interface IVaultHelper : IVaultApi, IDisposable
     {
         /// <summary>
-        /// Gets a secret using the provided secret getter.
+        ///     Gets a secret using the provided secret getter. Predefined getters are in the <see cref="SecretGetters" /> static
+        ///     class.
         /// </summary>
         /// <param name="getter"></param>
         /// <param name="cancellationToken"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        Task<T> GetSecretAsync<T>(Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default(CancellationToken));
+        Task<T> GetSecretAsync<T>(Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Gets a new <see cref="LiveSecret{T}"/> which will be acquired and renewed using the <paramref name="getter"/>.
+        ///     Gets a new <see cref="LiveSecret{T}" /> which will be acquired and renewed using the <paramref name="getter" />.
+        ///     Predefined getters are in the <see cref="SecretGetters" /> static class.
         /// </summary>
         /// <param name="label">Used to prefix log messages and errors related to this secret.</param>
         /// <param name="getter"></param>
         /// <param name="cancellationToken"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        Task<LiveSecret<T>> GetRenewingSecretAsync<T>(string label, Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default(CancellationToken));
+        Task<LiveSecret<T>> GetLiveSecretAsync<T>(string label, Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default);
     }
 
 
@@ -45,7 +44,7 @@ namespace Metabase.Api.Vault
         {
             Address = address;
         }
-        
+
         public string Address { get; set; }
 
         public ILogger Logger { get; set; } = NullLogger.Instance;
@@ -64,27 +63,101 @@ namespace Metabase.Api.Vault
 
         public VaultHelperConfig UsingTokenLogin(string token)
         {
-            LoginStrategies.Add(new TokenLoginStrategy()
+            LoginStrategies.Add(new TokenLoginStrategy
             {
-                Token = token,
+                Token = token
             });
             return this;
         }
+
+        public VaultHelperConfig WithErrorHandler(Action<Exception> handler)
+        {
+            ErrorHandler = handler;
+            return this;
+        }
+
+        public Action<Exception> ErrorHandler { get; set; }
     }
 
     public class VaultHelper : IVaultHelper
     {
         private readonly VaultHelperConfig _config;
         private readonly CancellationTokenSource _cts;
-        private IVaultApi _api;
         private readonly ILogger _logger;
-      
+        private IVaultApi _api;
+
 
         private VaultHelper(VaultHelperConfig config)
         {
             _config = config;
             _cts = new CancellationTokenSource();
             _logger = config.Logger;
+        }
+
+        public async Task<T> GetSecretAsync<T>(Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default)
+        {
+            var cts = CancellationTokenSource.CreateLinkedTokenSource(_cts.Token, cancellationToken);
+            var secret = await getter(this, cts.Token);
+            return secret.Data;
+        }
+
+        public async Task<LiveSecret<T>> GetLiveSecretAsync<T>(string label, Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default)
+        {
+            var cts = CancellationTokenSource.CreateLinkedTokenSource(_cts.Token, cancellationToken);
+            var secret = await getter(this, cts.Token);
+
+            if (secret.Renewable)
+            {
+                // If the lease is renewable, the renewal action is to renew the lease and return
+                // the original value provided by the getter.
+                var halflife = TimeSpan.FromSeconds(secret.LeaseDuration / 2.0);
+                return new LiveSecret<T>(label, secret.Data, _cts.Token, halflife, async token =>
+                {
+                    _logger.LogDebug($"Renewing lease for secret with label '{label}'.");
+                    await _api.WriteAsync<NoData>("sys/lease/renew", new Dictionary<string, string> {["lease_id"] = secret.LeaseId}, token);
+                    return secret.Data;
+                });
+            }
+
+            if (secret.LeaseDuration == 0)
+            {
+                _logger.LogDebug($"Lease for secret with label '{label}' will never expire, no renewal work to do.");
+                return new LiveSecret<T>(secret.Data);
+            }
+
+            {
+                // If the lease is not renewable, the only way to keep the secret fresh is to re-invoke the getter.
+                var halflife = TimeSpan.FromSeconds(secret.LeaseDuration / 2.0);
+                return new LiveSecret<T>(label, secret.Data, _cts.Token, halflife, async token =>
+                {
+                    _logger.LogDebug($"Re-acquiring secret with label '{label}'.");
+                    var renewedSecret = await getter(this, token);
+                    return renewedSecret.Data;
+                });
+            }
+        }
+
+
+        public string Token
+        {
+            get => _api.Token;
+            set => _api.Token = value;
+        }
+
+        public Task<Secret<T>> ReadAsync<T>(string path, CancellationToken cancellationToken = default)
+        {
+            return _api.ReadAsync<T>(path, cancellationToken);
+        }
+
+        public Task<Secret<T>> WriteAsync<T>(string path, object payload, CancellationToken cancellationToken = default)
+        {
+            return _api.WriteAsync<T>(path, payload, cancellationToken);
+        }
+
+        public void Dispose()
+        {
+            _cts?.Cancel();
+            _cts?.Dispose();
         }
 
 
@@ -107,7 +180,11 @@ namespace Metabase.Api.Vault
                     try
                     {
                         loginResult = await strategy.LoginAsync(_config.Address, _logger);
-                        if (loginResult != null) break;
+                        if (loginResult != null)
+                        {
+                            break;
+                        }
+
                         errors[strategy.ToString()] = "returned null";
                     }
                     catch (Exception ex)
@@ -143,10 +220,14 @@ namespace Metabase.Api.Vault
                 if (!tokenData.Renewable)
                 {
                     if (tokenData.LeaseDuration == 0)
+                    {
                         _logger.LogInformation("Auth token will live forever, not renewing.");
+                    }
                     else
+                    {
                         _logger.LogWarning(
                             $"Auth token is not renewable. It will expire in {tokenData.LeaseDuration} seconds.");
+                    }
 
                     return;
                 }
@@ -154,7 +235,7 @@ namespace Metabase.Api.Vault
                 _logger.LogDebug("Auth token renewal started.");
 
                 // ReSharper disable once PossibleLossOfFraction
-                var halflife = TimeSpan.FromSeconds(tokenData.LeaseDuration / 2);
+                var halflife = TimeSpan.FromSeconds(tokenData.LeaseDuration / 2.0);
 
                 while (true)
                 {
@@ -174,69 +255,16 @@ namespace Metabase.Api.Vault
             catch (Exception ex)
             {
                 _logger.LogCritical(ex, "Auth token renewal failed, application can no longer authenticate.");
-                Environment.Exit(8200);
-            }
-        }
-
-        public async Task<T> GetSecretAsync<T>(Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            var cts = CancellationTokenSource.CreateLinkedTokenSource(_cts.Token, cancellationToken);
-            var secret = await getter(this, cts.Token);
-            return secret.Data;
-        }
-
-        public async Task<LiveSecret<T>> GetRenewingSecretAsync<T>(string label, Func<IVaultApi, CancellationToken, Task<Secret<T>>> getter, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            var cts = CancellationTokenSource.CreateLinkedTokenSource(_cts.Token, cancellationToken);
-            var secret = await getter(this, cts.Token);
-
-            if (secret.Renewable)
-            {
-                // If the lease is renewable, the renewal action is to renew the lease and return
-                // the original value provided by the getter.
-                var halflife = TimeSpan.FromSeconds(secret.LeaseDuration / 2.0);
-                return new LiveSecret<T>(label, secret.Data, _cts.Token, halflife, async (token) =>
+                if (_config.ErrorHandler == null)
                 {
-                    _logger.LogDebug($"Renewing lease for secret with label '{label}'.");
-                    await _api.WriteAsync<NoData>("sys/lease/renew", new Dictionary<string,string>{["lease_id"] = secret.LeaseId}, token);
-                    return secret.Data;
-                });
-            }
-            else if (secret.LeaseDuration == 0)
-            {
-                _logger.LogDebug($"Lease for secret with label '{label}' will never expire, no renewal work to do.");
-                return new LiveSecret<T>(secret.Data);
-            }
-            else
-            {
-                // If the lease is not renewable, the only way to keep the secret fresh is to re-invoke the getter.
-                var halflife = TimeSpan.FromSeconds(secret.LeaseDuration / 2.0);
-                return new LiveSecret<T>(label, secret.Data, _cts.Token, halflife, async (token) =>
+                    Environment.Exit(8200);
+                }
+                else
                 {
-                    _logger.LogDebug($"Re-acquiring secret with label '{label}'.");
-                    var renewedSecret = await getter(this, token);
-                    return renewedSecret.Data;
-                });
+                    _config.ErrorHandler(new Exception("Auth token renewal failed.", ex));
+                }
             }
         }
-
-
-        public string Token
-        {
-            get => _api.Token;
-            set => _api.Token = value;
-        }
-
-        public Task<Secret<T>> ReadAsync<T>(string path, CancellationToken cancellationToken = default(CancellationToken)) => _api.ReadAsync<T>(path, cancellationToken);
-
-        public Task<Secret<T>> WriteAsync<T>(string path, object payload, CancellationToken cancellationToken = default(CancellationToken)) => _api.WriteAsync<T>(path, payload, cancellationToken);
-
-        public void Dispose()
-        {
-            _cts?.Cancel();
-            _cts?.Dispose();
-        }
-
     }
 
 

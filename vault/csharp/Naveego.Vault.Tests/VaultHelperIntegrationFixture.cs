@@ -40,7 +40,9 @@ namespace Naveego.Vault.Tests
 
             var secret = await helperWithOriginalToken.WriteAsync<NoData>("auth/token/create", new Dictionary<string, string>()
             {
-                ["period"] = "1s"
+                ["ttl"] = "1s",
+                ["explicit_max_ttl"] = "1m",
+                ["renewable"] = "true"
             });
 
             Exception ex = null;

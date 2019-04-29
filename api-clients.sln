@@ -8,6 +8,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naveego.Vault.Tests", "vaul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naveego.Vault", "vault\csharp\Naveego.Vault\Naveego.Vault.csproj", "{234E1FD2-99C8-4DE2-996A-8E15795E49D3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auth", "auth", "{CBBB16AC-D277-4858-A425-4976A6963122}"
+ProjectSection(SolutionItems) = preProject
+	auth\generate.sh = auth\generate.sh
+	auth\generator.md = auth\generator.md
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "metabase", "metabase", "{137E3794-F379-48B3-BC7C-7A1CDE2CD225}"
+ProjectSection(SolutionItems) = preProject
+	metabase\generate.sh = metabase\generate.sh
+	metabase\generator.md = metabase\generator.md
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vault", "vault", "{7FC5AACB-0C2C-4E88-8140-FE006BF38970}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +44,11 @@ Global
 		{234E1FD2-99C8-4DE2-996A-8E15795E49D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{234E1FD2-99C8-4DE2-996A-8E15795E49D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{234E1FD2-99C8-4DE2-996A-8E15795E49D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43AED96D-71CD-4EA5-BFD2-7CA40CBC0040} = {CBBB16AC-D277-4858-A425-4976A6963122}
+		{E1F8F5D7-B1C1-4B25-9ABD-5C8BC9E66BAF} = {137E3794-F379-48B3-BC7C-7A1CDE2CD225}
+		{234E1FD2-99C8-4DE2-996A-8E15795E49D3} = {7FC5AACB-0C2C-4E88-8140-FE006BF38970}
+		{9969BAF6-A3AA-4993-BA21-9927727DABA8} = {7FC5AACB-0C2C-4E88-8140-FE006BF38970}
 	EndGlobalSection
 EndGlobal

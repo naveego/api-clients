@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_api-clients.-1818381728.00" t="ExcludeRecursive" />
     <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.0.1/build/netcoreapp1.0" t="Include">
@@ -11,149 +12,164 @@
     <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="api-clients.sln" t="IncludeFlat" />
-      <e p="auth/csharp" t="IncludeRecursive">
-        <e p="AuthService.cs" t="Include" />
-        <e p="AuthServiceExtensions.cs" t="Include" />
-        <e p="IAuthService.cs" t="Include" />
-        <e p="Models" t="Include">
-          <e p="DiscoveryKey.cs" t="Include" />
-          <e p="DiscoveryKeys.cs" t="Include" />
-          <e p="DiscoveryKeysException.cs" t="Include" />
-          <e p="OauthToken.cs" t="Include" />
-          <e p="OauthTokenException.cs" t="Include" />
-          <e p="SamlGenerateRequestResponse.cs" t="Include" />
-          <e p="SamlGenerateRequestResponseException.cs" t="Include" />
-          <e p="SamlSAMLSettings.cs" t="Include" />
-          <e p="SamlSAMLSettingsException.cs" t="Include" />
-          <e p="TenantConfiguration.cs" t="Include" />
-          <e p="TenantConfigurationException.cs" t="Include" />
-          <e p="UserAuthCodeResponse.cs" t="Include" />
-          <e p="UserAuthCodeResponseException.cs" t="Include" />
-          <e p="UserCreateUser.cs" t="Include" />
-          <e p="UserUser.cs" t="Include" />
-          <e p="UserUserException.cs" t="Include" />
-        </e>
-        <e p="Naveego.Auth.csproj" t="IncludeRecursive" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
-              <e p="Naveego.Auth.AssemblyInfo.cs" t="Include" />
+      <e p="auth" t="Include">
+        <e p="csharp" t="IncludeRecursive">
+          <e p="AuthService.cs" t="Include" />
+          <e p="AuthServiceExtensions.cs" t="Include" />
+          <e p="IAuthService.cs" t="Include" />
+          <e p="Models" t="Include">
+            <e p="DiscoveryKey.cs" t="Include" />
+            <e p="DiscoveryKeys.cs" t="Include" />
+            <e p="DiscoveryKeysException.cs" t="Include" />
+            <e p="OauthToken.cs" t="Include" />
+            <e p="OauthTokenException.cs" t="Include" />
+            <e p="SamlGenerateRequestResponse.cs" t="Include" />
+            <e p="SamlGenerateRequestResponseException.cs" t="Include" />
+            <e p="SamlSAMLSettings.cs" t="Include" />
+            <e p="SamlSAMLSettingsException.cs" t="Include" />
+            <e p="TenantConfiguration.cs" t="Include" />
+            <e p="TenantConfigurationException.cs" t="Include" />
+            <e p="UserAuthCodeResponse.cs" t="Include" />
+            <e p="UserAuthCodeResponseException.cs" t="Include" />
+            <e p="UserCreateUser.cs" t="Include" />
+            <e p="UserUser.cs" t="Include" />
+            <e p="UserUserException.cs" t="Include" />
+          </e>
+          <e p="Naveego.Auth.csproj" t="IncludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp2.1" t="Include">
+                <e p="Naveego.Auth.AssemblyInfo.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>
+        <e p="generate.sh" t="Include" />
+        <e p="generator.md" t="Include" />
       </e>
-      <e p="metabase/csharp" t="IncludeRecursive">
-        <e p="IMetabaseAPI10.cs" t="Include" />
-        <e p="MetabaseAPI10.cs" t="Include" />
-        <e p="MetabaseAPI10Extensions.cs" t="Include" />
-        <e p="Models" t="Include">
-          <e p="Batch.cs" t="Include" />
-          <e p="BatchStatus.cs" t="Include" />
-          <e p="BatchStatusGoBetweenScope.cs" t="Include" />
-          <e p="Boxplot.cs" t="Include" />
-          <e p="Connection.cs" t="Include" />
-          <e p="ConnectionDiscoveredSchema.cs" t="Include" />
-          <e p="ConnectionRole.cs" t="Include" />
-          <e p="ConnectionRoleConverter.cs" t="Include" />
-          <e p="DataflowEvent.cs" t="Include" />
-          <e p="Edge.cs" t="Include" />
-          <e p="EdgeType.cs" t="Include" />
-          <e p="EdgeTypeConverter.cs" t="Include" />
-          <e p="Filter.cs" t="Include" />
-          <e p="FilterRule.cs" t="Include" />
-          <e p="FilterRuleEffect.cs" t="Include" />
-          <e p="FilterRuleEffectConverter.cs" t="Include" />
-          <e p="Flow.cs" t="Include" />
-          <e p="Histogram.cs" t="Include" />
-          <e p="HttpEdge.cs" t="Include" />
-          <e p="Job.cs" t="Include" />
-          <e p="JobStatus.cs" t="Include" />
-          <e p="JobStatusGoBetweenScope.cs" t="Include" />
-          <e p="JobType.cs" t="Include" />
-          <e p="JobTypeConverter.cs" t="Include" />
-          <e p="KafkaEdge.cs" t="Include" />
-          <e p="MapNode.cs" t="Include" />
-          <e p="Mapping.cs" t="Include" />
-          <e p="MappingDirection.cs" t="Include" />
-          <e p="MappingDirectionConverter.cs" t="Include" />
-          <e p="MatchRule.cs" t="Include" />
-          <e p="MergeRule.cs" t="Include" />
-          <e p="Node.cs" t="Include" />
-          <e p="NodeType.cs" t="Include" />
-          <e p="NodeTypeConverter.cs" t="Include" />
-          <e p="PagedResultOfBatchStatus.cs" t="Include" />
-          <e p="PagedResultOfJobStatus.cs" t="Include" />
-          <e p="Payload.cs" t="Include" />
-          <e p="PluginCapabilities.cs" t="Include" />
-          <e p="PropertyIdMeaning.cs" t="Include" />
-          <e p="PropertyIdMeaningConverter.cs" t="Include" />
-          <e p="PropertyMapping.cs" t="Include" />
-          <e p="PropertyMergeRule.cs" t="Include" />
-          <e p="PropertyTrait.cs" t="Include" />
-          <e p="PropertyType.cs" t="Include" />
-          <e p="PropertyTypeConverter.cs" t="Include" />
-          <e p="PublishNode.cs" t="Include" />
-          <e p="RealTimeSettings.cs" t="Include" />
-          <e p="RealTimeStateScope.cs" t="Include" />
-          <e p="Schedule.cs" t="Include" />
-          <e p="ScheduleType.cs" t="Include" />
-          <e p="ScheduleTypeConverter.cs" t="Include" />
-          <e p="Schema.cs" t="Include" />
-          <e p="SchemaCapability.cs" t="Include" />
-          <e p="SchemaCapabilityConverter.cs" t="Include" />
-          <e p="SchemaForm.cs" t="Include" />
-          <e p="SchemaProfile.cs" t="Include" />
-          <e p="SchemaProperty.cs" t="Include" />
-          <e p="SchemaTrait.cs" t="Include" />
-          <e p="SecurityAlgorithm.cs" t="Include" />
-          <e p="SecurityAlgorithmConverter.cs" t="Include" />
-          <e p="SecurityKeyStorage.cs" t="Include" />
-          <e p="SecurityKeyStorageConverter.cs" t="Include" />
-          <e p="Shape.cs" t="Include" />
-          <e p="ShapeProperty.cs" t="Include" />
-          <e p="ShapePropertySecurity.cs" t="Include" />
-          <e p="Trace.cs" t="Include" />
-          <e p="TraitAttributeDefinition.cs" t="Include" />
-          <e p="TraitAttributeType.cs" t="Include" />
-          <e p="TraitAttributeTypeConverter.cs" t="Include" />
-          <e p="TraitDefinition.cs" t="Include" />
-          <e p="Transform.cs" t="Include" />
-          <e p="Writeback.cs" t="Include" />
-        </e>
-        <e p="Naveego.Metabase.csproj" t="IncludeRecursive" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
-              <e p="Naveego.Metabase.AssemblyInfo.cs" t="Include" />
+      <e p="metabase" t="Include">
+        <e p="csharp" t="IncludeRecursive">
+          <e p="IMetabaseAPI10.cs" t="Include" />
+          <e p="MetabaseAPI10.cs" t="Include" />
+          <e p="MetabaseAPI10Extensions.cs" t="Include" />
+          <e p="Models" t="Include">
+            <e p="Batch.cs" t="Include" />
+            <e p="BatchStatus.cs" t="Include" />
+            <e p="BatchStatusGoBetweenScope.cs" t="Include" />
+            <e p="Boxplot.cs" t="Include" />
+            <e p="Connection.cs" t="Include" />
+            <e p="ConnectionDiscoveredSchema.cs" t="Include" />
+            <e p="ConnectionRole.cs" t="Include" />
+            <e p="ConnectionRoleConverter.cs" t="Include" />
+            <e p="DataflowEvent.cs" t="Include" />
+            <e p="Edge.cs" t="Include" />
+            <e p="EdgeType.cs" t="Include" />
+            <e p="EdgeTypeConverter.cs" t="Include" />
+            <e p="Filter.cs" t="Include" />
+            <e p="FilterRule.cs" t="Include" />
+            <e p="FilterRuleEffect.cs" t="Include" />
+            <e p="FilterRuleEffectConverter.cs" t="Include" />
+            <e p="Flow.cs" t="Include" />
+            <e p="Histogram.cs" t="Include" />
+            <e p="HttpEdge.cs" t="Include" />
+            <e p="Job.cs" t="Include" />
+            <e p="JobStatus.cs" t="Include" />
+            <e p="JobStatusGoBetweenScope.cs" t="Include" />
+            <e p="JobType.cs" t="Include" />
+            <e p="JobTypeConverter.cs" t="Include" />
+            <e p="KafkaEdge.cs" t="Include" />
+            <e p="MapNode.cs" t="Include" />
+            <e p="Mapping.cs" t="Include" />
+            <e p="MappingDirection.cs" t="Include" />
+            <e p="MappingDirectionConverter.cs" t="Include" />
+            <e p="MatchRule.cs" t="Include" />
+            <e p="MergeRule.cs" t="Include" />
+            <e p="Node.cs" t="Include" />
+            <e p="NodeType.cs" t="Include" />
+            <e p="NodeTypeConverter.cs" t="Include" />
+            <e p="PagedResultOfBatchStatus.cs" t="Include" />
+            <e p="PagedResultOfJobStatus.cs" t="Include" />
+            <e p="Payload.cs" t="Include" />
+            <e p="PluginCapabilities.cs" t="Include" />
+            <e p="PropertyIdMeaning.cs" t="Include" />
+            <e p="PropertyIdMeaningConverter.cs" t="Include" />
+            <e p="PropertyMapping.cs" t="Include" />
+            <e p="PropertyMergeRule.cs" t="Include" />
+            <e p="PropertyTrait.cs" t="Include" />
+            <e p="PropertyType.cs" t="Include" />
+            <e p="PropertyTypeConverter.cs" t="Include" />
+            <e p="PublishNode.cs" t="Include" />
+            <e p="RealTimeSettings.cs" t="Include" />
+            <e p="RealTimeStateScope.cs" t="Include" />
+            <e p="Schedule.cs" t="Include" />
+            <e p="ScheduleType.cs" t="Include" />
+            <e p="ScheduleTypeConverter.cs" t="Include" />
+            <e p="Schema.cs" t="Include" />
+            <e p="SchemaCapability.cs" t="Include" />
+            <e p="SchemaCapabilityConverter.cs" t="Include" />
+            <e p="SchemaForm.cs" t="Include" />
+            <e p="SchemaProfile.cs" t="Include" />
+            <e p="SchemaProperty.cs" t="Include" />
+            <e p="SchemaTrait.cs" t="Include" />
+            <e p="SecurityAlgorithm.cs" t="Include" />
+            <e p="SecurityAlgorithmConverter.cs" t="Include" />
+            <e p="SecurityKeyStorage.cs" t="Include" />
+            <e p="SecurityKeyStorageConverter.cs" t="Include" />
+            <e p="Shape.cs" t="Include" />
+            <e p="ShapeProperty.cs" t="Include" />
+            <e p="ShapePropertySecurity.cs" t="Include" />
+            <e p="Trace.cs" t="Include" />
+            <e p="TraitAttributeDefinition.cs" t="Include" />
+            <e p="TraitAttributeType.cs" t="Include" />
+            <e p="TraitAttributeTypeConverter.cs" t="Include" />
+            <e p="TraitDefinition.cs" t="Include" />
+            <e p="Transform.cs" t="Include" />
+            <e p="Writeback.cs" t="Include" />
+          </e>
+          <e p="Naveego.Metabase.csproj" t="IncludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp2.1" t="Include">
+                <e p="Naveego.Metabase.AssemblyInfo.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>
+        <e p="generate.sh" t="Include" />
+        <e p="generator.md" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
-      <e p="vault/csharp/Naveego.Vault" t="IncludeRecursive">
-        <e p="ILoginStrategy.cs" t="Include" />
-        <e p="Naveego.Vault.csproj" t="IncludeRecursive" />
-        <e p="RenewingSecret.cs" t="Include" />
-        <e p="VaultHelper.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="Naveego.Vault.AssemblyInfo.cs" t="Include" />
+      <e p="vault" t="Include">
+        <e p="csharp/Naveego.Vault" t="IncludeRecursive">
+          <e p="ILoginStrategy.cs" t="Include" />
+          <e p="IVaultApi.cs" t="Include" />
+          <e p="IVaultHelper.cs" t="Include" />
+          <e p="LiveSecret.cs" t="Include" />
+          <e p="Naveego.Vault.csproj" t="IncludeRecursive" />
+          <e p="Secret.cs" t="Include" />
+          <e p="SecretGetters.cs" t="Include" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Naveego.Vault.AssemblyInfo.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>
-      </e>
-      <e p="vault/csharp/Naveego.Vault.Tests" t="IncludeRecursive">
-        <e p="Naveego.Vault.Tests.csproj" t="IncludeRecursive" />
-        <e p="VaultHelper.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="Naveego.Vault.Tests.AssemblyInfo.cs" t="Include" />
+        <e p="csharp/Naveego.Vault.Tests" t="IncludeRecursive">
+          <e p="Naveego.Vault.Tests.csproj" t="IncludeRecursive" />
+          <e p="TestLogger.cs" t="Include" />
+          <e p="VaultHelperIntegrationFixture.cs" t="Include" />
+          <e p="VaultHelperUnitFixture.cs" t="Include" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp2.2" t="Include">
+                <e p="Naveego.Vault.Tests.AssemblyInfo.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>

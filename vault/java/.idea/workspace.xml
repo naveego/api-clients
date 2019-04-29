@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/VaultHelper.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="217" column="66" lean-forward="true" selection-start-line="217" selection-start-column="66" selection-end-line="217" selection-end-column="66" />
+            <state relative-caret-position="224">
+              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
               <folding>
                 <element signature="e#23#53#0" expanded="true" />
               </folding>
@@ -136,13 +136,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-360">
-              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+            <state relative-caret-position="180">
+              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -202,8 +202,8 @@
         <option value="$PROJECT_DIR$/src/test/scala/naveego/vault/SecretGettersFixture.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/naveego/vault/VaultHelperFixture.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/naveego/vault/VaultHelper.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala" />
       </list>
     </option>
   </component>
@@ -484,17 +484,11 @@
       <updated>1556203722401</updated>
       <workItem from="1556203724710" duration="31144000" />
       <workItem from="1556299025577" duration="14959000" />
-      <workItem from="1556540525661" duration="20431000" />
+      <workItem from="1556540525661" duration="20677000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SecretGettersFixture - 2019.04.29 at 16h 34m 36s.xml">
-      <configuration name="SecretGettersFixture" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="SecretGettersFixture - 2019.04.29 at 16h 35m 16s.xml">
-      <configuration name="SecretGettersFixture" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
     <history-entry file="SecretGettersFixture - 2019.04.29 at 16h 35m 47s.xml">
       <configuration name="SecretGettersFixture" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
@@ -519,34 +513,40 @@
     <history-entry file="VaultHelperFixture_VaultHelper_should_be_able_to_resolve_a_live_secret - 2019.04.29 at 16h 52m 05s.xml">
       <configuration name="VaultHelperFixture.VaultHelper should be able to resolve a live secret" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="ScalaTests_in_'vault' - 2019.04.29 at 17h 08m 15s.xml">
+      <configuration name="ScalaTests in 'vault'" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ScalaTests_in_'vault' - 2019.04.29 at 17h 08m 24s.xml">
+      <configuration name="ScalaTests in 'vault'" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66534000" />
+    <option name="totallyTimeSpent" value="66780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2560" y="0" width="1920" height="1181" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="UI Designer" order="0" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.1430096" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.1430096" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="1" sideWeight="0.4994664" weight="0.2783505" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.6256961" weight="0.14078042" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.6256961" visible="true" weight="0.420806" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="6" sideWeight="0.12860192" side_tool="true" weight="0.25679475" />
       <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32955107" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.8713981" visible="true" weight="0.19962512" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.3289597" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.8713981" weight="0.32333645" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.4994664" weight="0.09840675" />
       <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.6254002" weight="0.35988754" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.32977587" />
       <window_info anchor="right" id="Palette&#9;" order="0" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="Maven" order="2" />
@@ -942,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/naveego/vault/VaultHelperFixture.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
@@ -971,18 +964,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        <state relative-caret-position="180">
+          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/VaultHelper.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="217" column="66" lean-forward="true" selection-start-line="217" selection-start-column="66" selection-end-line="217" selection-end-column="66" />
+        <state relative-caret-position="224">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding>
             <element signature="e#23#53#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
         </state>
       </provider>
     </entry>

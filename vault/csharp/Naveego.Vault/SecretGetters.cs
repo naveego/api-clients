@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using Vault;
-using Vault.Models;
 
 namespace Metabase.Api.Vault
 {
@@ -15,28 +13,21 @@ namespace Metabase.Api.Vault
 
         private static readonly Regex TemplateReplacer = new Regex(@"\{\{\s*\.?([A-z]+)\s*\}\}");
 
-        private static VaultResponse<TTo> RewrapResponse<TFrom, TTo>(VaultResponse<TFrom> secret, TTo transformedValue)
-        {
-            return                new VaultResponse<TTo>
-            {
-                Data = transformedValue,
-                Renewable = secret.Renewable,
-                LeaseDuration = secret.LeaseDuration,
-                Auth = secret.Auth,
-                Warnings = secret.Warnings,
-                LeaseId = secret.LeaseId,
-                RequestId = secret.RequestId
-            };
-        }
-        
-        public static (Uri, bool) ParseSecretURI(string secretUri)
+
+        private static (Uri, bool) ParseSecretURI(string secretUri)
         {
             try
             {
-                if (string.IsNullOrEmpty(secretUri)) return (null, false);
+                if (string.IsNullOrEmpty(secretUri))
+                {
+                    return (null, false);
+                }
 
                 var matches = SecretReferenceParser.Match(secretUri);
-                if (!matches.Success) return (null, false);
+                if (!matches.Success)
+                {
+                    return (null, false);
+                }
 
                 var path = matches.Groups[0].Value?
                     .Trim('(', ')')
@@ -54,35 +45,34 @@ namespace Metabase.Api.Vault
         }
 
 
-        public static Func<IVaultApi, CancellationToken, Task<VaultResponse<string>>> MakeJwt(string role, TimeSpan ttl, string tenantID, string sub, Dictionary<string, object> claims = null)
+        public static Func<IVaultApi, CancellationToken, Task<Secret<string>>> MakeJwtGetter(string role, TimeSpan ttl, string tenantID, string sub, Dictionary<string, object> claims = null)
         {
             claims = new Dictionary<string, object>(claims ?? new Dictionary<string, object>());
             claims["tid"] = tenantID;
             claims["sub"] = sub;
-            return MakeJwt(role, ttl, claims);
+            return MakeJwtGetter(role, ttl, claims);
         }
-        
-        public static Func<IVaultApi, CancellationToken, Task<VaultResponse<string>>> MakeJwt(string role, TimeSpan ttl, Dictionary<string, object> claims = null)
+
+        public static Func<IVaultApi, CancellationToken, Task<Secret<string>>> MakeJwtGetter(string role, TimeSpan ttl, Dictionary<string, object> claims = null)
         {
             claims = new Dictionary<string, object>(claims ?? new Dictionary<string, object>());
-            
+
             return async (client, cancellationToken) =>
             {
                 string formattedSecret;
-                VaultResponse<Dictionary<string, string>> secret;
 
                 try
                 {
                     var path = $"jose/jwt/issue/{role}";
                     claims["exp"] = DateTimeOffset.Now.Add(ttl).ToUnixTimeSeconds();
-                    
-                    var req = new Dictionary<string, object>()
+
+                    var req = new Dictionary<string, object>
                     {
                         ["token_ttl"] = ttl.TotalSeconds,
-                        ["claims"] = claims,
+                        ["claims"] = claims
                     };
-                    
-                    secret = await client.WriteAsync<Dictionary<string, string>>(path, req, cancellationToken);
+
+                    var secret = await client.WriteAsync<Dictionary<string, string>>(path, req, cancellationToken);
 
                     if (secret?.Data == null)
                     {
@@ -94,29 +84,50 @@ namespace Metabase.Api.Vault
                         throw new Exception("Secret did not contain token.");
                     }
 
-                    return RewrapResponse(secret, token);
+                    return secret.ReWrap(token);
                 }
                 catch (Exception ex)
                 {
                     throw new Exception($"Error creating JWT using role '{role}'.", ex);
                 }
             };
-        } 
-        
-        public static Func<IVaultApi, CancellationToken, Task<VaultResponse<string>>> MakeRenderSecretTemplate(string stringWithEmbeddedSecrets)
+        }
+
+        /// <summary>
+        ///     The getter returned by this method will resolve an embedded template by pulling values from a vault secret.
+        ///     An example of an embedded template:
+        ///     <code>
+        /// mongodb://(vault://database/creds/mongodb-admin?template={{.username}}:{{.password}})@mongodb:27017/go-between?readPreference=primary
+        /// </code>
+        ///     The vault secret will be read from database/creds/mongodb-admin, then the "username" and "password"
+        ///     values from the secret will be formatted using the template. Finally, the entire (vault:...) token
+        ///     will be replaced with the result of the formatting. If the username and password were "user" and "pass",
+        ///     the result would be:
+        ///     <code>
+        /// mongodb://user:pass@mongodb:27017/go-between?readPreference=primary
+        /// </code>
+        /// </summary>
+        /// <param name="stringWithEmbeddedSecrets"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public static Func<IVaultApi, CancellationToken, Task<Secret<string>>> MakeSecretTemplateGetter(string stringWithEmbeddedSecrets)
         {
             var (uri, hasSecret) = ParseSecretURI(stringWithEmbeddedSecrets);
 
             if (!hasSecret)
-                return (client, token) => Task.FromResult(new VaultResponse<string>
+            {
+                return (client, token) => Task.FromResult(new Secret<string>
                 {
                     Data = stringWithEmbeddedSecrets
                 });
+            }
 
             return async (client, cancellationToken) =>
             {
                 string formattedSecret;
-                VaultResponse<Dictionary<string, string>> secret;
+                Secret<Dictionary<string, string>> secret;
 
                 try
                 {
@@ -139,16 +150,21 @@ namespace Metabase.Api.Vault
                             .Substring(1) // Remove '?'
                             .Split('&')
                             .Select(q => q.Split('='))
-                            .ToDictionary(q => q.FirstOrDefault(), q => q.Skip(1).FirstOrDefault());
+                            .ToDictionary(q => q.FirstOrDefault(), q => Uri.UnescapeDataString(q.Skip(1).FirstOrDefault() ?? ""));
 
                         if (!query.TryGetValue("template", out var template))
+                        {
                             throw new ArgumentException(
                                 $"Secret embedded in string {stringWithEmbeddedSecrets} had multiple keys, but no template was provided.");
+                        }
 
                         formattedSecret = TemplateReplacer.Replace(template, m =>
                         {
                             var token = m.Groups[1].Value;
-                            if (secret.Data.TryGetValue(token, out var value)) return value;
+                            if (secret.Data.TryGetValue(token, out var value))
+                            {
+                                return value;
+                            }
 
                             throw new ArgumentOutOfRangeException(
                                 $"The template for secret reference '{stringWithEmbeddedSecrets}' referenced a key '{token}' which was not in the secret.");
@@ -158,7 +174,7 @@ namespace Metabase.Api.Vault
 
                 var final = SecretReferenceParser.Replace(stringWithEmbeddedSecrets, formattedSecret);
 
-                return RewrapResponse(secret, final);
+                return secret.ReWrap(final);
             };
         }
     }

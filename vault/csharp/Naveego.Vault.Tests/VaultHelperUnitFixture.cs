@@ -29,6 +29,26 @@ namespace Naveego.Vault.Tests
         
         
         [Fact]
+        public async Task AuthTokenIsRenewed()
+        {
+            var (mockClient, sut) = GetMocks(new SecretAuth()
+            {
+                Renewable = true,
+                LeaseDuration = 1,
+            });
+            
+            const string leaseId = "lease-id";
+            
+            mockClient.Setup(m => m.WriteAsync<NoData>("auth/token/renew-self", null, It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(new Secret<NoData>()))
+                .Verifiable();        
+            
+            await Task.Delay(TimeSpan.FromSeconds(1));
+            
+            mockClient.Verify();
+        }     
+        
+               [Fact]
         public async Task RenewableSecretsAreRenewed()
         {
             var (mockClient, sut) = GetMocks();
@@ -107,18 +127,19 @@ namespace Naveego.Vault.Tests
 
         }
 
-        public (Mock<IVaultApi>, IVaultHelper) GetMocks()
+        public (Mock<IVaultApi>, IVaultHelper) GetMocks(SecretAuth auth = null)
         {
+            auth = auth ?? new SecretAuth
+            {
+                LeaseDuration = 0
+            };
             var mockClient = new Mock<IVaultApi>(MockBehavior.Strict);
             var mockLoginStrategy = new Mock<ILoginStrategy>(MockBehavior.Strict);
             mockLoginStrategy.Setup(m => m.LoginAsync(It.IsAny<string>(), It.IsAny<ILogger>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(new LoginResult()
                 {
                     Client = mockClient.Object,
-                    SecretAuth = new SecretAuth()
-                    {
-                        LeaseDuration = 0
-                    }
+                    SecretAuth = auth
                 }));
             
             Config.LoginStrategies = new List<ILoginStrategy>(){mockLoginStrategy.Object};
