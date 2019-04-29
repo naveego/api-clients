@@ -1,24 +1,24 @@
 package naveego.vault
 
 import NaveegoJsonProtocol._
-import org.scalatest.{FlatSpec, Matchers, OptionValues}
+import org.scalatest.{EitherValues, FlatSpec, Matchers, OptionValues}
 import spray.json._
 
-class VaultHelperFixture extends FlatSpec with Matchers with OptionValues {
+class VaultHelperFixture extends FlatSpec with Matchers with OptionValues with EitherValues {
 
    val address = "http://vault.n5o.red"
 
   "org.naveego.vault.VaultHelper" should "authenticate, write and read with root token" in {
-    val sut = vault.vault.withAddress(address)
+    val sut = vault.builder.withAddress(address)
       .withStrategies(TokenLoginStrategy("root"))
       .build()
 
     val data = Map[String, String](
       "a" -> "A"
-    )
-    sut.write[NoData]("secret/data/scala-test", data.toJson.asJsObject())
+    ).toJson.asJsObject()
+    sut.write("secret/data/scala-test", data)
 
-    val result = sut.read[Map[String,String]]("secret/data/scala-test")
+    val result = sut.read("secret/data/scala-test")
 
     result.data.value should equal(data)
   }
@@ -27,7 +27,7 @@ class VaultHelperFixture extends FlatSpec with Matchers with OptionValues {
 
     var error: Exception = null
 
-    val helperWithRootToken = vault.vault.withAddress(address)
+    val helperWithRootToken = vault.builder.withAddress(address)
       .withStrategies(TokenLoginStrategy("root"))
       .withErrorHandler(ex => error = ex)
       .build()
@@ -38,9 +38,9 @@ class VaultHelperFixture extends FlatSpec with Matchers with OptionValues {
       "renewable" -> "true",
     )
 
-    val secret = helperWithRootToken.write[NoData]("auth/token/create", data.toJson)
+    val secret = helperWithRootToken.write("auth/token/create", data.toJson)
 
-    val sut = vault.vault.withAddress(address)
+    val sut = vault.builder.withAddress(address)
       .withStrategies(TokenLoginStrategy(secret.auth.clientToken))
       .build()
 
@@ -48,9 +48,50 @@ class VaultHelperFixture extends FlatSpec with Matchers with OptionValues {
 
     error should be(null)
 
-    val result = sut.read[NoData]("auth/token/lookup-self")
+    val result = sut.read("auth/token/lookup-self")
 
     result.data.value should not be(null)
+  }
+
+
+  "VaultHelper" should "be able to resolve secret once" in {
+
+    val sut = vault.builder.withAddress(address)
+      .withStrategies(TokenLoginStrategy("root"))
+      .build()
+
+    val secretPath = "secret/test-scala-client/data"
+    val data = Map(
+      "username"->"user",
+      "password"->"pass"
+    )
+
+    sut.write(secretPath, data.toJson)
+
+    val actual =  sut.getDeadSecret(SecretGetters.makeSecretTemplateGetter("vault://secret/test-scala-client/data?template={{.username}}:{{.password}}"))
+
+    actual shouldBe a [Right[_, _]]
+
+    actual.right.value should equal("user:pass")
+  }
+
+  "VaultHelper" should "be able to resolve a live secret" in {
+
+    val sut = vault.builder.withAddress(address)
+      .withStrategies(TokenLoginStrategy("root"))
+      .build()
+
+    val secretPath = "secret/test-scala-client/data"
+    val data = Map(
+      "username"->"user",
+      "password"->"pass"
+    )
+
+    sut.write(secretPath, data.toJson)
+
+    val actual =  sut.getLiveSecret("test-secret", SecretGetters.makeSecretTemplateGetter("vault://secret/test-scala-client/data?template={{.username}}:{{.password}}"))
+
+    actual.value().right.value should equal("user:pass")
   }
 
 }

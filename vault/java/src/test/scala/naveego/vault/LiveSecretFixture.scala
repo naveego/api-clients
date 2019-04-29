@@ -9,8 +9,8 @@ class LiveSecretFixture extends FlatSpec with Matchers with MockFactory with Eit
 
   "secret with infinite lease" should "resolve once" in {
     val expected = "test-data"
-    val spy = mockFunction[VaultApi, Secret[String]]
-    spy expects (*) returning Secret[String](Some(expected), null, false, 0)
+    val spy = mockFunction[VaultApi, Either[String, Secret[String]]]
+    spy expects * returning Right(Secret[String](Some(expected), null, false, 0))
     val sut = new LiveSecret("infinite-lease", mock[VaultApi], spy)
     sut.value.right.value should equal(expected)
   }
@@ -18,19 +18,19 @@ class LiveSecretFixture extends FlatSpec with Matchers with MockFactory with Eit
   "secret with renewable lease" should "be renewed" in {
     val expected = "test-data"
     val leaseID = "lease-id"
-    val spy = mockFunction[VaultApi, Secret[String]]
-    spy expects (*) returning Secret[String](Some(expected), null, true, 1, leaseID)
+    val spy = mockFunction[VaultApi, Either[String, Secret[String]]]
+    spy expects (*) returning Right(Secret[String](Some(expected), null, true, 1, leaseID))
     val api = stub[VaultApi]
 
-    (api.write[NoData](_: String, _: JsValue)(_: JsonFormat[NoData])) when(*, *, *) returns Secret[NoData](Some(NoData()))
+    (api.write(_: String, _: JsObject)) when(*, *) returns Secret[JsObject](None)
 
     val sut = new LiveSecret("renewable-lease", api, spy)
 
     try {
       sut.value.right.value should equal(expected)
       Thread.sleep(750)
-      (api.write[NoData](_: String, _: JsValue)(_: JsonFormat[NoData])) verify where {
-        (path: String, payload: JsValue, _) =>
+      (api.write(_: String, _: JsObject)) verify where {
+        (path: String, payload: JsValue) =>
           path == "sys/lease/renew" && payload.asJsObject.fields("lease_id").convertTo[String].equals(leaseID)
       }
     }
@@ -43,8 +43,8 @@ class LiveSecretFixture extends FlatSpec with Matchers with MockFactory with Eit
   "secret with non-renewable expiring lease" should "be re-acquired" in {
     val expected = "test-data"
     val leaseID = "lease-id"
-    val spy = stubFunction[VaultApi, Secret[String]]
-    spy when (*) returns Secret[String](Some(expected), null, false, 1, leaseID)
+    val spy = stubFunction[VaultApi, Either[String, Secret[String]]]
+    spy when (*) returns Right(Secret[String](Some(expected), null, false, 1, leaseID))
 
     val api = mock[VaultApi]
 
@@ -61,8 +61,8 @@ class LiveSecretFixture extends FlatSpec with Matchers with MockFactory with Eit
   "stopped secret" should "throw from value" in {
     val expected = "test-data"
     val leaseID = "lease-id"
-    val spy = stubFunction[VaultApi, Secret[String]]
-    spy when * returns Secret[String](Some(expected), null, true, 100, leaseID)
+    val spy = stubFunction[VaultApi, Either[String, Secret[String]]]
+    spy when * returns Right(Secret[String](Some(expected), null, true, 100, leaseID))
     val api = stub[VaultApi]
     val sut = new LiveSecret("renewable-lease", api, spy)
     try {

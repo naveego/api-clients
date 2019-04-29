@@ -3,30 +3,54 @@ package naveego.vault
 import spray.json._
 
 
-case class Secret[T: JsonFormat](
+case class Secret[T](
                    data: Option[T],
                    auth: SecretAuth = null,
                    renewable: Boolean = false,
-                   leaseDuration: Int = 0,
+                   leaseDuration: Long = 0,
                    leaseId: String = null,
                    warnings: List[String] = null,
                    requestId: String = "",
-                 )
+                 ) {
+  /**
+    * Returns a new Secret with `newData` as the data.
+    * @param newData
+    * @tparam TOther
+    * @return
+    */
+  def rewrap[TOther:JsonFormat](newData: TOther): Secret[TOther] = {
+    this.copy[TOther](data = Some(newData))
+  }
+
+
+  implicit class JsonSecret(self: Secret[JsObject]) {
+    /**
+      * Returns a secret with the same field values but the data parsed
+      * into TFormat.
+      * @tparam TFormat
+      * @return
+      */
+    def withParsedValue[TFormat: JsonFormat]() : Secret[TFormat] = {
+      self.data match {
+        case Some(j) => self.rewrap[TFormat](j.convertTo[TFormat])
+        case None => self.copy[TFormat](data = None)
+      }
+    }
+  }
+}
+
 
 case class SecretAuth(
                        clientToken: String,
                        renewable: Boolean = false,
-                       leaseDuration: Int = 0,
+                       leaseDuration: Long = 0,
                        policies: List[String] = List[String](),
                        metadata: Map[String, String] = null,
                        accessor: String = null,
                      )
 
-case class NoData()
-
 object NaveegoJsonProtocol extends DefaultJsonProtocol {
 
-  implicit val noData: RootJsonFormat[NoData] = jsonFormat0(NoData)
 
   implicit val secretAuth: RootJsonFormat[SecretAuth] = new RootJsonFormat[SecretAuth] {
     override def write(obj: SecretAuth): JsValue = {

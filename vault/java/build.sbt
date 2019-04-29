@@ -14,3 +14,5 @@ libraryDependencies += "org.scalamock" %% "scalamock" % "4.1.0" % Test
 
 libraryDependencies += "org.apache.logging.log4j" % "log4j-api" % "2.11.2"
 libraryDependencies += "org.apache.logging.log4j" % "log4j-core" % "2.11.2"
+
+libraryDependencies += "io.lemonlabs" %% "scala-uri" % "1.4.5"
