@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/b3/ab44a796/VaultHttpClient.cs" line="138" />
+  </component>
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="POSTPONE_SUITABLE_CONFIGURATIONS_SEARCH" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+    <treeState key="project">
+      <selectedPath>
+        <pathElement>
+          <option name="myNodeId" value="helperText" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.LinkedTextDescriptor" />
+        </pathElement>
+      </selectedPath>
+    </treeState>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6de631be-2064-4bbf-84e1-a2a2592f96cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vault/java/.idea/modules/vault-build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault/java/.idea/modules/vault.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault/java/project/plugin.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/Builder.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/Package.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__com_chuusai_shapeless_2_12_2_3_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__com_chuusai_shapeless_2_11_2_3_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__com_softwaremill_sttp_core_2_12_1_0_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__com_softwaremill_sttp_core_2_11_1_0_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__io_lemonlabs_scala_uri_2_12_1_4_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__io_lemonlabs_scala_uri_2_11_1_4_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__io_spray_spray_json_2_12_1_3_4_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__io_spray_spray_json_2_11_1_3_4_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_parboiled_parboiled_2_12_2_1_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_parboiled_parboiled_2_11_2_1_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_12_1_0_6_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_11_1_0_6_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_scala_library_2_12_8_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_scala_library_2_11_8_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_12_8_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_11_8_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalactic_scalactic_2_12_3_0_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalactic_scalactic_2_11_3_0_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalamock_scalamock_2_12_4_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalamock_scalamock_2_11_4_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalatest_scalatest_2_12_3_0_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalatest_scalatest_2_11_3_0_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_typelevel_macro_compat_2_12_1_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_typelevel_macro_compat_2_11_1_1_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/modules/naveego.vault-build.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/modules/naveego.vault.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/LiveSecret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/LiveSecret.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/LoginStrategy.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/LoginStrategy.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/Secret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/Secret.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/SecretGetters.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/SecretGetters.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/SeqHelpers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/SeqHelpers.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/VaultHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/VaultHelper.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/LiveSecretFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/com/naveego/vault/LiveSecretFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/SecretGettersFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/com/naveego/vault/SecretGettersFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/SeqHelpersFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/com/naveego/vault/SeqHelpersFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/VaultHelperFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/com/naveego/vault/VaultHelperFixture.scala" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1155">
+              <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+              <folding>
+                <marker date="1556572620452" expanded="false" signature="6:228" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="258:11002" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="319:1554" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="334:695" ph="///     Gets a secret using the provided secret getter. Predefined getters are in the &lt;see cref=&quot;SecretGetters&quot; / ... " />
+                <marker date="1556572620452" expanded="true" signature="847:1376" ph="///     Gets a new &lt;see cref=&quot;LiveSecret{T}&quot; /&gt; which will be acquired and renewed using the &lt;paramref name=&quot;gett ... " />
+                <marker date="1556572620452" expanded="true" signature="1591:2709" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1632:1652" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1702:1753" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2065:2259" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2148:2222" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2323:2483" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2401:2446" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2561:2642" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2754:9682" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2997:3134" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3289:3499" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3684:5378" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3887:4563" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3918:4061" ph="/* If the lease is renewable, the renewal action is to renew the lease and return ... */" />
+                <marker date="1556572620452" expanded="true" signature="4240:4547" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4607:4808" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5118:5352" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5408:5498" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5603:5686" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5808:5901" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5932:6009" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6096:6234" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6275:7752" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6301:7583" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6516:6859" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6678:6765" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6900:7013" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7067:7312" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7616:7742" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7818:9676" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7844:9073" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7900:8386" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7972:8111" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="8136:8339" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="8632:9059" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9115:9216" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9249:9666" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9424:9504" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9525:9652" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9711:11000" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="813">
+              <caret line="149" column="55" lean-forward="true" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="55" />
+              <folding>
+                <marker date="1556572620452" expanded="false" signature="6:158" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="188:7268" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="228:7266" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="538:1285" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="564:1131" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="631:709" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="818:896" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1164:1275" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1478:1719" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1882:3224" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2046:3213" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2121:3037" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2364:2489" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2654:2772" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2847:2969" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3074:3199" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3234:4425" ph="///     The getter returned by this method will resolve an embedded template by pulling values from a vault secre ... " />
+                <marker date="1556572620452" expanded="true" signature="4563:7260" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4680:4876" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4788:4860" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4933:7249" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5067:5221" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5258:5408" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5452:7085" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6181:6430" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6513:7034" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6677:6783" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/LiveSecret.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+              <folding>
+                <marker date="1556572620452" expanded="false" signature="6:67" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="97:2638" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="104:940" ph="///     Represents a secret value which is being renewed periodically. ... " />
+                <marker date="1556572620452" expanded="true" signature="985:2636" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1249:2184" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1415:2172" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1449:1686" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1500:1668" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1732:1930" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1967:2158" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2194:2358" ph="///     Create a renewing secret that doesn't actually do any renewing. ... " />
+                <marker date="1556572620452" expanded="true" signature="2400:2455" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2553:2630" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/Secret.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+              <folding>
+                <marker date="1556572620452" expanded="false" signature="6:53" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="83:2693" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="90:199" ph="///     Represents the case where no data is expected back from the API. ... " />
+                <marker date="1556572620452" expanded="true" signature="223:235" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="263:2349" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="663:1641" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="707:764" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="811:1630" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="980:1374" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1651:1944" ph="///     Returns a new secret with the new &lt;paramref name=&quot;data&quot; /&gt; ... " />
+                <marker date="1556572620452" expanded="true" signature="2002:2343" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2063:2332" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2379:2691" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/f8/79d8cb7d/Endpoint.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1230">
+              <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/94/df76181c/VaultClient.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2085">
+              <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/b3/ab44a796/VaultHttpClient.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1590">
+              <caret line="113" column="33" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+              <folding>
+                <marker date="1556572620452" expanded="false" signature="6:166" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="197:4120" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="246:4118" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="396:677" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="514:641" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="808:983" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1056:1865" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1289:1420" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1987:2482" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2127:2199" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2586:3428" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3553:4103" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/ILoginStrategy.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="678">
+              <caret line="71" column="51" lean-forward="true" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
+              <folding>
+                <marker date="1556572620452" expanded="false" signature="6:226" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="256:4965" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="263:538" ph="///     A login strategy will attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
+                <marker date="1556572620452" expanded="true" signature="574:1219" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="589:1103" ph="///     Attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
+                <marker date="1556572620452" expanded="true" signature="1249:1358" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1364:1457" ph="///     A strategy which authenticates using kubernetes. ... " />
+                <marker date="1556572620452" expanded="true" signature="1515:3143" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1855:3137" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1955:2110" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2361:2441" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2519:2952" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2830:2937" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2985:3127" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3149:3288" ph="///     A strategy which authenticates by creating a token which is based on the &lt;see cref=&quot;Token&quot; /&gt;. ... " />
+                <marker date="1556572620452" expanded="true" signature="3341:4963" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3390:3957" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4131:4957" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4379:4483" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4541:4808" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4858:4946" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+              <folding>
+                <marker date="1556572620452" expanded="false" signature="6:237" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="268:5112" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="310:5110" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="508:789" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="626:753" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="869:1458" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="954:1038" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1549:2409" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2089:2243" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2517:3310" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2720:2999" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2846:2983" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3429:4198" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3632:3911" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3758:3895" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4279:5088" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4344:4393" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4751:4856" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Got result</find>
+      <find>t.Result</find>
+      <find>secret.</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>response</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/44/989a8c85/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/bf/c36eb826/_ThreadPoolWaitCallback.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/ILoginStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/LiveSecret.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/45/858efc50/VaultResponseInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5F9D42B7-D86D-46FB-BFB4-793817F7E581/10/ObsoleteMockExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5F9D42B7-D86D-46FB-BFB4-793817F7E581/1F/Mock.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/8e/ab165285/ConfiguredTaskAwaitable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultApi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/05/674688c0/IEndpoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F9D42B7-D86D-46FB-BFB4-793817F7E581/62/a47acacf/IVerifies.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/36/aa16381b/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F9D42B7-D86D-46FB-BFB4-793817F7E581/62/9ab78602/IOccurrence.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/85/fad47323/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5F9D42B7-D86D-46FB-BFB4-793817F7E581/30/Mock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5F9D42B7-D86D-46FB-BFB4-793817F7E581/1B/ImmutablePoppableStack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/3c/c5fce5b0/AwaitTaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6DADD22E-0197-42CE-80AA-EFEF99855BE0/46/3cb26086/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/e4/34df0c98/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/61/263dc913/Task`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/6e/5037ff93/ISysEndpoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A03D3CEC-B898-4852-B849-0685F7383EBF/34/0385bd9f/HttpClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/45D20605-9EC8-44F8-8A47-1D6E18421912/58/7aec9baf/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A03D3CEC-B898-4852-B849-0685F7383EBF/78/15bdbbda/RedirectHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/ca/334363a6/CancellationTokenSource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/0a/378e30c6/ValueTaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/02/e1b61b9e/ThreadPoolWorkQueue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/7f/64f5ee19/IVaultClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/94/df76181c/VaultClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/f8/79d8cb7d/Endpoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6DADD22E-0197-42CE-80AA-EFEF99855BE0/5b/58038bcd/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6DADD22E-0197-42CE-80AA-EFEF99855BE0/f8/e98d3ee7/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/bf/19858270/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/95/ef56b7f3/SecretAuth.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/3c/54c6116d/IVaultHttpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/1e/efbd7fea/VaultResponse`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/2a/70247f71/NoData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/b3/ab44a796/VaultHttpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A03D3CEC-B898-4852-B849-0685F7383EBF/3c/50b901ee/HttpMethod.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/Secret.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/5f/090ddeb7/WrappedVaultResponse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/d4/e0677fc3/SysEndpoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/TestLogger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/4f/f80b2566/Thread.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/c7/7a4bfd3c/ContinuationResultTaskFromResultTask`2.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/Class1.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/ILoginStrategy.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/RenewingSecret.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Class1.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/VaultHelper.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/UnitTest1.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretFactory.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/RenewingSecret.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/VaultHelper.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/VaultApi.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/LiveSecret.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/Secret.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelper.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/ILoginStrategy.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs" />
+        <option value="$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="2560" />
+    <option name="height" value="1421" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="api-clients" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="api-clients" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="auth" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="api-clients" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="metabase" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="api-clients" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="vault" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="api-clients" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="vault" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Naveego.Vault" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="api-clients" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="vault" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Naveego.Vault.Tests" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/metabase/generator.md" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6de631be-2064-4bbf-84e1-a2a2592f96cb" name="Default Changelist" comment="" />
+      <created>1556108048944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556108048944</updated>
+      <workItem from="1556108050666" duration="16062000" />
+      <workItem from="1556128375015" duration="11277000" />
+      <workItem from="1556202564947" duration="11570000" />
+      <workItem from="1556540624679" duration="2402000" />
+      <workItem from="1556891788617" duration="758000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="42069000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="2560" height="1421" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.11654733" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="0" weight="0.3298969" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="2" visible="true" weight="0.18592195" />
+      <window_info anchor="bottom" id="TeamCity" order="3" weight="0.3298969" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Change Signature" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298969" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.343955" />
+      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" />
+      <window_info anchor="bottom" id="Run" order="11" />
+      <window_info anchor="bottom" id="NuGet" order="12" weight="0.34020618" />
+      <window_info anchor="bottom" id="Debug" order="13" weight="0.4048735" />
+      <window_info anchor="bottom" id="Cvs" order="14" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="15" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="16" />
+      <window_info anchor="bottom" id="Stacktrace" order="17" weight="0.23336457" />
+      <window_info anchor="right" id="Database" order="0" weight="0.14407684" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="5" weight="0.32977587" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/b3/ab44a796/VaultHttpClient.cs</url>
+          <line>138</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/b3/ab44a796/VaultHttpClient.cs" initialLine="138">
+            <startOffsets>
+              <option value="4739" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4863" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="RiderUnitTests">
+        <watch expression="this.r.Content._bufferedContent._buffer[0]" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>r</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>r.Content._bufferedContent._buffer</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.r.Content._bufferedContent._buffer</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getter</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>typeof(T)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>r</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.r</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>r.Content.ReadAsStringAsync()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/98484efe-93e2-4eb5-9654-bf628937ba10___2019-04-24-12-42-32-823.log" />
+    <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/98484efe-93e2-4eb5-9654-bf628937ba10___2019-04-24-12-52-28-193.log" />
+    <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/98484efe-93e2-4eb5-9654-bf628937ba10___2019-04-24-12-57-28-234.log" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/8e/ab165285/ConfiguredTaskAwaitable`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A03D3CEC-B898-4852-B849-0685F7383EBF/34/0385bd9f/HttpClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7365">
+          <caret line="496" column="6" selection-start-line="496" selection-start-column="6" selection-end-line="496" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A03D3CEC-B898-4852-B849-0685F7383EBF/78/15bdbbda/RedirectHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/0a/378e30c6/ValueTaskAwaiter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/3c/c5fce5b0/AwaitTaskContinuation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2670">
+          <caret line="180" column="12" selection-start-line="180" selection-start-column="12" selection-end-line="180" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6DADD22E-0197-42CE-80AA-EFEF99855BE0/46/3cb26086/Dictionary`2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/45D20605-9EC8-44F8-8A47-1D6E18421912/58/7aec9baf/ILogger.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/7f/64f5ee19/IVaultClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/d4/e0677fc3/SysEndpoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="160" column="39" selection-start-line="160" selection-start-column="39" selection-end-line="160" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/6e/5037ff93/ISysEndpoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/bf/c36eb826/_ThreadPoolWaitCallback.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/02/e1b61b9e/ThreadPoolWorkQueue.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/85/fad47323/ExecutionContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="143" column="6" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/44/989a8c85/Task.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="25" column="85" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/c7/7a4bfd3c/ContinuationResultTaskFromResultTask`2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5F9D42B7-D86D-46FB-BFB4-793817F7E581/10/ObsoleteMockExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5F9D42B7-D86D-46FB-BFB4-793817F7E581/1F/Mock.Generic.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="292" column="25" selection-start-line="292" selection-start-column="25" selection-end-line="292" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F9D42B7-D86D-46FB-BFB4-793817F7E581/62/a47acacf/IVerifies.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F9D42B7-D86D-46FB-BFB4-793817F7E581/62/9ab78602/IOccurrence.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5F9D42B7-D86D-46FB-BFB4-793817F7E581/1B/ImmutablePoppableStack.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5F9D42B7-D86D-46FB-BFB4-793817F7E581/30/Mock.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="192" column="20" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/2a/70247f71/NoData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/e4/34df0c98/Dictionary`2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="199" column="8" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/36/aa16381b/AsyncTaskMethodBuilder`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/ca/334363a6/CancellationTokenSource.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/61/263dc913/Task`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3360">
+          <caret line="225" column="8" selection-start-line="225" selection-start-column="8" selection-end-line="225" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/generate.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/generator.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metabase/generate.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metabase/generator.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/45/858efc50/VaultResponseInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/95/ef56b7f3/SecretAuth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding>
+            <marker date="1556114810812" expanded="true" signature="0:285" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1556114810812" expanded="false" signature="293:343" ph="..." />
+            <marker date="1556114810812" expanded="true" signature="367:883" ph="{...}" />
+            <marker date="1556114810812" expanded="true" signature="395:881" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/1e/efbd7fea/VaultResponse`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <marker date="1556131622974" expanded="true" signature="0:290" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1556131622974" expanded="true" signature="338:538" ph="{...}" />
+            <marker date="1556131622974" expanded="true" signature="396:536" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/TestLogger.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <marker date="1556283161341" expanded="false" signature="6:126" ph="..." />
+            <marker date="1556283161341" expanded="true" signature="157:887" ph="{...}" />
+            <marker date="1556283161341" expanded="true" signature="210:885" ph="{...}" />
+            <marker date="1556283161341" expanded="true" signature="321:371" ph="{...}" />
+            <marker date="1556283161341" expanded="true" signature="518:627" ph="{...}" />
+            <marker date="1556283161341" expanded="true" signature="677:722" ph="{...}" />
+            <marker date="1556283161341" expanded="true" signature="783:828" ph="{...}" />
+            <marker date="1556283161341" expanded="true" signature="859:879" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/3c/54c6116d/IVaultHttpClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultApi.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="41" column="46" lean-forward="true" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+          <folding>
+            <marker date="1556137911893" expanded="false" signature="6:66" ph="..." />
+            <marker date="1556137911893" expanded="true" signature="96:1419" ph="{...}" />
+            <marker date="1556137911893" expanded="true" signature="129:396" ph="{...}" />
+            <marker date="1556137911893" expanded="true" signature="435:1417" ph="{...}" />
+            <marker date="1556137911893" expanded="true" signature="560:657" ph="{...}" />
+            <marker date="1556137911893" expanded="true" signature="686:848" ph="{...}" />
+            <marker date="1556137911893" expanded="true" signature="739:838" ph="{...}" />
+            <marker date="1556137911893" expanded="true" signature="959:1114" ph="{...}" />
+            <marker date="1556137911893" expanded="true" signature="1242:1411" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/05/674688c0/IEndpoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/4f/f80b2566/Thread.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+          <folding>
+            <marker date="1556572620452" expanded="false" signature="6:228" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="258:11002" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="319:1554" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="334:695" ph="///     Gets a secret using the provided secret getter. Predefined getters are in the &lt;see cref=&quot;SecretGetters&quot; / ... " />
+            <marker date="1556572620452" expanded="true" signature="847:1376" ph="///     Gets a new &lt;see cref=&quot;LiveSecret{T}&quot; /&gt; which will be acquired and renewed using the &lt;paramref name=&quot;gett ... " />
+            <marker date="1556572620452" expanded="true" signature="1591:2709" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1632:1652" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1702:1753" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2065:2259" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2148:2222" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2323:2483" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2401:2446" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2561:2642" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2754:9682" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2997:3134" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3289:3499" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3684:5378" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3887:4563" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3918:4061" ph="/* If the lease is renewable, the renewal action is to renew the lease and return ... */" />
+            <marker date="1556572620452" expanded="true" signature="4240:4547" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4607:4808" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5118:5352" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5408:5498" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5603:5686" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5808:5901" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5932:6009" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6096:6234" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6275:7752" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6301:7583" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6516:6859" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6678:6765" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6900:7013" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7067:7312" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7616:7742" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7818:9676" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7844:9073" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7900:8386" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7972:8111" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="8136:8339" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="8632:9059" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9115:9216" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9249:9666" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9424:9504" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9525:9652" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9711:11000" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/LiveSecret.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <marker date="1556572620452" expanded="false" signature="6:67" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="97:2638" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="104:940" ph="///     Represents a secret value which is being renewed periodically. ... " />
+            <marker date="1556572620452" expanded="true" signature="985:2636" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1249:2184" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1415:2172" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1449:1686" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1500:1668" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1732:1930" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1967:2158" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2194:2358" ph="///     Create a renewing secret that doesn't actually do any renewing. ... " />
+            <marker date="1556572620452" expanded="true" signature="2400:2455" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2553:2630" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/Secret.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+          <folding>
+            <marker date="1556572620452" expanded="false" signature="6:53" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="83:2693" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="90:199" ph="///     Represents the case where no data is expected back from the API. ... " />
+            <marker date="1556572620452" expanded="true" signature="223:235" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="263:2349" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="663:1641" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="707:764" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="811:1630" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="980:1374" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1651:1944" ph="///     Returns a new secret with the new &lt;paramref name=&quot;data&quot; /&gt; ... " />
+            <marker date="1556572620452" expanded="true" signature="2002:2343" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2063:2332" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2379:2691" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/f8/79d8cb7d/Endpoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/94/df76181c/VaultClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2085">
+          <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/b3/ab44a796/VaultHttpClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="113" column="33" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <marker date="1556572620452" expanded="false" signature="6:166" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="197:4120" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="246:4118" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="396:677" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="514:641" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="808:983" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1056:1865" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1289:1420" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1987:2482" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2127:2199" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2586:3428" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3553:4103" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+          <folding>
+            <marker date="1556572620452" expanded="false" signature="6:237" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="268:5112" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="310:5110" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="508:789" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="626:753" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="869:1458" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="954:1038" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1549:2409" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2089:2243" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2517:3310" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2720:2999" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2846:2983" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3429:4198" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3632:3911" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3758:3895" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4279:5088" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4344:4393" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4751:4856" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="813">
+          <caret line="149" column="55" lean-forward="true" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="55" />
+          <folding>
+            <marker date="1556572620452" expanded="false" signature="6:158" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="188:7268" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="228:7266" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="538:1285" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="564:1131" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="631:709" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="818:896" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1164:1275" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1478:1719" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1882:3224" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2046:3213" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2121:3037" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2364:2489" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2654:2772" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2847:2969" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3074:3199" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3234:4425" ph="///     The getter returned by this method will resolve an embedded template by pulling values from a vault secre ... " />
+            <marker date="1556572620452" expanded="true" signature="4563:7260" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4680:4876" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4788:4860" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4933:7249" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5067:5221" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5258:5408" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5452:7085" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6181:6430" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6513:7034" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6677:6783" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/ILoginStrategy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="71" column="51" lean-forward="true" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
+          <folding>
+            <marker date="1556572620452" expanded="false" signature="6:226" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="256:4965" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="263:538" ph="///     A login strategy will attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
+            <marker date="1556572620452" expanded="true" signature="574:1219" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="589:1103" ph="///     Attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
+            <marker date="1556572620452" expanded="true" signature="1249:1358" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1364:1457" ph="///     A strategy which authenticates using kubernetes. ... " />
+            <marker date="1556572620452" expanded="true" signature="1515:3143" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1855:3137" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1955:2110" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2361:2441" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2519:2952" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2830:2937" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2985:3127" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3149:3288" ph="///     A strategy which authenticates by creating a token which is based on the &lt;see cref=&quot;Token&quot; /&gt;. ... " />
+            <marker date="1556572620452" expanded="true" signature="3341:4963" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3390:3957" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4131:4957" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4379:4483" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4541:4808" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4858:4946" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
