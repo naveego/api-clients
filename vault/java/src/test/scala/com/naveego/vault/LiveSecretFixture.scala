@@ -1,6 +1,6 @@
-package naveego.vault
+package com.naveego.vault
 
-import naveego.vault.NaveegoJsonProtocol._
+import NaveegoJsonProtocol._
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.{EitherValues, FlatSpec, Matchers}
 import spray.json._

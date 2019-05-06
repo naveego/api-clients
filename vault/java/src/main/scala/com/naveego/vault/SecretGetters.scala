@@ -1,11 +1,8 @@
-package naveego.vault
+package com.naveego.vault
 
-import java.net.URI
-
-import spray.json._
-import DefaultJsonProtocol._
-import com.softwaremill.sttp._
 import io.lemonlabs.uri.Url
+import spray.json.DefaultJsonProtocol._
+import spray.json._
 
 import scala.util.matching.Regex
 
@@ -98,9 +95,11 @@ object SecretGetters {
             }))
         }
 
-        result.map(x => {
+        result.fold(
+          err => throw new Exception(err),
+          x => {
           val finalResult = secretReferenceParser.replaceFirstIn(stringWithEmbeddedSecrets, x)
-          secret.rewrap(finalResult)
+          Right(secret.rewrap(finalResult))
         })
       } catch {
         case ex: Exception => Left(s"Error resolving embedded secret in '${stringWithEmbeddedSecrets}': $ex")

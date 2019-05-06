@@ -1,8 +1,8 @@
-package naveego.vault
+package com.naveego.vault
 
-import naveego.vault.NaveegoJsonProtocol._
+import com.naveego.vault.NaveegoJsonProtocol._
 import org.scalamock.scalatest.MockFactory
-import org.scalatest.{EitherValues, FlatSpec, Matchers, OptionValues, WordSpec}
+import org.scalatest.{EitherValues, Matchers, OptionValues, WordSpec}
 import spray.json._
 
 class SecretGettersFixture extends WordSpec with Matchers with MockFactory with EitherValues with OptionValues {
@@ -144,34 +144,34 @@ class SecretGettersFixture extends WordSpec with Matchers with MockFactory with 
       }
     }
   }
+  class TestVaultApi extends VaultApi {
+    var readResponses = Map[String, Secret[JsObject]]()
+    var writeResponses = Map[String, Secret[JsObject]]()
+    var reads = Map[String, Int]()
+    var writes = Map[String, Seq[JsValue]]()
+
+    override def read(path: String): Secret[JsObject] = {
+      val normalizedPath = path.stripPrefix("/")
+      val curr = reads.getOrElse(normalizedPath, 0)
+      reads += (normalizedPath -> (curr + 1))
+      readResponses.get(normalizedPath) match {
+        case Some(v) => v
+        case None => throw new Exception(s"Nothing set in readResponses at key $normalizedPath")
+      }
+    }
+
+    override def write(path: String, payload: JsValue = null): Secret[JsObject] = {
+      val normalizedPath = path.stripPrefix("/")
+      val curr = writes.getOrElse(normalizedPath, Seq())
+      val updated = curr :+ payload
+      writes += (normalizedPath -> updated)
+
+      writeResponses.get(normalizedPath) match {
+        case Some(v) => v
+        case None => throw new Exception(s"Nothing set in readResponses at key $normalizedPath")
+      }
+    }
+
+  }
 }
 
-class TestVaultApi extends VaultApi {
-  var readResponses = Map[String, Secret[JsObject]]()
-  var writeResponses = Map[String, Secret[JsObject]]()
-  var reads = Map[String, Int]()
-  var writes = Map[String, Seq[JsValue]]()
-
-  override def read(path: String): Secret[JsObject] = {
-    val normalizedPath = path.stripPrefix("/")
-    val curr = reads.getOrElse(normalizedPath, 0)
-    reads += (normalizedPath -> (curr + 1))
-    readResponses.get(normalizedPath) match {
-      case Some(v) => v
-      case None => throw new Exception(s"Nothing set in readResponses at key $normalizedPath")
-    }
-  }
-
-  override def write(path: String, payload: JsValue = null): Secret[JsObject] = {
-    val normalizedPath = path.stripPrefix("/")
-    val curr = writes.getOrElse(normalizedPath, Seq())
-    val updated = curr :+ payload
-    writes += (normalizedPath -> updated)
-
-    writeResponses.get(normalizedPath) match {
-      case Some(v) => v
-      case None => throw new Exception(s"Nothing set in readResponses at key $normalizedPath")
-    }
-  }
-
-}

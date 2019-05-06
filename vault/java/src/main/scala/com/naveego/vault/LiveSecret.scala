@@ -1,10 +1,11 @@
-package naveego.vault
+package com.naveego.vault
 
 import java.util.TimerTask
 import java.util.Timer
 
 import spray.json._
 import NaveegoJsonProtocol._
+import com.typesafe.scalalogging.LazyLogging
 
 /**
   * A LiveSecret acquires a secret and keeps renewing or re-acquiring it so that
@@ -13,7 +14,7 @@ import NaveegoJsonProtocol._
   * throw an exception. The `value` method will return an Either[String, T] where
   * Left is the error if the value is invalid.
   *
-  * @param label A label that will be used when logging from this instance.
+  * @param label A label that will be used when logger.ing from this instance.
   * @param api The VaultApi which will be passed to the getter.
   * @param getter The getter function which will be invoked to get the secret. This function is responsible for
   *               obtaining the raw secret from the api and applying any transforms to it before returning it.
@@ -23,7 +24,7 @@ class LiveSecret[T](
                      label: String,
                      api: VaultApi,
                      getter: (VaultApi) => Either[String, Secret[T]]
-                   ) extends log.LazyLogger {
+                   ) extends LazyLogging {
 
   private var valueOrError: Either[String, T] = Left("not initialized")
 
@@ -52,7 +53,7 @@ class LiveSecret[T](
       val secret = maybeSecret.right.get
 
       if (secret.leaseDuration == 0) {
-        log.debug(s"Lease for secret with label '$label' will never expire, no renewal work to do.");
+        logger.debug(s"Lease for secret with label '$label' will never expire, no renewal work to do.");
         return
       }
 
@@ -62,13 +63,13 @@ class LiveSecret[T](
         new TimerTask {
           override def run(): Unit = {
             try {
-              log.debug(s"Renewing live secret with label '$label'.")
+              logger.debug(s"Renewing live secret with label '$label'.")
               val payload = Map("lease_id" -> secret.leaseId).toJson(DefaultJsonProtocol.mapFormat)
               api.write("sys/lease/renew", payload)
             }
             catch {
               case e: Exception => {
-                log.error(s"Renewing live secret with label '$label' failed with error $e")
+                logger.error(s"Renewing live secret with label '$label' failed with error $e")
                 self.valueOrError = Left(e.toString)
               }
             }
@@ -79,13 +80,13 @@ class LiveSecret[T](
         new TimerTask {
           override def run(): Unit = {
             try {
-              log.debug(s"Re-acquiring live secret with label '$label'.")
+              logger.debug(s"Re-acquiring live secret with label '$label'.")
               maybeSecret = getter(api)
               self.setValue(maybeSecret)
             }
             catch {
               case e: Exception => {
-                log.error(s"Re-acquiring live secret with label '$label' failed with error $e")
+                logger.error(s"Re-acquiring live secret with label '$label' failed with error $e")
                 self.valueOrError = Left(e.toString)
               }
             }

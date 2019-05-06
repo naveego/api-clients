@@ -2,35 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ddc0c09-8f69-4355-917e-d0f385a1dfe1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_chuusai_shapeless_2_12_2_3_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__io_lemonlabs_scala_uri_2_12_1_4_5_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_parboiled_parboiled_2_12_2_1_5_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_macro_compat_2_12_1_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/naveego/vault/SecretGetters.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/naveego/vault/SeqHelpers.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/naveego/vault/SecretGettersFixture.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/naveego/vault/SeqHelpersFixture.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../project/build.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/plugin.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/naveego/vault/Builder.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/naveego/vault/LoginStrategy.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/naveego/vault/Package.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/naveego/vault/VaultHelper.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/.idea.api-clients/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.idea.api-clients/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/.idea.api-clients/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.idea.api-clients/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../api-clients.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../api-clients.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/Naveego.Vault.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/Naveego.Vault.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/ILoginStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/ILoginStrategy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/IVaultApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/IVaultApi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/IVaultHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/IVaultHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/LiveSecret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/LiveSecret.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/Secret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/Secret.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/SecretGetters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/SecretGetters.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/naveego.vault.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/naveego.vault.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_chuusai_shapeless_2_12_2_3_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_softwaremill_sttp_core_2_12_1_0_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__io_lemonlabs_scala_uri_2_12_1_4_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__io_spray_spray_json_2_12_1_3_4_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_logging_log4j_log4j_api_2_11_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_logging_log4j_log4j_core_2_11_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_parboiled_parboiled_2_12_2_1_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_12_1_0_6_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_12_8_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_12_8_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_2_12_3_0_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalamock_scalamock_2_12_4_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_2_12_3_0_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_macro_compat_2_12_1_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/naveego.vault-build.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/naveego.vault.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/naveego/vault/VaultHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/naveego/vault/VaultHelper.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/naveego/vault/LiveSecretFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/naveego/vault/LiveSecretFixture.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/naveego/vault/VaultHelperFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/naveego/vault/VaultHelperFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/log/LazyLogger.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/naveego/vault/LiveSecret.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/naveego/vault/LoginStrategy.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/naveego/vault/Secret.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/naveego/vault/SecretGetters.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/naveego/vault/SecretGetters.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/naveego/vault/SeqHelpers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/naveego/vault/SeqHelpers.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/naveego/vault/VaultHelper.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/naveego/vault/LiveSecretFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/naveego/vault/LiveSecretFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/naveego/vault/SecretGettersFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/naveego/vault/SecretGettersFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/naveego/vault/SeqHelpersFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/naveego/vault/SeqHelpersFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/naveego/vault/VaultHelperFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/naveego/vault/VaultHelperFixture.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,112 +61,120 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="com.naveego.vault" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="true" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.12/srcs/core_2.12-1.0.5-sources.jar!/com/softwaremill/sttp/RequestT.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="3255">
               <caret line="224" column="6" selection-start-line="224" selection-start-column="6" selection-end-line="224" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/VaultHelper.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LoginStrategy.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+              <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
               <folding>
-                <element signature="e#23#53#0" expanded="true" />
+                <element signature="e#27#73#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/naveego/vault/SecretGettersFixture.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="129" column="82" selection-start-line="129" selection-start-column="82" selection-end-line="129" selection-end-column="82" />
-              <folding>
-                <element signature="e#23#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/SecretGetters.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
-              <folding>
-                <element signature="e#23#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/naveego/vault/LiveSecretFixture.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-              <folding>
-                <element signature="e#23#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/LoginStrategy.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#23#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/naveego/vault/VaultHelperFixture.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-              <folding>
-                <element signature="e#23#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SecretGetters.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+            <state relative-caret-position="204">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+              <folding>
+                <element signature="e#27#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-json_2.12/srcs/spray-json_2.12-1.3.4-sources.jar!/spray/json/JsValue.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/Secret.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="454">
+              <caret line="119" column="50" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LiveSecret.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+              <folding>
+                <element signature="e#27#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SeqHelpers.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
+              <folding>
+                <element signature="e#27#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/VaultHelperFixture.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+              <folding>
+                <element signature="e#27#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/VaultHelper.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+              <folding>
+                <element signature="e#27#73#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,10 +193,13 @@
       <find>public (\S+) (\S+) \{ get; set; \}</find>
       <find>parse</find>
       <find>maybeSecret</find>
+      <find>map</find>
+      <find>log.</find>
     </findStrings>
     <replaceStrings>
       <replace>var $2: $1;</replace>
       <replace>secret</replace>
+      <replace>logger.</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -196,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/test/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/naveego/vault/SeqHelpers.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/naveego/vault/SeqHelpersFixture.scala" />
-        <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/test/scala/naveego/vault/LiveSecretFixture.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/naveego/vault/SecretGetters.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/naveego/vault/SecretGettersFixture.scala" />
@@ -204,6 +225,20 @@
         <option value="$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/naveego/vault/VaultHelper.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala" />
+        <option value="$PROJECT_DIR$/project/plugin.sbt" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/naveego/vault/Secret.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/naveego/vault/Package.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/naveego/vault/SecretGettersFixture.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/naveego/vault/SecretGetters.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/naveego/vault/LazyLogger.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/naveego/vault/Builder.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/naveego/vault/LiveSecret.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/naveego/vault/SeqHelpers.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/naveego/vault/VaultHelper.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/naveego/vault/VaultHelperFixture.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/naveego/vault/LoginStrategy.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
       </list>
     </option>
   </component>
@@ -220,86 +255,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vault" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vault" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="vault" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="vault" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="naveego.vault" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/scala" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -307,6 +292,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.naveego.vault" />
       <recent name="naveego.vault" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -328,9 +314,56 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="ScalaTest.ScalaTests in 'vault'">
-    <configuration name="ScalaTests in 'vault'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true">
-      <module name="naveego.vault" />
+  <component name="RunManager" selected="ScalaTest.VaultHelperFixture.org.naveego.vault.VaultHelper should authenticate, write and read with kubernetes token">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="naveego.vault-build" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="naveego.vault-build" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScalaTests in 'scala'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true">
+      <module name="vault" />
       <setting name="path" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
@@ -342,22 +375,48 @@
       <setting name="jrePath" value="" />
       <envs />
       <setting name="testKind" value="All in package" />
-      <setting name="package" value="naveego.vault" />
-      <buffered bufClass="naveego.vault.LiveSecretFixture" />
-      <buffered bufClass="naveego.vault.LiveSecretFixture" />
-      <buffered bufClass="naveego.vault.SecretGettersFixture" />
-      <buffered bufClass="naveego.vault.SecretGettersFixture" />
-      <buffered bufClass="naveego.vault.SeqHelpersFixture" />
-      <buffered bufClass="naveego.vault.SeqHelpersFixture" />
-      <buffered bufClass="naveego.vault.VaultHelperFixture" />
-      <buffered bufClass="naveego.vault.VaultHelperFixture" />
+      <setting name="package" value="" />
+      <buffered bufClass="com.naveego.vault.LiveSecretFixture" />
+      <buffered bufClass="com.naveego.vault.LiveSecretFixture" />
+      <buffered bufClass="com.naveego.vault.SecretGettersFixture" />
+      <buffered bufClass="com.naveego.vault.SecretGettersFixture" />
+      <buffered bufClass="com.naveego.vault.SeqHelpersFixture" />
+      <buffered bufClass="com.naveego.vault.SeqHelpersFixture" />
+      <buffered bufClass="com.naveego.vault.VaultHelperFixture" />
+      <buffered bufClass="com.naveego.vault.VaultHelperFixture" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecretGettersFixture" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="naveego.vault" />
-      <setting name="path" value="naveego.vault.SecretGettersFixture" />
+    <configuration name="ScalaTests in 'vault'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true">
+      <module name="vault" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <setting name="jrePath" value="" />
+      <envs />
+      <setting name="testKind" value="All in package" />
+      <setting name="package" value="com.naveego.vault" />
+      <buffered bufClass="com.naveego.vault.LiveSecretFixture" />
+      <buffered bufClass="com.naveego.vault.LiveSecretFixture" />
+      <buffered bufClass="com.naveego.vault.SecretGettersFixture" />
+      <buffered bufClass="com.naveego.vault.SecretGettersFixture" />
+      <buffered bufClass="com.naveego.vault.SeqHelpersFixture" />
+      <buffered bufClass="com.naveego.vault.SeqHelpersFixture" />
+      <buffered bufClass="com.naveego.vault.VaultHelperFixture" />
+      <buffered bufClass="com.naveego.vault.VaultHelperFixture" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeqHelpersFixture" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="vault" />
+      <setting name="path" value="com.naveego.vault.SeqHelpersFixture" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -368,14 +427,32 @@
       <setting name="jrePath" value="" />
       <envs />
       <setting name="testKind" value="Class" />
-      <setting name="path" value="naveego.vault.SecretGettersFixture" />
+      <setting name="path" value="com.naveego.vault.SeqHelpersFixture" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VaultHelperFixture.VaultHelper should be able to resolve a live secret" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="naveego.vault" />
-      <setting name="path" value="naveego.vault.VaultHelperFixture" />
+    <configuration name="VaultHelperFixture" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="vault" />
+      <setting name="path" value="com.naveego.vault.VaultHelperFixture" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <setting name="jrePath" value="" />
+      <envs />
+      <setting name="testKind" value="Class" />
+      <setting name="path" value="com.naveego.vault.VaultHelperFixture" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VaultHelperFixture.org.naveego.vault.VaultHelper should authenticate, write and read with kubernetes token" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="vault" />
+      <setting name="path" value="com.naveego.vault.VaultHelperFixture" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -386,57 +463,19 @@
       <setting name="jrePath" value="" />
       <envs />
       <setting name="testKind" value="Test name" />
-      <setting name="path" value="naveego.vault.VaultHelperFixture" />
-      <setting name="testName" value="VaultHelper should be able to resolve a live secret" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VaultHelperFixture.VaultHelper should be able to resolve secret once" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="naveego.vault" />
-      <setting name="path" value="naveego.vault.VaultHelperFixture" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <setting name="jrePath" value="" />
-      <envs />
-      <setting name="testKind" value="Test name" />
-      <setting name="path" value="naveego.vault.VaultHelperFixture" />
-      <setting name="testName" value="VaultHelper should be able to resolve secret once" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VaultHelperFixture.org.naveego.vault.VaultHelper should be able to resolve secret once" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="naveego.vault" />
-      <setting name="path" value="naveego.vault.VaultHelperFixture" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <setting name="jrePath" value="" />
-      <envs />
-      <setting name="testKind" value="Test name" />
-      <setting name="path" value="naveego.vault.VaultHelperFixture" />
-      <setting name="testName" value="org.naveego.vault.VaultHelper should be able to resolve secret once" />
+      <setting name="path" value="com.naveego.vault.VaultHelperFixture" />
+      <setting name="testName" value="org.naveego.vault.VaultHelper should authenticate, write and read with kubernetes token" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="ScalaTest.VaultHelperFixture.org.naveego.vault.VaultHelper should authenticate, write and read with kubernetes token" />
         <item itemvalue="ScalaTest.ScalaTests in 'vault'" />
-        <item itemvalue="ScalaTest.VaultHelperFixture.VaultHelper should be able to resolve a live secret" />
-        <item itemvalue="ScalaTest.VaultHelperFixture.VaultHelper should be able to resolve secret once" />
-        <item itemvalue="ScalaTest.VaultHelperFixture.org.naveego.vault.VaultHelper should be able to resolve secret once" />
-        <item itemvalue="ScalaTest.SecretGettersFixture" />
+        <item itemvalue="ScalaTest.ScalaTests in 'scala'" />
+        <item itemvalue="ScalaTest.ScalaTests in 'scala'" />
+        <item itemvalue="ScalaTest.VaultHelperFixture" />
       </list>
     </recent_temporary>
   </component>
@@ -446,7 +485,7 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="naveego.vault" />
+              <option name="name" value="vault" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
@@ -457,7 +496,7 @@
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value="naveego.vault-build" />
+                <option name="name" value="vault-build" />
                 <option name="path" value="$PROJECT_DIR$/project" />
               </ExternalProjectPojo>
             </list>
@@ -467,8 +506,10 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/build.sbt" value="2438997623" />
+        <entry key="$PROJECT_DIR$" value="4670460801000" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="131022722" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="1396028727" />
+        <entry key="$PROJECT_DIR$/project/plugin.sbt" value="554310503" />
       </map>
     </option>
   </component>
@@ -484,77 +525,80 @@
       <updated>1556203722401</updated>
       <workItem from="1556203724710" duration="31144000" />
       <workItem from="1556299025577" duration="14959000" />
-      <workItem from="1556540525661" duration="20677000" />
+      <workItem from="1556540525661" duration="20983000" />
+      <workItem from="1556723880003" duration="8448000" />
+      <workItem from="1556888742388" duration="9819000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SecretGettersFixture - 2019.04.29 at 16h 35m 47s.xml">
+    <history-entry file="LiveSecretFixture - 2019.05.01 at 15h 59m 57s.xml">
+      <configuration name="LiveSecretFixture" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="SecretGettersFixture - 2019.05.01 at 16h 00m 48s.xml">
       <configuration name="SecretGettersFixture" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="VaultHelperFixture_org_naveego_vault_VaultHelper_should_be_able_to_resolve_secret_once - 2019.04.29 at 16h 40m 31s.xml">
-      <configuration name="VaultHelperFixture.org.naveego.vault.VaultHelper should be able to resolve secret once" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="SeqHelpersFixture - 2019.05.01 at 16h 00m 53s.xml">
+      <configuration name="SeqHelpersFixture" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="VaultHelperFixture_VaultHelper_should_be_able_to_resolve_secret_once - 2019.04.29 at 16h 40m 45s.xml">
-      <configuration name="VaultHelperFixture.VaultHelper should be able to resolve secret once" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="VaultHelperFixture - 2019.05.01 at 16h 01m 00s.xml">
+      <configuration name="VaultHelperFixture" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="VaultHelperFixture_VaultHelper_should_be_able_to_resolve_secret_once - 2019.04.29 at 16h 47m 16s.xml">
-      <configuration name="VaultHelperFixture.VaultHelper should be able to resolve secret once" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="ScalaTests_in_'scala' - 2019.05.01 at 16h 01m 11s.xml">
+      <configuration name="ScalaTests in 'scala'" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="VaultHelperFixture_VaultHelper_should_be_able_to_resolve_secret_once - 2019.04.29 at 16h 47m 54s.xml">
-      <configuration name="VaultHelperFixture.VaultHelper should be able to resolve secret once" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="ScalaTests_in_'scala' - 2019.05.01 at 16h 04m 34s.xml">
+      <configuration name="ScalaTests in 'scala'" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="VaultHelperFixture_VaultHelper_should_be_able_to_resolve_a_live_secret - 2019.04.29 at 16h 49m 01s.xml">
-      <configuration name="VaultHelperFixture.VaultHelper should be able to resolve a live secret" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="ScalaTests_in_'scala' - 2019.05.06 at 10h 07m 10s.xml">
+      <configuration name="ScalaTests in 'scala'" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="VaultHelperFixture_VaultHelper_should_be_able_to_resolve_a_live_secret - 2019.04.29 at 16h 51m 56s.xml">
-      <configuration name="VaultHelperFixture.VaultHelper should be able to resolve a live secret" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="VaultHelperFixture_VaultHelper_should_be_able_to_resolve_a_live_secret - 2019.04.29 at 16h 52m 05s.xml">
-      <configuration name="VaultHelperFixture.VaultHelper should be able to resolve a live secret" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ScalaTests_in_'vault' - 2019.04.29 at 17h 08m 15s.xml">
+    <history-entry file="ScalaTests_in_'vault' - 2019.05.06 at 10h 22m 03s.xml">
       <configuration name="ScalaTests in 'vault'" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="ScalaTests_in_'vault' - 2019.04.29 at 17h 08m 24s.xml">
+    <history-entry file="ScalaTests_in_'vault' - 2019.05.06 at 10h 40m 18s.xml">
       <configuration name="ScalaTests in 'vault'" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="VaultHelperFixture_org_naveego_vault_VaultHelper_should_authenticate,_write_and_read_with_kubernetes_token - 2019.05.06 at 10h 41m 26s.xml">
+      <configuration name="VaultHelperFixture.org.naveego.vault.VaultHelper should authenticate, write and read with kubernetes token" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66780000" />
+    <option name="totallyTimeSpent" value="85353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2560" y="0" width="1920" height="1181" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" order="0" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.1430096" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.19530416" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="1" sideWeight="0.4994664" weight="0.2783505" />
+      <window_info anchor="bottom" id="Build" order="1" sideWeight="0.49893278" weight="0.2783505" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.6256961" visible="true" weight="0.420806" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.6256961" visible="true" weight="0.5463917" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="6" sideWeight="0.12860192" side_tool="true" weight="0.25679475" />
+      <window_info anchor="bottom" id="Messages" order="6" sideWeight="0.20651014" side_tool="true" weight="0.5220244" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3289597" />
       <window_info anchor="bottom" id="Run" order="9" sideWeight="0.8713981" weight="0.32333645" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.4994664" weight="0.09840675" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.7934899" weight="0.34582943" />
       <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.6254002" weight="0.35988754" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
-      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.32977587" />
       <window_info anchor="right" id="Palette&#9;" order="0" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="Maven" order="2" />
-      <window_info anchor="right" id="sbt" order="3" />
+      <window_info anchor="right" id="sbt" order="3" weight="0.32977587" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.32977587" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,20 +608,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/test/scala/naveego/vault/VaultHelperFixture.scala</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/naveego/vault/SecretGetters.scala</url>
+          <url>file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SecretGetters.scala</url>
           <line>91</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala</url>
-          <line>97</line>
+          <url>file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LiveSecret.scala</url>
+          <line>98</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
@@ -604,175 +642,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375">
-          <caret line="242" column="16" selection-start-line="242" selection-start-column="16" selection-end-line="242" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.12/srcs/core_2.12-1.0.5-sources.jar!/com/softwaremill/sttp/package.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-json_2.12/srcs/spray-json_2.12-1.3.4-sources.jar!/spray/json/ProductFormatsInstances.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-json_2.12/srcs/spray-json_2.12-1.3.4-sources.jar!/spray/json/ProductFormats.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.8-sources.jar!/scala/Predef.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="149" column="26" lean-forward="true" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-json_2.12/srcs/spray-json_2.12-1.3.4-sources.jar!/spray/json/DefaultJsonProtocol.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalamock/scalamock_2.12/srcs/scalamock_2.12-4.1.0-sources.jar!/org/scalamock/function/FunctionAdapter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalamock/scalamock_2.12/srcs/scalamock_2.12-4.1.0-sources.jar!/org/scalamock/clazz/Mock.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalamock/scalamock_2.12/srcs/scalamock_2.12-4.1.0-sources.jar!/org/scalamock/handlers/CallHandler.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="149" column="6" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalamock/scalamock_2.12/srcs/scalamock_2.12-4.1.0-sources.jar!/org/scalamock/function/MockFunction.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalamock/scalamock_2.12/srcs/scalamock_2.12-4.1.0-sources.jar!/org/scalamock/function/StubFunction.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.0.5-sources.jar!/org/scalatest/TestSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2715">
-          <caret line="195" column="4" selection-start-line="195" selection-start-column="4" selection-end-line="195" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.12/jars/core_2.12-1.0.5.jar!/com/softwaremill/sttp/Response.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.12/srcs/core_2.12-1.0.5-sources.jar!/com/softwaremill/sttp/Response.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-543">
-          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.12/jars/core_2.12-1.0.5.jar!/com/softwaremill/sttp/RequestT.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="288" selection-start-line="1" selection-start-column="288" selection-end-line="1" selection-end-column="288" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.12/srcs/core_2.12-1.0.5-sources.jar!/com/softwaremill/sttp/RequestT.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="224" column="6" selection-start-line="224" selection-start-column="6" selection-end-line="224" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1813">
-          <caret line="633" column="19" selection-start-line="633" selection-start-column="19" selection-end-line="633" selection-end-column="19" />
-          <folding>
-            <element signature="e#23072#23073#0" expanded="true" />
-            <element signature="e#23112#23113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="352" column="30" selection-start-line="352" selection-start-column="30" selection-end-line="352" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-json_2.12/srcs/spray-json_2.12-1.3.4-sources.jar!/spray/json/CollectionFormats.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-json_2.12/srcs/spray-json_2.12-1.3.4-sources.jar!/spray/json/package.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.8-sources.jar!/scala/Option.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="129" column="6" selection-start-line="129" selection-start-column="6" selection-end-line="129" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.8-sources.jar!/scala/util/Either.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="351" column="6" selection-start-line="351" selection-start-column="6" selection-end-line="351" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -811,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/io.lemonlabs/scala-uri_2.12/srcs/scala-uri_2.12-1.4.5-sources.jar!/io/lemonlabs/uri/Uri.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -853,13 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/SeqHelpers.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalamock/scalamock_2.12/srcs/scalamock_2.12-4.1.0-sources.jar!/org/scalamock/scalatest/AbstractMockFactory.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -888,50 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/naveego/vault/SeqHelpersFixture.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-          <folding>
-            <element signature="e#23#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.0.5-sources.jar!/org/scalatest/words/MatcherWords.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/LoginStrategy.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#23#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/SecretGetters.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-          <folding>
-            <element signature="e#23#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/naveego/vault/SecretGettersFixture.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="129" column="82" selection-start-line="129" selection-start-column="82" selection-end-line="129" selection-end-column="82" />
-          <folding>
-            <element signature="e#23#65#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -942,47 +761,270 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/naveego/vault/VaultHelperFixture.scala">
+    <entry file="jar://$USER_HOME$/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/librarymanagement-core_2.12-1.2.4.jar!/sbt/librarymanagement/ResolverFunctions.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+        <state relative-caret-position="238">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/plugin.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/main-settings_2.12-1.2.8.jar!/sbt/std/MacroValue.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/scala_2.12/sbt_1.0/ohnosequences/sbt-s3-resolver/jars/sbt-s3-resolver-0.19.0.jar!/ohnosequences/sbt/SbtS3Resolver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/main_2.12-1.2.8.jar!/sbt/Keys.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="273" column="6" selection-start-line="273" selection-start-column="6" selection-end-line="273" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.8-sources.jar!/scala/util/Either.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="340" column="25" selection-start-line="334" selection-end-line="354" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.11/srcs/core_2.11-1.0.5-sources.jar!/com/softwaremill/sttp/RequestT.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.11/srcs/core_2.11-1.0.5-sources.jar!/com/softwaremill/sttp/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.12/srcs/core_2.12-1.0.5-sources.jar!/com/softwaremill/sttp/RequestT.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3255">
+          <caret line="224" column="6" selection-start-line="224" selection-start-column="6" selection-end-line="224" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/SecretGettersFixture.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
           <folding>
-            <element signature="e#23#51#0" expanded="true" />
+            <element signature="e#27#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/naveego/vault/LiveSecretFixture.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/util/Either.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="2910">
+          <caret line="200" column="17" selection-start-line="200" selection-start-column="17" selection-end-line="200" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/SeqHelpersFixture.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+          <folding>
+            <element signature="e#27#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/LiveSecretFixture.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
           <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/io/BufferedSource.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/io/Source.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="74" column="61" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="2420" column="20" selection-start-line="2420" selection-start-column="20" selection-end-line="2420" selection-end-column="20" />
           <folding>
-            <element signature="e#23#65#0" expanded="true" />
+            <element signature="e#23072#23073#0" expanded="true" />
+            <element signature="e#23112#23113#0" expanded="true" />
+            <element signature="e#94598#94599#0" expanded="true" />
+            <element signature="e#94636#94637#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/LiveSecret.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/immutable/StringOps.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+        <state relative-caret-position="330">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/VaultHelper.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/immutable/StringLike.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="205" column="39" selection-start-line="205" selection-start-column="39" selection-end-line="205" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/Predef.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.11/srcs/core_2.11-1.0.5-sources.jar!/com/softwaremill/sttp/Uri.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.11/jars/core_2.11-1.0.5.jar!/com/softwaremill/sttp/Response.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.11/srcs/core_2.11-1.0.5-sources.jar!/com/softwaremill/sttp/Response.scala">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LazyLogger.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/Package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/Builder.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="89" column="24" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
+          <folding>
+            <element signature="e#27#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LiveSecret.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding>
+            <element signature="e#27#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/Secret.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="119" column="50" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SeqHelpers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#27#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LoginStrategy.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
           <folding>
-            <element signature="e#23#53#0" expanded="true" />
+            <element signature="e#27#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/naveego/vault/Secret.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/VaultHelperFixture.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+          <folding>
+            <element signature="e#27#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/VaultHelper.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <element signature="e#27#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="43" column="10" lean-forward="true" selection-end-line="65" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SecretGetters.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#27#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,12 +1078,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>vault|naveego</last-edited>
+          <last-edited>vault-build</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

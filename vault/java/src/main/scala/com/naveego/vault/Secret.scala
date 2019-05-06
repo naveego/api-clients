@@ -1,4 +1,4 @@
-package naveego.vault
+package com.naveego.vault
 
 import spray.json._
 
@@ -10,7 +10,7 @@ case class Secret[T](
                    leaseDuration: Long = 0,
                    leaseId: String = null,
                    warnings: List[String] = null,
-                   requestId: String = "",
+                   requestId: String = ""
                  ) {
   /**
     * Returns a new Secret with `newData` as the data.
@@ -46,7 +46,7 @@ case class SecretAuth(
                        leaseDuration: Long = 0,
                        policies: List[String] = List[String](),
                        metadata: Map[String, String] = null,
-                       accessor: String = null,
+                       accessor: String = null
                      )
 
 object NaveegoJsonProtocol extends DefaultJsonProtocol {
@@ -60,7 +60,7 @@ object NaveegoJsonProtocol extends DefaultJsonProtocol {
         "policies" -> obj.policies.toJson,
         "metadata" -> obj.metadata.toJson,
         "lease_duration" -> obj.leaseDuration.toJson,
-        "renewable" -> obj.renewable.toJson,
+        "renewable" -> obj.renewable.toJson
       )
     }
 
@@ -80,7 +80,7 @@ object NaveegoJsonProtocol extends DefaultJsonProtocol {
           case o: JsObject => o.convertTo[Map[String, String]]
           case _ => null
         },
-        obj.fields("accessor").convertTo[String],
+        obj.fields("accessor").convertTo[String]
       )
     }
   }
@@ -94,7 +94,7 @@ object NaveegoJsonProtocol extends DefaultJsonProtocol {
         "lease_id" -> obj.leaseId.toJson,
         "lease_duration" -> obj.leaseDuration.toJson,
         "renewable" -> obj.renewable.toJson,
-        "warnings" -> obj.warnings.toJson,
+        "warnings" -> obj.warnings.toJson
       )
     }
 
@@ -117,7 +117,7 @@ object NaveegoJsonProtocol extends DefaultJsonProtocol {
           case o: JsArray => o.convertTo[List[String]]
           case _ => null
         },
-        obj.fields("request_id").convertTo[String],
+        obj.fields("request_id").convertTo[String]
       )
     }
   }

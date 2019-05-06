@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/naveego.vault.iml" filepath="$PROJECT_DIR$/.idea/modules/naveego.vault.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/naveego.vault-build.iml" filepath="$PROJECT_DIR$/.idea/modules/naveego.vault-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vault.iml" filepath="$PROJECT_DIR$/.idea/modules/vault.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vault-build.iml" filepath="$PROJECT_DIR$/.idea/modules/vault-build.iml" />
     </modules>
   </component>
 </project>

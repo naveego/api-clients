@@ -1,8 +1,7 @@
-package naveego.vault
+package com.naveego.vault
 
-import org.scalamock.scalatest.MockFactory
-import org.scalatest.{EitherValues, FlatSpec, Matchers, WordSpec}
-import naveego.vault.SeqHelpers._
+import com.naveego.vault.SeqHelpers._
+import org.scalatest.{EitherValues, Matchers, WordSpec}
 
 class SeqHelpersFixture extends WordSpec with Matchers with EitherValues {
 

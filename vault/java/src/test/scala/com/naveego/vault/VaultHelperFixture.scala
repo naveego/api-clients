@@ -1,6 +1,7 @@
-package naveego.vault
+package com.naveego.vault
 
 import NaveegoJsonProtocol._
+import com.naveego.vault
 import org.scalatest.{EitherValues, FlatSpec, Matchers, OptionValues}
 import spray.json._
 
@@ -23,6 +24,21 @@ class VaultHelperFixture extends FlatSpec with Matchers with OptionValues with E
     result.data.value should equal(data)
   }
 
+  "org.naveego.vault.VaultHelper" should "authenticate, write and read with kubernetes token" in {
+    val sut = vault.builder.withAddress(address)
+      .withStrategies(KubernetesLoginStrategy("matching", jwt ="eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJ0ZW5hbnRzIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Im1hdGNoaW5nLXRva2VuLXc4amtsIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Im1hdGNoaW5nIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiYzdjNGI5ZDMtNmRkNC0xMWU5LTk5MTAtMDgwMDI3ZGYyZmRhIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OnRlbmFudHM6bWF0Y2hpbmcifQ.sSFPwVBRVkWOD7Xrgd4L3c76jxiYYmdRZyUtTAsFOlckfQ6y-V45VZYdztZByGWQD2KQv8aJL8Pgryt09uygLtGmSu93qjJESysmhGLpQvkA_fB-wIYJrZZ_f-0v40AGX7KgAyf1F3IYyTgIHyXfuhtR28CkiC1ZduIsrhP63Czj1NKmuFC2iWfS3zicduvL38ZwkMUBnlrYbCx1yL0pO1dtGbCY7XRG8zkTuAD49mkNVLwlRUXoCp7lW2ty8GP6qp5kgHek7gV2s7bPXz8Oa5lhGjzh5W4ELDCOU3wPTNMCqzjyo6-vzfWxf3fLgnmMeYH8FMYyBMw_1pq_Ww-zog"))
+      .build()
+
+    val data = Map[String, String](
+      "a" -> "A"
+    ).toJson.asJsObject()
+    sut.write("naveego-secrets/matching/scala-test", data)
+
+    val result = sut.read("naveego-secrets/matching/scala-test")
+
+    result.data.value should equal(data)
+  }
+
   "org.naveego.vault.VaultHelper" should "keep own auth token fresh" in {
 
     var error: Exception = null
@@ -35,7 +51,7 @@ class VaultHelperFixture extends FlatSpec with Matchers with OptionValues with E
     val data = Map(
       "ttl" -> "2s",
       "explicit_max_ttl" -> "1m",
-      "renewable" -> "true",
+      "renewable" -> "true"
     )
 
     val secret = helperWithRootToken.write("auth/token/create", data.toJson)

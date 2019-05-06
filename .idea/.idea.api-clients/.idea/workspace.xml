@@ -38,35 +38,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6de631be-2064-4bbf-84e1-a2a2592f96cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vault/java/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__com_chuusai_shapeless_2_12_2_3_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__io_lemonlabs_scala_uri_2_12_1_4_5_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_parboiled_parboiled_2_12_2_1_5_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_typelevel_macro_compat_2_12_1_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/SecretGetters.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/SeqHelpers.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/SecretGettersFixture.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/SeqHelpersFixture.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.api-clients/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.api-clients/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.api-clients/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.api-clients/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-clients.sln" beforeDir="false" afterPath="$PROJECT_DIR$/api-clients.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/Naveego.Vault.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/Naveego.Vault.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/ILoginStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/ILoginStrategy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultApi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/LiveSecret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/LiveSecret.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/Secret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/Secret.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/java/.idea/modules/naveego.vault.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/modules/naveego.vault.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault/java/.idea/modules/vault-build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault/java/.idea/modules/vault.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault/java/project/plugin.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/Builder.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/Package.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__com_chuusai_shapeless_2_12_2_3_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__com_chuusai_shapeless_2_11_2_3_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__com_softwaremill_sttp_core_2_12_1_0_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__com_softwaremill_sttp_core_2_11_1_0_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__io_lemonlabs_scala_uri_2_12_1_4_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__io_lemonlabs_scala_uri_2_11_1_4_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__io_spray_spray_json_2_12_1_3_4_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__io_spray_spray_json_2_11_1_3_4_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_parboiled_parboiled_2_12_2_1_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_parboiled_parboiled_2_11_2_1_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_12_1_0_6_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_11_1_0_6_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_scala_library_2_12_8_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_scala_library_2_11_8_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_12_8_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_11_8_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalactic_scalactic_2_12_3_0_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalactic_scalactic_2_11_3_0_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalamock_scalamock_2_12_4_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalamock_scalamock_2_11_4_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalatest_scalatest_2_12_3_0_5_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_scalatest_scalatest_2_11_3_0_5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_typelevel_macro_compat_2_12_1_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/libraries/sbt__org_typelevel_macro_compat_2_11_1_1_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/modules/naveego.vault-build.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/modules/naveego.vault.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/scala_compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vault/java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vault/java/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/LiveSecret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/LiveSecret.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/Secret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/Secret.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/VaultHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/VaultHelper.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/LiveSecretFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/LiveSecretFixture.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/VaultHelperFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/VaultHelperFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/LiveSecret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/LiveSecret.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/LoginStrategy.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/LoginStrategy.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/Secret.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/Secret.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/SecretGetters.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/SecretGetters.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/SeqHelpers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/SeqHelpers.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/main/scala/naveego/vault/VaultHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/main/scala/com/naveego/vault/VaultHelper.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/LiveSecretFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/com/naveego/vault/LiveSecretFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/SecretGettersFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/com/naveego/vault/SecretGettersFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/SeqHelpersFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/com/naveego/vault/SeqHelpersFixture.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault/java/src/test/scala/naveego/vault/VaultHelperFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/vault/java/src/test/scala/com/naveego/vault/VaultHelperFixture.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,92 +98,92 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="100" column="31" lean-forward="true" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+            <state relative-caret-position="1155">
+              <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
               <folding>
-                <marker date="1556286485903" expanded="false" signature="6:228" ph="..." />
-                <marker date="1556286485903" expanded="true" signature="258:11002" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="319:1554" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="334:695" ph="///     Gets a secret using the provided secret getter. Predefined getters are in the &lt;see cref=&quot;SecretGetters&quot; / ... " />
-                <marker date="1556286485903" expanded="true" signature="847:1376" ph="///     Gets a new &lt;see cref=&quot;LiveSecret{T}&quot; /&gt; which will be acquired and renewed using the &lt;paramref name=&quot;gett ... " />
-                <marker date="1556286485903" expanded="true" signature="1591:2709" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="1632:1652" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="1702:1753" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="2065:2259" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="2148:2222" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="2323:2483" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="2401:2446" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="2561:2642" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="2754:9682" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="2997:3134" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="3289:3499" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="3684:5378" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="3887:4563" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="3918:4061" ph="/* If the lease is renewable, the renewal action is to renew the lease and return ... */" />
-                <marker date="1556286485903" expanded="true" signature="4240:4547" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="4607:4808" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="5118:5352" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="5408:5498" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="5603:5686" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="5808:5901" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="5932:6009" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="6096:6234" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="6275:7752" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="6301:7583" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="6516:6859" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="6678:6765" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="6900:7013" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="7067:7312" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="7616:7742" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="7818:9676" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="7844:9073" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="7900:8386" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="7972:8111" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="8136:8339" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="8632:9059" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="9115:9216" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="9249:9666" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="9424:9504" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="9525:9652" ph="{...}" />
-                <marker date="1556286485903" expanded="true" signature="9711:11000" ph="{...}" />
+                <marker date="1556572620452" expanded="false" signature="6:228" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="258:11002" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="319:1554" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="334:695" ph="///     Gets a secret using the provided secret getter. Predefined getters are in the &lt;see cref=&quot;SecretGetters&quot; / ... " />
+                <marker date="1556572620452" expanded="true" signature="847:1376" ph="///     Gets a new &lt;see cref=&quot;LiveSecret{T}&quot; /&gt; which will be acquired and renewed using the &lt;paramref name=&quot;gett ... " />
+                <marker date="1556572620452" expanded="true" signature="1591:2709" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1632:1652" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1702:1753" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2065:2259" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2148:2222" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2323:2483" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2401:2446" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2561:2642" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2754:9682" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2997:3134" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3289:3499" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3684:5378" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3887:4563" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3918:4061" ph="/* If the lease is renewable, the renewal action is to renew the lease and return ... */" />
+                <marker date="1556572620452" expanded="true" signature="4240:4547" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4607:4808" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5118:5352" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5408:5498" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5603:5686" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5808:5901" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5932:6009" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6096:6234" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6275:7752" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6301:7583" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6516:6859" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6678:6765" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6900:7013" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7067:7312" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7616:7742" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7818:9676" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7844:9073" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7900:8386" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="7972:8111" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="8136:8339" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="8632:9059" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9115:9216" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9249:9666" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9424:9504" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9525:9652" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="9711:11000" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="174" column="49" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="49" />
+            <state relative-caret-position="813">
+              <caret line="149" column="55" lean-forward="true" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="55" />
               <folding>
-                <marker date="1556138749514" expanded="false" signature="6:158" ph="..." />
-                <marker date="1556138749514" expanded="true" signature="188:7268" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="228:7266" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="538:1285" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="564:1131" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="631:709" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="818:896" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="1164:1275" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="1478:1719" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="1882:3224" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="2046:3213" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="2121:3037" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="2364:2489" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="2654:2772" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="2847:2969" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="3074:3199" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="3234:4425" ph="///     The getter returned by this method will resolve an embedded template by pulling values from a vault secre ... " />
-                <marker date="1556138749514" expanded="true" signature="4563:7260" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="4680:4876" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="4788:4860" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="4933:7249" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="5067:5221" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="5258:5408" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="5452:7085" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="6181:6430" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="6513:7034" ph="{...}" />
-                <marker date="1556138749514" expanded="true" signature="6677:6783" ph="{...}" />
+                <marker date="1556572620452" expanded="false" signature="6:158" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="188:7268" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="228:7266" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="538:1285" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="564:1131" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="631:709" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="818:896" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1164:1275" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1478:1719" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1882:3224" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2046:3213" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2121:3037" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2364:2489" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2654:2772" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2847:2969" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3074:3199" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3234:4425" ph="///     The getter returned by this method will resolve an embedded template by pulling values from a vault secre ... " />
+                <marker date="1556572620452" expanded="true" signature="4563:7260" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4680:4876" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4788:4860" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4933:7249" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5067:5221" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5258:5408" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="5452:7085" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6181:6430" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6513:7034" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="6677:6783" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -190,19 +195,19 @@
             <state relative-caret-position="225">
               <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
               <folding>
-                <marker date="1556138749506" expanded="false" signature="6:67" ph="..." />
-                <marker date="1556138749506" expanded="true" signature="97:2638" ph="{...}" />
-                <marker date="1556138749506" expanded="true" signature="104:940" ph="///     Represents a secret value which is being renewed periodically. ... " />
-                <marker date="1556138749506" expanded="true" signature="985:2636" ph="{...}" />
-                <marker date="1556138749506" expanded="true" signature="1249:2184" ph="{...}" />
-                <marker date="1556138749506" expanded="true" signature="1415:2172" ph="{...}" />
-                <marker date="1556138749506" expanded="true" signature="1449:1686" ph="{...}" />
-                <marker date="1556138749506" expanded="true" signature="1500:1668" ph="{...}" />
-                <marker date="1556138749506" expanded="true" signature="1732:1930" ph="{...}" />
-                <marker date="1556138749506" expanded="true" signature="1967:2158" ph="{...}" />
-                <marker date="1556138749506" expanded="true" signature="2194:2358" ph="///     Create a renewing secret that doesn't actually do any renewing. ... " />
-                <marker date="1556138749506" expanded="true" signature="2400:2455" ph="{...}" />
-                <marker date="1556138749506" expanded="true" signature="2553:2630" ph="{...}" />
+                <marker date="1556572620452" expanded="false" signature="6:67" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="97:2638" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="104:940" ph="///     Represents a secret value which is being renewed periodically. ... " />
+                <marker date="1556572620452" expanded="true" signature="985:2636" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1249:2184" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1415:2172" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1449:1686" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1500:1668" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1732:1930" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1967:2158" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2194:2358" ph="///     Create a renewing secret that doesn't actually do any renewing. ... " />
+                <marker date="1556572620452" expanded="true" signature="2400:2455" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2553:2630" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -214,19 +219,19 @@
             <state relative-caret-position="1020">
               <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
               <folding>
-                <marker date="1556138749458" expanded="false" signature="6:53" ph="..." />
-                <marker date="1556138749458" expanded="true" signature="83:2693" ph="{...}" />
-                <marker date="1556138749458" expanded="true" signature="90:199" ph="///     Represents the case where no data is expected back from the API. ... " />
-                <marker date="1556138749458" expanded="true" signature="223:235" ph="{...}" />
-                <marker date="1556138749458" expanded="true" signature="263:2349" ph="{...}" />
-                <marker date="1556138749458" expanded="true" signature="663:1641" ph="{...}" />
-                <marker date="1556138749458" expanded="true" signature="707:764" ph="{...}" />
-                <marker date="1556138749458" expanded="true" signature="811:1630" ph="{...}" />
-                <marker date="1556138749458" expanded="true" signature="980:1374" ph="{...}" />
-                <marker date="1556138749458" expanded="true" signature="1651:1944" ph="///     Returns a new secret with the new &lt;paramref name=&quot;data&quot; /&gt; ... " />
-                <marker date="1556138749458" expanded="true" signature="2002:2343" ph="{...}" />
-                <marker date="1556138749458" expanded="true" signature="2063:2332" ph="{...}" />
-                <marker date="1556138749458" expanded="true" signature="2379:2691" ph="{...}" />
+                <marker date="1556572620452" expanded="false" signature="6:53" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="83:2693" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="90:199" ph="///     Represents the case where no data is expected back from the API. ... " />
+                <marker date="1556572620452" expanded="true" signature="223:235" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="263:2349" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="663:1641" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="707:764" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="811:1630" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="980:1374" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1651:1944" ph="///     Returns a new secret with the new &lt;paramref name=&quot;data&quot; /&gt; ... " />
+                <marker date="1556572620452" expanded="true" signature="2002:2343" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2063:2332" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2379:2691" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -265,50 +270,50 @@
             <state relative-caret-position="240">
               <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
               <folding>
-                <marker date="1556285302143" expanded="false" signature="6:166" ph="..." />
-                <marker date="1556285302143" expanded="true" signature="197:4120" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="246:4118" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="396:677" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="514:641" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="808:983" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="1056:1865" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="1289:1420" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="1987:2482" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="2127:2199" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="2586:3428" ph="{...}" />
-                <marker date="1556285302143" expanded="true" signature="3553:4103" ph="{...}" />
+                <marker date="1556572620452" expanded="false" signature="6:166" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="197:4120" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="246:4118" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="396:677" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="514:641" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="808:983" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1056:1865" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1289:1420" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1987:2482" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2127:2199" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2586:3428" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3553:4103" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/ILoginStrategy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1545">
-              <caret line="129" column="39" selection-start-line="129" selection-start-column="39" selection-end-line="129" selection-end-column="39" />
+            <state relative-caret-position="678">
+              <caret line="71" column="51" lean-forward="true" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
               <folding>
-                <marker date="1556286341642" expanded="false" signature="6:226" ph="..." />
-                <marker date="1556286341642" expanded="true" signature="256:4965" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="263:538" ph="///     A login strategy will attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
-                <marker date="1556286341642" expanded="true" signature="574:1219" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="589:1103" ph="///     Attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
-                <marker date="1556286341642" expanded="true" signature="1249:1358" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="1364:1457" ph="///     A strategy which authenticates using kubernetes. ... " />
-                <marker date="1556286341642" expanded="true" signature="1515:3143" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="1855:3137" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="1955:2110" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="2361:2441" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="2519:2952" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="2830:2937" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="2985:3127" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="3149:3288" ph="///     A strategy which authenticates by creating a token which is based on the &lt;see cref=&quot;Token&quot; /&gt;. ... " />
-                <marker date="1556286341642" expanded="true" signature="3341:4963" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="3390:3957" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="4131:4957" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="4379:4483" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="4541:4808" ph="{...}" />
-                <marker date="1556286341642" expanded="true" signature="4858:4946" ph="{...}" />
+                <marker date="1556572620452" expanded="false" signature="6:226" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="256:4965" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="263:538" ph="///     A login strategy will attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
+                <marker date="1556572620452" expanded="true" signature="574:1219" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="589:1103" ph="///     Attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
+                <marker date="1556572620452" expanded="true" signature="1249:1358" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1364:1457" ph="///     A strategy which authenticates using kubernetes. ... " />
+                <marker date="1556572620452" expanded="true" signature="1515:3143" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1855:3137" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1955:2110" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2361:2441" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2519:2952" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2830:2937" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2985:3127" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3149:3288" ph="///     A strategy which authenticates by creating a token which is based on the &lt;see cref=&quot;Token&quot; /&gt;. ... " />
+                <marker date="1556572620452" expanded="true" signature="3341:4963" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3390:3957" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4131:4957" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4379:4483" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4541:4808" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4858:4946" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -320,24 +325,24 @@
             <state relative-caret-position="300">
               <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
               <folding>
-                <marker date="1556286457639" expanded="false" signature="6:237" ph="..." />
-                <marker date="1556286457639" expanded="true" signature="268:5112" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="310:5110" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="508:789" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="626:753" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="869:1458" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="954:1038" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="1549:2409" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="2089:2243" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="2517:3310" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="2720:2999" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="2846:2983" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="3429:4198" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="3632:3911" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="3758:3895" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="4279:5088" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="4344:4393" ph="{...}" />
-                <marker date="1556286457639" expanded="true" signature="4751:4856" ph="{...}" />
+                <marker date="1556572620452" expanded="false" signature="6:237" ph="..." />
+                <marker date="1556572620452" expanded="true" signature="268:5112" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="310:5110" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="508:789" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="626:753" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="869:1458" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="954:1038" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="1549:2409" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2089:2243" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2517:3310" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2720:2999" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="2846:2983" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3429:4198" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3632:3911" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="3758:3895" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4279:5088" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4344:4393" ph="{...}" />
+                <marker date="1556572620452" expanded="true" signature="4751:4856" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -435,9 +440,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2560" />
-    <option name="width" value="1920" />
-    <option name="height" value="1181" />
+    <option name="width" value="2560" />
+    <option name="height" value="1421" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -527,11 +531,12 @@
       <workItem from="1556128375015" duration="11277000" />
       <workItem from="1556202564947" duration="11570000" />
       <workItem from="1556540624679" duration="2402000" />
+      <workItem from="1556891788617" duration="758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41311000" />
+    <option name="totallyTimeSpent" value="42069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,17 +548,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2560" y="0" width="1920" height="1181" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1421" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1547492" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.11654733" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="0" weight="0.3298969" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" order="2" visible="true" weight="0.22774133" />
+      <window_info anchor="bottom" id="Unit Tests" order="2" visible="true" weight="0.18592195" />
       <window_info anchor="bottom" id="TeamCity" order="3" weight="0.3298969" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
@@ -588,57 +593,6 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs</url>
-          <line>128</line>
-          <properties documentPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs" initialLine="117">
-            <startOffsets>
-              <option value="4964" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4987" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs</url>
-          <line>154</line>
-          <properties documentPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs" initialLine="144">
-            <startOffsets>
-              <option value="6128" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6181" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs</url>
-          <line>112</line>
-          <properties documentPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/VaultHelper.cs" initialLine="149" />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs</url>
-          <line>197</line>
-          <properties documentPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/VaultHelper.cs" initialLine="195" />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs</url>
-          <line>219</line>
-          <properties documentPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs" initialLine="219">
-            <startOffsets>
-              <option value="7875" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7900" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/b3/ab44a796/VaultHttpClient.cs</url>
           <line>138</line>
           <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58842F1C-EA1E-45EF-98F4-D5D5070ED0FC/b3/ab44a796/VaultHttpClient.cs" initialLine="138">
@@ -650,45 +604,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs</url>
-          <line>191</line>
-          <properties documentPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs" initialLine="191">
-            <startOffsets>
-              <option value="6947" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6991" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs</url>
-          <line>187</line>
-          <properties documentPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs" initialLine="187">
-            <startOffsets>
-              <option value="6791" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6837" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs</url>
-          <line>181</line>
-          <properties documentPath="$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs" initialLine="181">
-            <startOffsets>
-              <option value="6563" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6629" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -753,15 +668,9 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/98484efe-93e2-4eb5-9654-bf628937ba10___2019-04-24-12-42-32-823.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/98484efe-93e2-4eb5-9654-bf628937ba10___2019-04-24-12-52-28-193.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/98484efe-93e2-4eb5-9654-bf628937ba10___2019-04-24-12-57-28-234.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/98484efe-93e2-4eb5-9654-bf628937ba10___2019-04-24-12-42-32-823.log" />
+    <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/98484efe-93e2-4eb5-9654-bf628937ba10___2019-04-24-12-52-28-193.log" />
+    <entry file="file://$USER_HOME$/.Rider2018.3/system/log/UnitTestLogs/98484efe-93e2-4eb5-9654-bf628937ba10___2019-04-24-12-57-28-234.log" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/8e/ab165285/ConfiguredTaskAwaitable`1.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
@@ -1048,24 +957,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+          <folding>
+            <marker date="1556572620452" expanded="false" signature="6:228" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="258:11002" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="319:1554" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="334:695" ph="///     Gets a secret using the provided secret getter. Predefined getters are in the &lt;see cref=&quot;SecretGetters&quot; / ... " />
+            <marker date="1556572620452" expanded="true" signature="847:1376" ph="///     Gets a new &lt;see cref=&quot;LiveSecret{T}&quot; /&gt; which will be acquired and renewed using the &lt;paramref name=&quot;gett ... " />
+            <marker date="1556572620452" expanded="true" signature="1591:2709" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1632:1652" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1702:1753" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2065:2259" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2148:2222" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2323:2483" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2401:2446" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2561:2642" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2754:9682" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2997:3134" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3289:3499" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3684:5378" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3887:4563" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3918:4061" ph="/* If the lease is renewable, the renewal action is to renew the lease and return ... */" />
+            <marker date="1556572620452" expanded="true" signature="4240:4547" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4607:4808" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5118:5352" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5408:5498" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5603:5686" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5808:5901" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5932:6009" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6096:6234" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6275:7752" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6301:7583" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6516:6859" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6678:6765" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6900:7013" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7067:7312" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7616:7742" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7818:9676" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7844:9073" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7900:8386" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="7972:8111" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="8136:8339" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="8632:9059" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9115:9216" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9249:9666" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9424:9504" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9525:9652" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="9711:11000" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/LiveSecret.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding>
-            <marker date="1556138749506" expanded="false" signature="6:67" ph="..." />
-            <marker date="1556138749506" expanded="true" signature="97:2638" ph="{...}" />
-            <marker date="1556138749506" expanded="true" signature="104:940" ph="///     Represents a secret value which is being renewed periodically. ... " />
-            <marker date="1556138749506" expanded="true" signature="985:2636" ph="{...}" />
-            <marker date="1556138749506" expanded="true" signature="1249:2184" ph="{...}" />
-            <marker date="1556138749506" expanded="true" signature="1415:2172" ph="{...}" />
-            <marker date="1556138749506" expanded="true" signature="1449:1686" ph="{...}" />
-            <marker date="1556138749506" expanded="true" signature="1500:1668" ph="{...}" />
-            <marker date="1556138749506" expanded="true" signature="1732:1930" ph="{...}" />
-            <marker date="1556138749506" expanded="true" signature="1967:2158" ph="{...}" />
-            <marker date="1556138749506" expanded="true" signature="2194:2358" ph="///     Create a renewing secret that doesn't actually do any renewing. ... " />
-            <marker date="1556138749506" expanded="true" signature="2400:2455" ph="{...}" />
-            <marker date="1556138749506" expanded="true" signature="2553:2630" ph="{...}" />
+            <marker date="1556572620452" expanded="false" signature="6:67" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="97:2638" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="104:940" ph="///     Represents a secret value which is being renewed periodically. ... " />
+            <marker date="1556572620452" expanded="true" signature="985:2636" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1249:2184" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1415:2172" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1449:1686" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1500:1668" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1732:1930" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1967:2158" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2194:2358" ph="///     Create a renewing secret that doesn't actually do any renewing. ... " />
+            <marker date="1556572620452" expanded="true" signature="2400:2455" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2553:2630" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1075,19 +1038,19 @@
         <state relative-caret-position="1020">
           <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
           <folding>
-            <marker date="1556138749458" expanded="false" signature="6:53" ph="..." />
-            <marker date="1556138749458" expanded="true" signature="83:2693" ph="{...}" />
-            <marker date="1556138749458" expanded="true" signature="90:199" ph="///     Represents the case where no data is expected back from the API. ... " />
-            <marker date="1556138749458" expanded="true" signature="223:235" ph="{...}" />
-            <marker date="1556138749458" expanded="true" signature="263:2349" ph="{...}" />
-            <marker date="1556138749458" expanded="true" signature="663:1641" ph="{...}" />
-            <marker date="1556138749458" expanded="true" signature="707:764" ph="{...}" />
-            <marker date="1556138749458" expanded="true" signature="811:1630" ph="{...}" />
-            <marker date="1556138749458" expanded="true" signature="980:1374" ph="{...}" />
-            <marker date="1556138749458" expanded="true" signature="1651:1944" ph="///     Returns a new secret with the new &lt;paramref name=&quot;data&quot; /&gt; ... " />
-            <marker date="1556138749458" expanded="true" signature="2002:2343" ph="{...}" />
-            <marker date="1556138749458" expanded="true" signature="2063:2332" ph="{...}" />
-            <marker date="1556138749458" expanded="true" signature="2379:2691" ph="{...}" />
+            <marker date="1556572620452" expanded="false" signature="6:53" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="83:2693" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="90:199" ph="///     Represents the case where no data is expected back from the API. ... " />
+            <marker date="1556572620452" expanded="true" signature="223:235" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="263:2349" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="663:1641" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="707:764" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="811:1630" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="980:1374" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1651:1944" ph="///     Returns a new secret with the new &lt;paramref name=&quot;data&quot; /&gt; ... " />
+            <marker date="1556572620452" expanded="true" signature="2002:2343" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2063:2332" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2379:2691" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1118,48 +1081,18 @@
         <state relative-caret-position="240">
           <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
           <folding>
-            <marker date="1556285302143" expanded="false" signature="6:166" ph="..." />
-            <marker date="1556285302143" expanded="true" signature="197:4120" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="246:4118" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="396:677" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="514:641" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="808:983" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="1056:1865" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="1289:1420" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="1987:2482" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="2127:2199" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="2586:3428" ph="{...}" />
-            <marker date="1556285302143" expanded="true" signature="3553:4103" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/ILoginStrategy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="129" column="39" selection-start-line="129" selection-start-column="39" selection-end-line="129" selection-end-column="39" />
-          <folding>
-            <marker date="1556286341642" expanded="false" signature="6:226" ph="..." />
-            <marker date="1556286341642" expanded="true" signature="256:4965" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="263:538" ph="///     A login strategy will attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
-            <marker date="1556286341642" expanded="true" signature="574:1219" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="589:1103" ph="///     Attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
-            <marker date="1556286341642" expanded="true" signature="1249:1358" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="1364:1457" ph="///     A strategy which authenticates using kubernetes. ... " />
-            <marker date="1556286341642" expanded="true" signature="1515:3143" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="1855:3137" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="1955:2110" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="2361:2441" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="2519:2952" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="2830:2937" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="2985:3127" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="3149:3288" ph="///     A strategy which authenticates by creating a token which is based on the &lt;see cref=&quot;Token&quot; /&gt;. ... " />
-            <marker date="1556286341642" expanded="true" signature="3341:4963" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="3390:3957" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="4131:4957" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="4379:4483" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="4541:4808" ph="{...}" />
-            <marker date="1556286341642" expanded="true" signature="4858:4946" ph="{...}" />
+            <marker date="1556572620452" expanded="false" signature="6:166" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="197:4120" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="246:4118" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="396:677" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="514:641" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="808:983" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1056:1865" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1289:1420" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1987:2482" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2127:2199" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2586:3428" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3553:4103" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1169,114 +1102,90 @@
         <state relative-caret-position="300">
           <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
           <folding>
-            <marker date="1556286457639" expanded="false" signature="6:237" ph="..." />
-            <marker date="1556286457639" expanded="true" signature="268:5112" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="310:5110" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="508:789" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="626:753" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="869:1458" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="954:1038" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="1549:2409" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="2089:2243" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="2517:3310" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="2720:2999" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="2846:2983" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="3429:4198" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="3632:3911" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="3758:3895" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="4279:5088" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="4344:4393" ph="{...}" />
-            <marker date="1556286457639" expanded="true" signature="4751:4856" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/IVaultHelper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="100" column="31" lean-forward="true" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
-          <folding>
-            <marker date="1556286485903" expanded="false" signature="6:228" ph="..." />
-            <marker date="1556286485903" expanded="true" signature="258:11002" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="319:1554" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="334:695" ph="///     Gets a secret using the provided secret getter. Predefined getters are in the &lt;see cref=&quot;SecretGetters&quot; / ... " />
-            <marker date="1556286485903" expanded="true" signature="847:1376" ph="///     Gets a new &lt;see cref=&quot;LiveSecret{T}&quot; /&gt; which will be acquired and renewed using the &lt;paramref name=&quot;gett ... " />
-            <marker date="1556286485903" expanded="true" signature="1591:2709" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="1632:1652" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="1702:1753" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="2065:2259" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="2148:2222" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="2323:2483" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="2401:2446" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="2561:2642" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="2754:9682" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="2997:3134" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="3289:3499" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="3684:5378" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="3887:4563" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="3918:4061" ph="/* If the lease is renewable, the renewal action is to renew the lease and return ... */" />
-            <marker date="1556286485903" expanded="true" signature="4240:4547" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="4607:4808" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="5118:5352" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="5408:5498" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="5603:5686" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="5808:5901" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="5932:6009" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="6096:6234" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="6275:7752" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="6301:7583" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="6516:6859" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="6678:6765" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="6900:7013" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="7067:7312" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="7616:7742" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="7818:9676" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="7844:9073" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="7900:8386" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="7972:8111" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="8136:8339" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="8632:9059" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="9115:9216" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="9249:9666" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="9424:9504" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="9525:9652" ph="{...}" />
-            <marker date="1556286485903" expanded="true" signature="9711:11000" ph="{...}" />
+            <marker date="1556572620452" expanded="false" signature="6:237" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="268:5112" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="310:5110" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="508:789" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="626:753" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="869:1458" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="954:1038" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1549:2409" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2089:2243" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2517:3310" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2720:2999" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2846:2983" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3429:4198" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3632:3911" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3758:3895" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4279:5088" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4344:4393" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4751:4856" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/SecretGetters.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="174" column="49" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="49" />
+        <state relative-caret-position="813">
+          <caret line="149" column="55" lean-forward="true" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="55" />
           <folding>
-            <marker date="1556138749514" expanded="false" signature="6:158" ph="..." />
-            <marker date="1556138749514" expanded="true" signature="188:7268" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="228:7266" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="538:1285" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="564:1131" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="631:709" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="818:896" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="1164:1275" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="1478:1719" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="1882:3224" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="2046:3213" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="2121:3037" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="2364:2489" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="2654:2772" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="2847:2969" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="3074:3199" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="3234:4425" ph="///     The getter returned by this method will resolve an embedded template by pulling values from a vault secre ... " />
-            <marker date="1556138749514" expanded="true" signature="4563:7260" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="4680:4876" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="4788:4860" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="4933:7249" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="5067:5221" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="5258:5408" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="5452:7085" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="6181:6430" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="6513:7034" ph="{...}" />
-            <marker date="1556138749514" expanded="true" signature="6677:6783" ph="{...}" />
+            <marker date="1556572620452" expanded="false" signature="6:158" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="188:7268" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="228:7266" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="538:1285" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="564:1131" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="631:709" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="818:896" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1164:1275" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1478:1719" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1882:3224" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2046:3213" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2121:3037" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2364:2489" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2654:2772" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2847:2969" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3074:3199" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3234:4425" ph="///     The getter returned by this method will resolve an embedded template by pulling values from a vault secre ... " />
+            <marker date="1556572620452" expanded="true" signature="4563:7260" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4680:4876" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4788:4860" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4933:7249" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5067:5221" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5258:5408" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="5452:7085" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6181:6430" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6513:7034" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="6677:6783" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault/csharp/Naveego.Vault/ILoginStrategy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="71" column="51" lean-forward="true" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
+          <folding>
+            <marker date="1556572620452" expanded="false" signature="6:226" ph="..." />
+            <marker date="1556572620452" expanded="true" signature="256:4965" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="263:538" ph="///     A login strategy will attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
+            <marker date="1556572620452" expanded="true" signature="574:1219" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="589:1103" ph="///     Attempt to create an authenticated &lt;see cref=&quot;IVaultApi&quot; /&gt; instance ... " />
+            <marker date="1556572620452" expanded="true" signature="1249:1358" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1364:1457" ph="///     A strategy which authenticates using kubernetes. ... " />
+            <marker date="1556572620452" expanded="true" signature="1515:3143" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1855:3137" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="1955:2110" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2361:2441" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2519:2952" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2830:2937" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="2985:3127" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3149:3288" ph="///     A strategy which authenticates by creating a token which is based on the &lt;see cref=&quot;Token&quot; /&gt;. ... " />
+            <marker date="1556572620452" expanded="true" signature="3341:4963" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="3390:3957" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4131:4957" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4379:4483" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4541:4808" ph="{...}" />
+            <marker date="1556572620452" expanded="true" signature="4858:4946" ph="{...}" />
           </folding>
         </state>
       </provider>

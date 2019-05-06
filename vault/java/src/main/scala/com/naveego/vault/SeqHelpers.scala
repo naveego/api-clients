@@ -1,6 +1,7 @@
-package naveego.vault
+package com.naveego.vault
 
 import scala.collection.{GenIterable, Iterator}
+import scala.util.{Either, Right}
 
 object SeqHelpers {
 
@@ -35,4 +36,5 @@ object SeqHelpers {
       Left(acc)
     }
   }
+
 }

@@ -32,6 +32,9 @@
             <e p="UserAuthCodeResponse.cs" t="Include" />
             <e p="UserAuthCodeResponseException.cs" t="Include" />
             <e p="UserCreateUser.cs" t="Include" />
+            <e p="UserLoginRequest.cs" t="Include" />
+            <e p="UserLoginResponse.cs" t="Include" />
+            <e p="UserLoginResponseException.cs" t="Include" />
             <e p="UserUser.cs" t="Include" />
             <e p="UserUserException.cs" t="Include" />
           </e>
