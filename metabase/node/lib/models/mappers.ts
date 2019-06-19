@@ -2487,6 +2487,38 @@ export const MatchRule: msRest.CompositeMapper = {
   }
 };
 
+export const MergingPrerequisites: msRest.CompositeMapper = {
+  serializedName: "MergingPrerequisites",
+  type: {
+    name: "Composite",
+    className: "MergingPrerequisites",
+    modelProperties: {
+      allRequiredConnectionIdsPresent: {
+        serializedName: "allRequiredConnectionIdsPresent",
+        type: {
+          name: "Sequence",
+          element: {
+            type: {
+              name: "String"
+            }
+          }
+        }
+      },
+      oneConnectionIdMustBePresent: {
+        serializedName: "oneConnectionIdMustBePresent",
+        type: {
+          name: "Sequence",
+          element: {
+            type: {
+              name: "String"
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
 export const PropertyMergeRule: msRest.CompositeMapper = {
   serializedName: "PropertyMergeRule",
   type: {
@@ -2526,6 +2558,13 @@ export const MergeRule: msRest.CompositeMapper = {
           name: "Number"
         }
       },
+      mergingPrerequisites: {
+        serializedName: "mergingPrerequisites",
+        type: {
+          name: "Composite",
+          className: "MergingPrerequisites"
+        }
+      },
       properties: {
         serializedName: "properties",
         type: {
@@ -2534,6 +2573,67 @@ export const MergeRule: msRest.CompositeMapper = {
             type: {
               name: "Composite",
               className: "PropertyMergeRule"
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
+export const PropertyCompareRule: msRest.CompositeMapper = {
+  serializedName: "PropertyCompareRule",
+  type: {
+    name: "Composite",
+    className: "PropertyCompareRule",
+    modelProperties: {
+      propertyId: {
+        serializedName: "propertyId",
+        type: {
+          name: "String"
+        }
+      },
+      connections: {
+        serializedName: "connections",
+        type: {
+          name: "Sequence",
+          element: {
+            type: {
+              name: "String"
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
+export const CompareRule: msRest.CompositeMapper = {
+  serializedName: "CompareRule",
+  type: {
+    name: "Composite",
+    className: "CompareRule",
+    modelProperties: {
+      id: {
+        serializedName: "id",
+        type: {
+          name: "String"
+        }
+      },
+      version: {
+        serializedName: "version",
+        type: {
+          name: "Number"
+        }
+      },
+      properties: {
+        serializedName: "properties",
+        type: {
+          name: "Dictionary",
+          value: {
+            type: {
+              name: "Composite",
+              className: "PropertyCompareRule"
             }
           }
         }
@@ -2614,6 +2714,13 @@ export const Shape: msRest.CompositeMapper = {
         type: {
           name: "Composite",
           className: "MergeRule"
+        }
+      },
+      compareRule: {
+        serializedName: "compareRule",
+        type: {
+          name: "Composite",
+          className: "CompareRule"
         }
       },
       copiedFromSchemaId: {

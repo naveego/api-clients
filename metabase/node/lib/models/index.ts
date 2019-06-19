@@ -617,6 +617,14 @@ export interface MatchRule {
 }
 
 /**
+ * An interface representing MergingPrerequisites.
+ */
+export interface MergingPrerequisites {
+  allRequiredConnectionIdsPresent?: string[];
+  oneConnectionIdMustBePresent?: string[];
+}
+
+/**
  * An interface representing PropertyMergeRule.
  */
 export interface PropertyMergeRule {
@@ -629,7 +637,25 @@ export interface PropertyMergeRule {
  */
 export interface MergeRule {
   version?: number;
+  mergingPrerequisites?: MergingPrerequisites;
   properties?: { [propertyName: string]: PropertyMergeRule };
+}
+
+/**
+ * An interface representing PropertyCompareRule.
+ */
+export interface PropertyCompareRule {
+  propertyId?: string;
+  connections?: string[];
+}
+
+/**
+ * An interface representing CompareRule.
+ */
+export interface CompareRule {
+  id?: string;
+  version?: number;
+  properties?: { [propertyName: string]: PropertyCompareRule };
 }
 
 /**
@@ -645,6 +671,7 @@ export interface Shape {
   isMdmShape?: boolean;
   matchRule?: MatchRule;
   mergeRule?: MergeRule;
+  compareRule?: CompareRule;
   copiedFromSchemaId?: string;
   createdAt?: Date;
   createdBy?: string;

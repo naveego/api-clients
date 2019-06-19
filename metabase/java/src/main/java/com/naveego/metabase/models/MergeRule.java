@@ -20,6 +20,12 @@ public class MergeRule {
     private Integer version;
 
     /**
+     * The mergingPrerequisites property.
+     */
+    @JsonProperty(value = "mergingPrerequisites")
+    private MergingPrerequisites mergingPrerequisites;
+
+    /**
      * The properties property.
      */
     @JsonProperty(value = "properties")
@@ -42,6 +48,26 @@ public class MergeRule {
      */
     public MergeRule withVersion(Integer version) {
         this.version = version;
+        return this;
+    }
+
+    /**
+     * Get the mergingPrerequisites value.
+     *
+     * @return the mergingPrerequisites value
+     */
+    public MergingPrerequisites mergingPrerequisites() {
+        return this.mergingPrerequisites;
+    }
+
+    /**
+     * Set the mergingPrerequisites value.
+     *
+     * @param mergingPrerequisites the mergingPrerequisites value to set
+     * @return the MergeRule object itself.
+     */
+    public MergeRule withMergingPrerequisites(MergingPrerequisites mergingPrerequisites) {
+        this.mergingPrerequisites = mergingPrerequisites;
         return this;
     }
 

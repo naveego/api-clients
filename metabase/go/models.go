@@ -316,6 +316,28 @@ const fqdn = "go"
             Max *float64 `json:"max,omitempty"`
             }
 
+            // CompareRuleType ...
+            type CompareRuleType struct {
+            ID *string `json:"id,omitempty"`
+            Version *int32 `json:"version,omitempty"`
+            Properties map[string]*PropertyCompareRuleType `json:"properties"`
+            }
+
+        // MarshalJSON is the custom marshaler for CompareRuleType.
+        func (crt CompareRuleType)MarshalJSON() ([]byte, error){
+        objectMap := make(map[string]interface{})
+                if(crt.ID != nil) {
+                objectMap["id"] = crt.ID
+                }
+                if(crt.Version != nil) {
+                objectMap["version"] = crt.Version
+                }
+                if(crt.Properties != nil) {
+                objectMap["properties"] = crt.Properties
+                }
+                return json.Marshal(objectMap)
+        }
+
             // ConnectionDiscoveredSchemaType ...
             type ConnectionDiscoveredSchemaType struct {
             DiscoveredSchemaID *string `json:"discoveredSchemaId,omitempty"`
@@ -720,6 +742,7 @@ const fqdn = "go"
             // MergeRuleType ...
             type MergeRuleType struct {
             Version *int32 `json:"version,omitempty"`
+            MergingPrerequisites *MergingPrerequisitesType `json:"mergingPrerequisites,omitempty"`
             Properties map[string]*PropertyMergeRuleType `json:"properties"`
             }
 
@@ -729,11 +752,20 @@ const fqdn = "go"
                 if(mrt.Version != nil) {
                 objectMap["version"] = mrt.Version
                 }
+                if(mrt.MergingPrerequisites != nil) {
+                objectMap["mergingPrerequisites"] = mrt.MergingPrerequisites
+                }
                 if(mrt.Properties != nil) {
                 objectMap["properties"] = mrt.Properties
                 }
                 return json.Marshal(objectMap)
         }
+
+            // MergingPrerequisitesType ...
+            type MergingPrerequisitesType struct {
+            AllRequiredConnectionIdsPresent *[]string `json:"allRequiredConnectionIdsPresent,omitempty"`
+            OneConnectionIDMustBePresent *[]string `json:"oneConnectionIdMustBePresent,omitempty"`
+            }
 
             // NodeType ...
             type NodeType struct {
@@ -786,6 +818,12 @@ const fqdn = "go"
             CanPublish *bool `json:"canPublish,omitempty"`
             CanUseOAuth *bool `json:"canUseOAuth,omitempty"`
             CanWrite *bool `json:"canWrite,omitempty"`
+            }
+
+            // PropertyCompareRuleType ...
+            type PropertyCompareRuleType struct {
+            PropertyID *string `json:"propertyId,omitempty"`
+            Connections *[]string `json:"connections,omitempty"`
             }
 
             // PropertyMappingType ...
@@ -1129,6 +1167,7 @@ const fqdn = "go"
             IsMdmShape *bool `json:"isMdmShape,omitempty"`
             MatchRule *MatchRuleType `json:"matchRule,omitempty"`
             MergeRule *MergeRuleType `json:"mergeRule,omitempty"`
+            CompareRule *CompareRuleType `json:"compareRule,omitempty"`
             CopiedFromSchemaID *string `json:"copiedFromSchemaId,omitempty"`
             CreatedAt *date.Time `json:"createdAt,omitempty"`
             CreatedBy *string `json:"createdBy,omitempty"`
@@ -1167,6 +1206,9 @@ const fqdn = "go"
                 }
                 if(st.MergeRule != nil) {
                 objectMap["mergeRule"] = st.MergeRule
+                }
+                if(st.CompareRule != nil) {
+                objectMap["compareRule"] = st.CompareRule
                 }
                 if(st.CopiedFromSchemaID != nil) {
                 objectMap["copiedFromSchemaId"] = st.CopiedFromSchemaID
