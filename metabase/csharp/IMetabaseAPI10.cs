@@ -16,7 +16,7 @@ namespace Naveego.Metabase
 
     /// <summary>
     /// API surface for Metabase. Application version is 0.0.0. NRN is
-    /// nv1:n5o.red::metabase:self/metabase-7f74b97897-654n8@0.0.0
+    /// nv1:n5o.red::metabase:self/metabase-67d56f4ff7-hfg4z@0.0.0
     /// </summary>
     public partial interface IMetabaseAPI10 : System.IDisposable
     {

@@ -70,6 +70,12 @@ public class Shape {
     private MergeRule mergeRule;
 
     /**
+     * The compareRule property.
+     */
+    @JsonProperty(value = "compareRule")
+    private CompareRule compareRule;
+
+    /**
      * The copiedFromSchemaId property.
      */
     @JsonProperty(value = "copiedFromSchemaId")
@@ -288,6 +294,26 @@ public class Shape {
      */
     public Shape withMergeRule(MergeRule mergeRule) {
         this.mergeRule = mergeRule;
+        return this;
+    }
+
+    /**
+     * Get the compareRule value.
+     *
+     * @return the compareRule value
+     */
+    public CompareRule compareRule() {
+        return this.compareRule;
+    }
+
+    /**
+     * Set the compareRule value.
+     *
+     * @param compareRule the compareRule value to set
+     * @return the Shape object itself.
+     */
+    public Shape withCompareRule(CompareRule compareRule) {
+        this.compareRule = compareRule;
         return this;
     }
 

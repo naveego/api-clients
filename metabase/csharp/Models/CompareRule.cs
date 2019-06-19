@@ -11,23 +11,23 @@ namespace Naveego.Metabase.Models
     using System.Collections.Generic;
     using System.Linq;
 
-    public partial class MergeRule
+    public partial class CompareRule
     {
         /// <summary>
-        /// Initializes a new instance of the MergeRule class.
+        /// Initializes a new instance of the CompareRule class.
         /// </summary>
-        public MergeRule()
+        public CompareRule()
         {
             CustomInit();
         }
 
         /// <summary>
-        /// Initializes a new instance of the MergeRule class.
+        /// Initializes a new instance of the CompareRule class.
         /// </summary>
-        public MergeRule(int? version = default(int?), MergingPrerequisites mergingPrerequisites = default(MergingPrerequisites), IDictionary<string, PropertyMergeRule> properties = default(IDictionary<string, PropertyMergeRule>))
+        public CompareRule(string id = default(string), int? version = default(int?), IDictionary<string, PropertyCompareRule> properties = default(IDictionary<string, PropertyCompareRule>))
         {
+            Id = id;
             Version = version;
-            MergingPrerequisites = mergingPrerequisites;
             Properties = properties;
             CustomInit();
         }
@@ -39,18 +39,18 @@ namespace Naveego.Metabase.Models
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "version")]
         public int? Version { get; set; }
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "mergingPrerequisites")]
-        public MergingPrerequisites MergingPrerequisites { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "properties")]
-        public IDictionary<string, PropertyMergeRule> Properties { get; set; }
+        public IDictionary<string, PropertyCompareRule> Properties { get; set; }
 
     }
 }

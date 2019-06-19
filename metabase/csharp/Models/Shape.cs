@@ -25,7 +25,7 @@ namespace Naveego.Metabase.Models
         /// <summary>
         /// Initializes a new instance of the Shape class.
         /// </summary>
-        public Shape(string name, string id = default(string), int? version = default(int?), string description = default(string), IList<ShapeProperty> properties = default(IList<ShapeProperty>), IDictionary<string, string> labels = default(IDictionary<string, string>), bool? isMdmShape = default(bool?), MatchRule matchRule = default(MatchRule), MergeRule mergeRule = default(MergeRule), string copiedFromSchemaId = default(string), System.DateTime? createdAt = default(System.DateTime?), string createdBy = default(string), System.DateTime? updatedAt = default(System.DateTime?), string updatedBy = default(string), System.DateTime? deletedAt = default(System.DateTime?), string deletedBy = default(string))
+        public Shape(string name, string id = default(string), int? version = default(int?), string description = default(string), IList<ShapeProperty> properties = default(IList<ShapeProperty>), IDictionary<string, string> labels = default(IDictionary<string, string>), bool? isMdmShape = default(bool?), MatchRule matchRule = default(MatchRule), MergeRule mergeRule = default(MergeRule), CompareRule compareRule = default(CompareRule), string copiedFromSchemaId = default(string), System.DateTime? createdAt = default(System.DateTime?), string createdBy = default(string), System.DateTime? updatedAt = default(System.DateTime?), string updatedBy = default(string), System.DateTime? deletedAt = default(System.DateTime?), string deletedBy = default(string))
         {
             Id = id;
             Version = version;
@@ -36,6 +36,7 @@ namespace Naveego.Metabase.Models
             IsMdmShape = isMdmShape;
             MatchRule = matchRule;
             MergeRule = mergeRule;
+            CompareRule = compareRule;
             CopiedFromSchemaId = copiedFromSchemaId;
             CreatedAt = createdAt;
             CreatedBy = createdBy;
@@ -95,6 +96,11 @@ namespace Naveego.Metabase.Models
         /// </summary>
         [JsonProperty(PropertyName = "mergeRule")]
         public MergeRule MergeRule { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "compareRule")]
+        public CompareRule CompareRule { get; set; }
 
         /// <summary>
         /// </summary>
