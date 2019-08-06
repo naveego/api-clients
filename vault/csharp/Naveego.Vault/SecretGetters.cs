@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Metabase.Api.Vault
+namespace Naveego.Vault
 {
     public static class SecretGetters
     {
@@ -59,8 +59,6 @@ namespace Metabase.Api.Vault
 
             return async (client, cancellationToken) =>
             {
-                string formattedSecret;
-
                 try
                 {
                     var path = $"jose/jwt/issue/{role}";

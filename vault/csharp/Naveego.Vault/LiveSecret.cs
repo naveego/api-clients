@@ -2,18 +2,18 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Metabase.Api.Vault
+namespace Naveego.Vault
 {
     /// <inheritdoc />
     /// <summary>
     ///     Represents a secret value which is being renewed periodically.
     ///     If the instance is disposed, renewal stops and attempts to get
-    ///     <see cref="P:Metabase.Api.Vault.LiveSecret`1.Value" />
-    ///     will throw an exception. <see cref="P:Metabase.Api.Vault.LiveSecret`1.Value" /> will also throw if the
-    ///     <see cref="T:Metabase.Api.Vault.VaultHelper" />
+    ///     <see cref="P:Naveego.Vault.LiveSecret`1.Value" />
+    ///     will throw an exception. <see cref="P:Naveego.Vault.LiveSecret`1.Value" /> will also throw if the
+    ///     <see cref="T:Naveego.Vault.VaultHelper" />
     ///     has been disposed. Instances can be obtained from
     ///     <see
-    ///         cref="M:Metabase.Api.Vault.IVaultHelper.GetLiveSecretAsync``1(System.String,System.Func{Metabase.Api.Vault.IVaultApi,System.Threading.CancellationToken,System.Threading.Tasks.Task{Metabase.Api.Vault.Secret{``0}}},System.Threading.CancellationToken)" />
+    ///         cref="M:Naveego.Vault.IVaultHelper.GetLiveSecretAsync``1(System.String,System.Func{Naveego.Vault.IVaultApi,System.Threading.CancellationToken,System.Threading.Tasks.Task{Naveego.Vault.Secret{``0}}},System.Threading.CancellationToken)" />
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class LiveSecret<T> : IDisposable

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using FluentAssertions;
-using Metabase.Api.Vault;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
@@ -55,7 +54,7 @@ namespace Naveego.Vault.Tests
             
             const string leaseId = "lease-id";
             
-            mockClient.Setup(m => m.WriteAsync<NoData>("sys/lease/renew", It.Is<Dictionary<string, string>>(x => x["lease_id"] == leaseId), It.IsAny<CancellationToken>()))
+            mockClient.Setup(m => m.WriteAsync<NoData>("sys/leases/renew", It.Is<Dictionary<string, string>>(x => x["lease_id"] == leaseId), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(new Secret<NoData>()))
                 .Verifiable();        
 
