@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Vault.Models;
 
-namespace Metabase.Api.Vault
+namespace Naveego.Vault
 {
     /// <summary>
     ///     Represents the case where no data is expected back from the API.

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using FluentAssertions;
-using Metabase.Api.Vault;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -17,7 +16,7 @@ namespace Naveego.Vault.Tests
             _testOutputHelper = testOutputHelper;
             Config = new VaultHelperConfig()
             {
-                Address = "https://vault.n5o.black",
+                Address = "https://vault.n5o.red",
                 Logger = new TestLogger(testOutputHelper),
             }.UsingTokenLogin("root");
 

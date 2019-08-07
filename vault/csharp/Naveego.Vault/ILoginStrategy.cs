@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Newtonsoft.Json;
 
-namespace Metabase.Api.Vault
+namespace Naveego.Vault
 {
     /// <summary>
     ///     A login strategy will attempt to create an authenticated <see cref="IVaultApi" /> instance
@@ -50,6 +50,11 @@ namespace Metabase.Api.Vault
             if (string.IsNullOrEmpty(Role))
             {
                 throw new InvalidOperationException("Kubernetes service token found, but settings.KubernetesRole was empty.");
+            }
+
+            if (!File.Exists(KubernetesTokenPath))
+            {
+                throw new InvalidOperationException("no file at kubernetes token path");
             }
 
             log.LogInformation("Found kubernetes service account token, will use it to authenticate to Vault.");

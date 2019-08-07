@@ -2,9 +2,95 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ddc0c09-8f69-4355-917e-d0f385a1dfe1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/java/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/java/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/java/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/java/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/java/build.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/java/metabase-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/.idea/modules/metabase-api-build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/.idea/modules/metabase-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/.idea/sbt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/.idea/scala_compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/project/plugin.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/MetabaseAPI10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/implementation/MetabaseAPI10Impl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/implementation/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Batch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/BatchStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/BatchStatusGoBetweenScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Boxplot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/ConnectionDiscoveredSchema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/ConnectionRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/DataflowEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Edge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/EdgeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Filter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/FilterRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/FilterRuleEffect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Flow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Histogram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/HttpEdge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Job.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/JobStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/JobStatusGoBetweenScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/JobType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/KafkaEdge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/MapNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Mapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/MappingDirection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/MatchRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/MergeRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/NodeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/PagedResultOfBatchStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/PagedResultOfJobStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Payload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/PluginCapabilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/PropertyIdMeaning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/PropertyMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/PropertyMergeRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/PropertyTrait.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/PropertyType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/PublishNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/RealTimeSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/RealTimeStateScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Schedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/ScheduleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Schema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/SchemaCapability.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/SchemaForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/SchemaProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/SchemaProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/SchemaTrait.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/SecurityAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/SecurityKeyStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/ShapeProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/ShapePropertySecurity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Trace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/TraitAttributeDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/TraitAttributeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/TraitDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Transform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/Writeback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/models/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../metabase/scala/src/main/java/com/naveego/metabase/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/.idea.api-clients/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.idea.api-clients/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/VaultHelperIntegrationFixture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault.Tests/VaultHelperUnitFixture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/ILoginStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/ILoginStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/IVaultApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/IVaultApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/IVaultHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/IVaultHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/LiveSecret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/LiveSecret.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/Naveego.Vault.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/Naveego.Vault.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/Secret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/Secret.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csharp/Naveego.Vault/SecretGetters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../csharp/Naveego.Vault/SecretGetters.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/com/naveego/vault/VaultHelperFixture.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/naveego/vault/VaultHelperFixture.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,7 +141,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/SecretGettersFixture.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="823">
+            <state relative-caret-position="1050">
               <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
               <folding>
                 <element signature="e#27#73#0" expanded="true" />
@@ -67,7 +153,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LoginStrategy.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="675">
               <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
               <folding>
                 <element signature="e#27#73#0" expanded="true" />
@@ -79,7 +165,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SecretGetters.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="930">
               <caret line="66" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="e#27#54#0" expanded="true" />
@@ -88,12 +174,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="240">
-                <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
+              <first_editor relative-caret-position="210">
+                <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               </first_editor>
               <second_editor />
             </state>
@@ -103,7 +189,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/SeqHelpersFixture.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="585">
               <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
               <folding>
                 <element signature="e#27#64#0" expanded="true" />
@@ -112,11 +198,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -124,7 +210,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SeqHelpers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
+            <state relative-caret-position="585">
               <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#27#74#0" expanded="true" />
@@ -137,7 +223,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/VaultHelperFixture.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#27#55#0" expanded="true" />
               </folding>
@@ -148,7 +234,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/VaultHelper.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="420">
               <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
               <folding>
                 <element signature="e#27#73#0" expanded="true" />
@@ -244,6 +330,11 @@
             <path>
               <item name="vault" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vault" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -258,14 +349,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vault" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="vault" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vault" type="b2602c69:ProjectViewProjectNode" />
@@ -290,7 +373,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -532,7 +615,10 @@
       <workItem from="1556299025577" duration="14959000" />
       <workItem from="1556540525661" duration="20983000" />
       <workItem from="1556723880003" duration="8448000" />
-      <workItem from="1556888742388" duration="10260000" />
+      <workItem from="1556888742388" duration="10404000" />
+      <workItem from="1557947179729" duration="708000" />
+      <workItem from="1558361247174" duration="177000" />
+      <workItem from="1558658055653" duration="985000" />
     </task>
     <servers />
   </component>
@@ -569,28 +655,27 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85794000" />
+    <option name="totallyTimeSpent" value="87808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2560" y="0" width="1920" height="1181" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="UI Designer" order="0" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.19530416" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.13233724" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="1" sideWeight="0.49893278" weight="0.2783505" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.6256961" visible="true" weight="0.15370196" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.6256961" weight="0.1882173" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="6" sideWeight="0.20651014" side_tool="true" weight="0.5220244" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3289597" />
       <window_info anchor="bottom" id="Run" order="9" sideWeight="0.8713981" weight="0.32333645" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.7934899" weight="0.34582943" />
+      <window_info active="true" anchor="bottom" id="sbt-shell-toolwindow" order="10" sideWeight="0.7934899" visible="true" weight="0.4226804" />
       <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.6254002" weight="0.35988754" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -815,13 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.12/srcs/core_2.12-1.0.5-sources.jar!/com/softwaremill/sttp/RequestT.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3255">
-          <caret line="224" column="6" selection-start-line="224" selection-start-column="6" selection-end-line="224" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/util/Either.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2910">
@@ -901,13 +979,7 @@
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.11/srcs/core_2.11-1.0.5-sources.jar!/com/softwaremill/sttp/Response.scala">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LazyLogger.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LazyLogger.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/Package.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -942,36 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SeqHelpers.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#27#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LoginStrategy.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-          <folding>
-            <element signature="e#27#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/VaultHelper.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding>
-            <element signature="e#27#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
@@ -979,36 +1021,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SecretGetters.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.softwaremill.sttp/core_2.12/srcs/core_2.12-1.0.5-sources.jar!/com/softwaremill/sttp/RequestT.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#27#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/VaultHelperFixture.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#27#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3255">
+          <caret line="224" column="6" selection-start-line="224" selection-start-column="6" selection-end-line="224" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/SecretGettersFixture.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
+        <state relative-caret-position="1050">
           <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
           <folding>
             <element signature="e#27#73#0" expanded="true" />
@@ -1016,9 +1038,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/LoginStrategy.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+          <folding>
+            <element signature="e#27#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SecretGetters.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#27#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/SeqHelpersFixture.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="585">
           <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
           <folding>
             <element signature="e#27#64#0" expanded="true" />
@@ -1026,13 +1068,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/SeqHelpers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#27#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/naveego/vault/VaultHelperFixture.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#27#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/naveego/vault/VaultHelper.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <element signature="e#27#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -1075,6 +1154,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

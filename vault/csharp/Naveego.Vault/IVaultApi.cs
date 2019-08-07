@@ -2,7 +2,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Vault;
 
-namespace Metabase.Api.Vault
+namespace Naveego.Vault
 {
     public interface IVaultApi
     {

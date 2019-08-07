@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Newtonsoft.Json;
 
-namespace Metabase.Api.Vault
+namespace Naveego.Vault
 {
     public interface IVaultHelper : IVaultApi, IDisposable
     {
@@ -114,7 +114,15 @@ namespace Metabase.Api.Vault
                 return new LiveSecret<T>(label, secret.Data, _cts.Token, halflife, async token =>
                 {
                     _logger.LogDebug($"Renewing lease for secret with label '{label}'.");
-                    await _api.WriteAsync<NoData>("sys/lease/renew", new Dictionary<string, string> {["lease_id"] = secret.LeaseId}, token);
+                    try
+                    {
+                        await _api.WriteAsync<NoData>("sys/leases/renew", new Dictionary<string, string> {["lease_id"] = secret.LeaseId}, token);
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, $"Error renewing lease with ID '{secret.LeaseId}'.");
+                        throw;
+                    }
                     return secret.Data;
                 });
             }
